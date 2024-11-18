@@ -1,0 +1,47 @@
+Rispondere alle seguenti domande:
+1.A cosa serve un iterator?
+2.A cosa serve il metodo forEach
+3.Posso trasformare una collection in un Array?
+4.Posso trasformare un array in un oggetto List?
+
+1.In Java, un Iterator è un costrutto utilizzato per attraversare o scorrere la collection.
+L'interfaccia Java Iterator sostituisce l'enumeratore utilizzato in precedenza per scorrere alcune semplici raccolte come i vettori.
+
+Le principali differenze tra Java Iterator ed Enumerator sono:
+- Notevole miglioramento nei nomi dei metodi.
+- Possibilità di rimuovere gli elementi del metodo dalla collection che viene iterata utilizzando un iteratore.
+
+2.Il foreach è un particolare costrutto (disponibile a partire da Java 5) che ci permette di iterare velocemente una struttura dati. In java possiamo usarlo sia su un array oppure su oggetti di tipo Iterable,cioè che dispongono di un iteratore.
+Esempio:
+          int[] numeri = {10, 20, 30, 40, 50};
+            for(int numero: numeri) {
+                System.out.prinln(numero):
+            }
+
+3.In Java, si può trasformare una collezione in un array utilizzando il metodo toArray().
+
+Ad esempio, supponiamo di avere una collezione di interi List<Integer> chiamata myList. Per trasformarla in un array, possiamo scrivere il seguente codice:
+
+Integer[] myArray = myList.toArray(new Integer[myList.size()]);
+
+In questo modo, viene creato un nuovo array myArray della stessa lunghezza della collezione myList e il contenuto della collezione viene copiato nell'array.
+
+È importante notare che il tipo dell'array deve essere compatibile con il tipo degli elementi della collezione. Se la collezione contiene elementi di tipo T, l'array deve essere di tipo T[]. Se la collezione contiene elementi di tipo primitivo, come int o double, è necessario utilizzare l'array corrispondente, come int[] o double[].
+
+4.Sì, in Java è possibile trasformare un array in un oggetto List utilizzando il metodo Arrays.asList().
+
+Ad esempio, supponiamo di avere un array di interi int[] myArray e vogliamo trasformarlo in un oggetto List. Possiamo farlo nel seguente modo:
+
+List<Integer> myList = Arrays.asList(myArray);
+
+In questo modo, viene creato un nuovo oggetto List myList che contiene gli stessi elementi dell'array myArray.
+
+È importante notare che il tipo degli elementi dell'array deve essere compatibile con il tipo degli elementi della List. Se l'array contiene elementi di tipo T, la List deve essere di tipo List<T>. Se l'array contiene elementi di tipo primitivo, come int o double, non si può utilizzare il metodo Arrays.asList(), ma si deve creare manualmente una nuova List e aggiungere gli elementi uno per uno. Ad esempio:
+
+int[] myArray = {1, 2, 3, 4, 5};
+List<Integer> myList = new ArrayList<Integer>();
+for (int i = 0; i < myArray.length; i++) {
+    myList.add(myArray[i]);
+}
+
+In questo modo, viene creato un nuovo oggetto List myList che contiene gli stessi elementi dell'array myArray.

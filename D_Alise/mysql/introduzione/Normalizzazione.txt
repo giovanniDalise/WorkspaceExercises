@@ -1,0 +1,73 @@
+PRIMA FORMA NORMALE
+La prima forma normale (1NF) è la forma di base per la normalizzazione dei database relazionali. La 1NF si applica quando un database ha una struttura relazionale e soddisfa alcuni requisiti fondamentali. L'obiettivo principale della 1NF è eliminare la ripetizione dei gruppi di valori all'interno di una tabella.
+
+Per soddisfare la 1NF, una tabella deve avere le seguenti caratteristiche:
+
+Ogni cella della tabella deve contenere un valore atomico, cioè un singolo valore, non un insieme di valori o una struttura complessa.
+Ogni colonna della tabella deve avere un nome univoco.
+Ogni riga della tabella deve essere unica, non devono esserci duplicati.
+
+Ad esempio, consideriamo una tabella chiamata "Clienti" che registra i dati dei clienti:
+
+Clienti (ID, Nome, Indirizzo, Città, Telefono)
+
+In questa tabella, ogni colonna ha un nome univoco e ogni riga rappresenta un cliente unico. Tuttavia, potrebbero esserci casi in cui i valori ripetuti si presentano all'interno della tabella. Ad esempio, se un cliente ha più numeri di telefono, potrebbe esserci una ripetizione dei valori nella colonna "Telefono".
+
+Per soddisfare la 1NF, dovremmo organizzare correttamente la tabella. Potremmo avere una tabella separata per i numeri di telefono dei clienti, collegata alla tabella "Clienti" tramite un identificatore univoco come l'ID del cliente. In questo modo, ogni cella conterrà un valore atomico e non ci saranno ripetizioni dei gruppi di valori.
+
+Clienti (ID, Nome, Indirizzo, Città)
+NumeriTelefono (IDCliente, Telefono)
+
+In questa struttura, la tabella "NumeriTelefono" ha una colonna "IDCliente" che funge da chiave esterna collegata all'ID del cliente nella tabella "Clienti". Ogni riga nella tabella "NumeriTelefono" conterrà un singolo numero di telefono associato a un cliente specifico.
+
+In questo modo, abbiamo soddisfatto la prima forma normale (1NF) eliminando la ripetizione dei gruppi di valori e garantendo che ogni cella contenga un valore atomico.
+
+L'esempio si basa su un rapporto uno a molti ma nel caso in cui avessimo avuto un rapporto molti a molti avremo dovuto creare una tabella cliente_numeri di telefono con con clienteId e numeriTelefonoId come campi per le colonne. Guarda esempio ristorante.
+
+
+
+SECONDA FORMA NORMALE
+La seconda forma normale (2NF) è una forma di normalizzazione dei database relazionali che si applica quando un database ha una struttura relazionale e contiene dipendenze funzionali parziali. L'obiettivo della 2NF è eliminare le dipendenze parziali e garantire che ogni attributo non chiave dipenda intesramente dalla chiave primaria.
+
+Per comprendere meglio la 2NF, prendiamo in considerazione un esempio di database relazionale contenente una tabella chiamata "Studenti" che registra i dati degli studenti e dei corsi che frequentano. Supponiamo che la tabella sia strutturata nel seguente modo:
+
+Studenti (Matricola, Nome, Corso, CodiceCorso, DescrizioneCorso)
+
+In questa tabella, "Matricola" è la chiave primaria che identifica univocamente ogni studente. "Corso" rappresenta il nome del corso che lo studente sta frequentando. "CodiceCorso" rappresenta un codice univoco assegnato a ogni corso, mentre "DescrizioneCorso" fornisce una descrizione del corso.
+
+Tuttavia, notiamo che ci sono dipendenze funzionali parziali nella tabella. La "DescrizioneCorso" dipende solo dal "CodiceCorso", mentre "Nome" dipende solo dalla "Matricola". Queste dipendenze parziali violano la 2NF.
+
+Per applicare la 2NF, dovremmo suddividere la tabella "Studenti" in due tabelle separate. Una tabella conterrà solo le informazioni sugli studenti, mentre l'altra conterrà solo le informazioni sui corsi. La struttura delle tabelle potrebbe apparire così:
+
+Tabella "Studenti":
+(Matricola, Nome)
+
+Tabella "Corsi":
+(CodiceCorso, DescrizioneCorso)
+
+Ora, ogni tabella ha una chiave primaria e ogni attributo dipende completamente dalla chiave primaria corrispondente. In questo modo, abbiamo eliminato le dipendenze funzionali parziali e soddisfatto la seconda forma normale (2NF).
+
+
+
+TERZA FORMA NORMALE
+La terza forma normale (3NF) è un concetto di normalizzazione dei database relazionali che si applica dopo la seconda forma normale (2NF). L'obiettivo principale della 3NF è eliminare le dipendenze transitiva, in modo che ogni attributo dipenda direttamente solo dalla chiave primaria.
+
+Per comprendere meglio la 3NF, prendiamo in considerazione un esempio di database relazionale che contiene una tabella chiamata "Ordini" che registra i dati degli ordini dei clienti. Supponiamo che la tabella sia strutturata nel seguente modo:
+
+Ordini (NumeroOrdine, DataOrdine, CodiceCliente, NomeCliente, CittàCliente, Prodotto, Prezzo)
+
+In questa tabella, "NumeroOrdine" è la chiave primaria che identifica univocamente ogni ordine. "CodiceCliente" rappresenta il codice univoco assegnato a ogni cliente, mentre "NomeCliente" e "CittàCliente" rappresentano il nome e la città del cliente. "Prodotto" indica il prodotto ordinato, mentre "Prezzo" rappresenta il prezzo del prodotto.
+
+Tuttavia, notiamo che ci sono dipendenze transitiva nella tabella. Ad esempio, il "NomeCliente" e la "CittàCliente" dipendono dalla chiave primaria "CodiceCliente", non direttamente dalla chiave primaria "NumeroOrdine".
+
+Per applicare la 3NF, dovremmo suddividere la tabella "Ordini" in più tabelle per eliminare le dipendenze transitiva. Potremmo avere le seguenti tabelle:
+
+Tabella "Ordini":
+(NumeroOrdine, DataOrdine, CodiceCliente, Prodotto, Prezzo)
+
+Tabella "Clienti":
+(CodiceCliente, NomeCliente, CittàCliente)
+
+Ora, ogni tabella ha una chiave primaria e ogni attributo dipende direttamente solo dalla chiave primaria corrispondente. In questo modo, abbiamo eliminato le dipendenze transitiva e soddisfatto la terza forma normale (3NF).
+
+È importante notare che la normalizzazione dei database può comportare la creazione di più tabelle, ma ciò aiuta a ridurre la ridondanza dei dati e a garantire una maggiore integrità e efficienza del database.

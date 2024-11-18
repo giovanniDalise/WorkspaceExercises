@@ -1,0 +1,36 @@
+Name:FileOutputStream
+
+Package:java.io
+
+Descrizione:Un flusso di output di file è un flusso di output per la scrittura di dati in un File o in un FileDescriptor. La disponibilità o la creazione di un file dipende dalla piattaforma sottostante. Alcune piattaforme, in particolare, consentono di aprire un file per la scrittura da un solo FileOutputStream (o altro oggetto di scrittura di file) alla volta. In tali situazioni i costruttori in questa classe falliranno se il file coinvolto è già aperto.
+
+FileOutputStream è pensato per la scrittura di flussi di byte non elaborati come i dati dell'immagine. Per scrivere flussi di caratteri, prendi in considerazione l'utilizzo di FileWriter.
+
+Costruttori:
+FileOutputStream(File file)
+Creates a file output stream to write to the file represented by the specified File object.
+
+FileOutputStream(File file, boolean append)
+Creates a file output stream to write to the file represented by the specified File object.
+
+FileOutputStream(FileDescriptor fdObj)
+Creates a file output stream to write to the specified file descriptor, which represents an existing connection to an actual file in the file system.
+
+FileOutputStream(String name)
+Creates a file output stream to write to the file with the specified name.
+
+FileOutputStream(String name, boolean append)
+Creates a file output stream to write to the file with the specified name.
+
+METODI:
+close()
+Closes this file output stream and releases any system resources associated with this stream.
+
+finalize()
+Cleans up the connection to the file, and ensures that the close method of this file output stream is called when there are no more references to this stream.
+
+getChannel()
+Returns the unique FileChannel object associated with this file output stream.
+
+write(byte[] b)
+Writes b.length bytes from the specified byte array to this file output stream.

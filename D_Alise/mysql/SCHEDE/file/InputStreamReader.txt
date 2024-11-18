@@ -1,0 +1,28 @@
+Name: InputStreamReader:
+Packag:java.io
+
+Descrizione:
+Un InputStreamReader è un ponte da flussi di byte a flussi di caratteri: legge i byte e li decodifica in caratteri utilizzando un set di caratteri specificato. Il set di caratteri che utilizza può essere specificato per nome o può essere fornito in modo esplicito, oppure può essere accettato il set di caratteri predefinito della piattaforma.
+
+Ogni chiamata di uno dei metodi read() di InputStreamReader può causare la lettura di uno o più byte dal flusso di input di byte sottostante. Per consentire la conversione efficiente di byte in caratteri, è possibile leggere in anticipo dal flusso sottostante più byte di quanti ne siano necessari per soddisfare l'operazione di lettura corrente.
+
+Per la massima efficienza, prendi in considerazione il wrapping di un InputStreamReader all'interno di un BufferedReader. Per esempio:
+
+ BufferedReader in
+   = new BufferedReader(new InputStreamReader(System.in));
+
+Field: inerenti alla classe Reader
+
+COSTRUTTORI:
+InputStreamReader(InputStream in):
+Crea un oggetto InputStreamReader che utilizza il set di caratteri predefinito.
+
+METODI:
+close():
+Chiude il flusso e rilascia tutte le risorse di sistema ad esso associate.
+
+getEncoding():
+Restituisce il nome della codifica dei caratteri utilizzata da questo flusso.
+
+read():
+Legge un singolo carattere.

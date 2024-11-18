@@ -1,0 +1,14 @@
+Name: System
+Package: java.lang
+
+Descrizione:
+Ha diverse class fields e metodi e non può essere instanziato.
+Tra le sue funzioni ne abbiamo di input,output e error stream, di accesso a variabili e proprietà.
+
+Costruttori:
+Non ne abbiamo
+
+Metodi:
+- setIN: riassegna gli input di stream.
+
+- setOUT: riassegna gli output di stream.

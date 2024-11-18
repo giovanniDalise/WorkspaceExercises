@@ -1,0 +1,10 @@
+Da specificare che con protected siamo visibili anche alle sottoclassi del package non solo nella sottoclasse della classe in questione.
+
+Per quanto riguarda il default ossia senza il modificatore di visibilità noi vediamo le cartelle nelle sottoclassi se però la classe dove è dichiarata appartiene allo stesso package(se dovremo importare il package allora sarò esterna e non visibile).
+
+    Una variabile di istanza senza modificatore di visibilità, è visibile alle classi dello stesso package.
+    Una variabile di istanza senza modificatore di visibilità, è visibile alle sottoclassi dello stesso package.
+
+La visibilità di una variabile di istanza dipende dal modificatore di visibilità utilizzato. Se non viene specificato alcun modificatore di visibilità, la variabile viene considerata con visibilità di pacchetto, il che significa che è accessibile a tutte le classi nello stesso package. Ciò include anche le sottoclassi definite nello stesso package.
+
+Tuttavia, se una sottoclasse viene definita in un package diverso rispetto alla classe che contiene la variabile, allora la sottoclasse non può accedere alla variabile di istanza a meno che la visibilità della variabile non sia stata esplicitamente dichiarata come "public" o "protected".

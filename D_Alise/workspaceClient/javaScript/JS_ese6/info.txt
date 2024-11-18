@@ -1,0 +1,28 @@
+DOMContentLoaded
+Il DOMContentLoaded è un evento che si verifica quando l'intero documento HTML è stato caricato e analizzato, e il DOM (Document Object Model) è stato costruito. In altre parole, l'evento DOMContentLoaded viene generato quando tutto il contenuto HTML della pagina è disponibile per essere manipolato tramite JavaScript.
+
+È importante utilizzare l'evento DOMContentLoaded quando si scrive codice JavaScript che deve interagire con il DOM della pagina, ad esempio selezionare elementi HTML, aggiungere o rimuovere elementi, o associare eventi. Questo perché il codice JavaScript viene eseguito in modo sequenziale e può essere eseguito prima che l'intero documento HTML sia stato caricato, causando errori o problemi nel riferimento agli elementi della pagina.
+
+Avvolgendo il codice all'interno di una funzione che viene eseguita quando si verifica l'evento DOMContentLoaded, si garantisce che il codice venga eseguito solo quando il DOM è completamente caricato. In questo modo si evitano errori di riferimento agli elementi che non sono ancora stati caricati.
+
+
+
+CREARE UN OGGETTO IN JAVASCRIPT 
+
+let libro = {
+            titolo: titolo,
+            autore: autore,
+            editore: editore
+        };
+L'oggetto libro è un oggetto JavaScript che viene utilizzato per rappresentare le informazioni di un libro, come il titolo, l'autore e l'editore.
+
+In dettaglio, le righe di codice creano un oggetto libro utilizzando la sintassi degli oggetti letterali di JavaScript. L'oggetto libro ha tre proprietà: titolo, autore e editore. Queste proprietà vengono inizializzate con i valori delle variabili titolo, autore ed editore che sono state ottenute dai relativi input HTML.
+
+Ecco come funziona il codice:
+
+Viene dichiarato un oggetto libro utilizzando le parentesi graffe {} per indicare la sintassi degli oggetti letterali di JavaScript.
+All'interno delle parentesi graffe, vengono specificate le proprietà dell'oggetto libro.
+La prima proprietà è titolo, che viene inizializzata con il valore della variabile titolo.
+La seconda proprietà è autore, che viene inizializzata con il valore della variabile autore.
+La terza proprietà è editore, che viene inizializzata con il valore della variabile editore.
+In questo modo, l'oggetto libro rappresenta un libro con le sue informazioni principali, ottenute dai campi di input HTML. Questo oggetto può essere utilizzato successivamente per inviare i dati del libro al server o per ulteriori manipolazioni nel codice JavaScript.

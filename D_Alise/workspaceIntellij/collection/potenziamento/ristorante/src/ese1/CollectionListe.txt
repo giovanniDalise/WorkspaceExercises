@@ -1,0 +1,32 @@
+- Scrivere un programma con le seguenti classi:
+    - Ingrediente: che rappresenta un ingrediente di unn piatto e contiene i seguenti attributi:
+        - nome: stringa che rappresenta il nome del piatto
+        - tipo: che rappresenta il tipo di ingrediente (carne, pesce, verdura, pasta, ... )
+        - calorie: un intero che rappresenta le calorie per 100gr dell'ingrediente
+        - vegano: dice se l'ingrediente rientra tra quelli vegani
+        - vegetariano: dice se l'ingrediente rientra tra quelli vegetariani
+        - celiaco: dice se l'ingrediente rientra tra quelli per celiaci
+        ed i seguenti metodi:
+        - get*
+    - Piatto: Che rappresenta un piatto di un ristorante con i seguenti attributi:
+        - tipo: Stringa che può avere uno dei seguenti valori (primo, secondo, contorno)
+        - ingredenti: lista degli ingredienti del piatto
+        - prezzo: il prezzo del piatto
+        - procedimento: descrizione del procedimento per la creazione del piatto
+        ed i seguenti metodi:
+        - get*
+        - isVegano(): restituisce true se tutti gli ingredienti sono vegani
+        - isVegetariano(): restituisce true se tutti gli ingredienti sono vegetariani
+        - isCeliaco(): : restituisce true se tutti gli ingredienti sono per celiaci
+        - calcolaCalorie(): restiuisce le calorie totali del piatto deducendole dagli ingredienti utilizzati
+    - Ristorante: rappresenta la classe main ed anche il ristorante e dovrà permettere di effettuare le seguenti operazioni
+        - aggiungere un piatto all'elenco dei piatti del ristorante
+        - inserire un ingrediente tra quelli censiti ed utilizzati dal ristorante
+        - creare un menù del pranzo con l'elenco dei piatti da presentare
+        - creare un menù della centa con l'elenco dei piatti da presentare
+        - visualizzare tutti i piatti in ordine di prezzo
+        - visualizzare i piatti in ordine di calorie
+        - visualizzare i piatti solo per celiaci
+        - visualizzare i piatti solo per vegetariani
+        - visualizzare i piatti solo per vegani
+        

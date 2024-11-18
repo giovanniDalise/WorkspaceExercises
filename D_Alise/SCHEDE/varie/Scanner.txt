@@ -1,0 +1,17 @@
+Name: Scanner
+Package: java.util
+
+Descrizione:
+Prende in input da uno stream oppure da un testo o da un file ed effettua il parsing, fornendo dei metodi per recuperare valori di tipo primitivo o stringa divisi in token (separati da spazio).
+
+Costruttori:
+
+- Scanner(InputStream source): utile per recuperare dati dallo standard input (tastiera).
+
+- Scanner(String source): permette di creare uno scanner con in input una stringa.
+
+Metodi:
+- hasNext: Verifica se ci sono token del tipo specificato
+- next: se presente recupera il token relativo al tipo previsto (esempio: netxInt recupera un token di tipo intero). Nel caso non esiste, restituisce un exception.
+
+

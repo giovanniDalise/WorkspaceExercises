@@ -1,0 +1,19 @@
+Name: FileWriter
+
+Package: java.io
+
+Descrizione:Classe pratica per la scrittura di file di caratteri. I costruttori di questa classe presuppongono che la codifica dei caratteri predefinita e la dimensione del buffer di byte predefinita siano accettabili. Per specificare personalmente questi valori, costruisci un OutputStreamWriter su un FileOutputStream.
+
+Fields: inerenti a Writer
+
+COSTRUTTORI:
+FileWriter(File file):
+Costruisce un oggetto FileWriter dato un oggetto File.
+
+FileWriter(String fileName):
+Costruisce un oggetto FileWriter dato un nome file.
+
+METODI:inerenti a OutpurStreamWriter,Writer,Object
+
+
+

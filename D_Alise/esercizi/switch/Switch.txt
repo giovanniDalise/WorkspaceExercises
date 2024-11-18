@@ -1,0 +1,4 @@
+- Scrivere una funzione che dato in input un voto da A ad F lo traduca nel voto corrispondente (A: Ottimo, B: Buono, C: Discreto, E: Sufficente, F: Insufficente.
+- Scrivere una funzione che dato un numero da 1 a 12 restituisca il mese corrispondente
+- Scrivere una funzione che dati in input il costo di un biglietto e la categoria della persona (adulto, bambino, studente, pensionato), applica uno sconto del 10% se si è studenti, 15% se si è pensionati, 20% se si è bambini e fornisca il relativo costo scontato.
+- Scrivere una funzione che accetta tre interi come parametri e restituisce il valore massimo di quei tre numeri. Utilizza uno switch per confrontare i tre numeri e determinare quello maggiore.

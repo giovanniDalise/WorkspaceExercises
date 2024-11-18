@@ -1,0 +1,33 @@
+Name:Enum ChronoUnit
+Package:java.time.temporal
+
+Descrizione:Un insieme standard di unità di periodi di data.
+
+Questo set di unità fornisce un accesso basato su unità per manipolare una data, un'ora o una data-ora. Il set standard di unità può essere esteso implementando TemporalUnit.
+
+Queste unità sono destinate ad essere applicabili in più sistemi di calendario. Ad esempio, la maggior parte dei sistemi di calendario non ISO definisce unità di anni, mesi e giorni, solo con regole leggermente diverse. La documentazione di ogni unità spiega come funziona.
+
+Constanti:vedi documentazione
+
+Metodi:
+addTo(R temporal, long amount):
+Restituisce una copia dell'oggetto temporale specificato con il periodo specificato aggiunto.
+
+between(Temporal temporal1Inclusive, Temporal temporal2Exclusive):
+Calcola la quantità di tempo tra due oggetti temporali.
+
+getDuration():
+Ottiene la durata stimata di questa unità nel sistema di calendario ISO.
+
+isDateBased():
+Controlla se questa unità è un'unità di data.
+
+toString():
+Restituisce il nome di questa costante enum, come contenuto nella dichiarazione.
+
+valueOf(String name):
+Restituisce la costante enum di questo tipo con il nome specificato.
+
+values():
+Restituisce un array contenente le costanti di questo tipo enum, nell'ordine in cui sono dichiarate.
+

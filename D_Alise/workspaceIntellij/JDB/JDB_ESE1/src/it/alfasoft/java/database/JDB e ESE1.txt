@@ -1,0 +1,161 @@
+JAVA SE
+Java SE (Java Standard Edition) è una piattaforma e un insieme di librerie di base per lo sviluppo e l'esecuzione di applicazioni Java su diversi tipi di dispositivi e sistemi operativi. È la versione standard di Java utilizzata per la maggior parte delle applicazioni desktop e delle applicazioni basate su server.
+Altra libreria è la Java Enterprise Edition (Java EE).
+Java SE fornisce un ambiente di esecuzione (Java Runtime Environment o JRE) e un set di librerie di classi Java che offrono funzionalità essenziali per lo sviluppo di applicazioni.
+Inoltre, Java SE include anche il compilatore Java (javac) per convertire il codice sorgente Java in bytecode eseguibile sulla piattaforma Java Virtual Machine (JVM). La JVM è l'ambiente di runtime che interpreta il bytecode Java e lo esegue sulla macchina ospite.
+
+API
+ Nel contesto della documentazione Java, "API" si riferisce alle interfacce e alle classi pubbliche fornite dalle librerie di Java Standard Edition (Java SE). L'API Java rappresenta l'interfaccia pubblica che gli sviluppatori possono utilizzare per interagire con le funzionalità fornite dalle librerie Java.
+
+La documentazione Java fornisce una descrizione dettagliata di queste interfacce e classi, specificando i metodi disponibili, i parametri richiesti, i valori restituiti e altre informazioni pertinenti. L'utilizzo dell'API Java consente agli sviluppatori di utilizzare in modo efficace e corretto le funzionalità offerte dalle librerie Java.
+
+Pertanto, quando si fa riferimento alla "documentazione API di Java", ci si riferisce alla documentazione che descrive l'interfaccia pubblica delle librerie Java SE, che gli sviluppatori possono utilizzare per sviluppare le proprie applicazioni Java.
+
+L'interfaccia pubblica di Java SE si riferisce alla collezione di interfacce, classi e metodi forniti dalle librerie di Java SE. Queste interfacce e classi costituiscono l'API Java SE, che rappresenta l'interfaccia pubblica attraverso cui gli sviluppatori possono interagire con le funzionalità fornite da Java SE.
+
+Ad esempio l'interfaccia "Comparable" è un'interfaccia specifica utilizzata per definire un ordine naturale per un oggetto, mentre l'interfaccia pubblica di Java SE si riferisce all'interfaccia generale delle librerie e delle funzionalità fornite da Java SE.
+
+ "API" non è una libreria di Java. L'acronimo "API" sta per "Application Programming Interface" e si riferisce a un insieme di regole e protocolli che consentono a diverse componenti software di comunicare tra loro.
+
+"Comparable" non è un'API, ma è un'interfaccia inclusa nell'API di Java
+
+DIFFERENZA TRA API E LIBRERIE
+
+
+Le API (Application Programming Interfaces) e le librerie sono concetti correlati ma distinti nel contesto dello sviluppo software.
+
+API (Application Programming Interfaces):
+Un'API rappresenta un insieme di regole, protocolli e strumenti che definiscono come le componenti software possono interagire tra loro. Fornisce un'interfaccia pubblica che specifica le funzionalità disponibili e i modi in cui possono essere utilizzate. Un'API può includere definizioni di classi, interfacce, metodi, costanti e altre entità che consentono agli sviluppatori di utilizzare le funzionalità offerte da una determinata tecnologia o servizio.
+Le API definiscono un contratto tra il fornitore dell'API e il consumatore, stabilendo quali operazioni possono essere eseguite e come possono essere utilizzate. Possono essere utilizzate per interagire con servizi web, sistemi operativi, framework, librerie e molti altri componenti software.
+
+LIRERIE:
+Una libreria è un insieme di codice predefinito e riutilizzabile che fornisce una serie di funzioni o componenti pronte all'uso. Le librerie contengono spesso implementazioni di classi, interfacce e metodi che offrono funzionalità specifiche. Possono essere sviluppate da terze parti o fornite come parte di una piattaforma o di un linguaggio di programmazione.
+Le librerie semplificano lo sviluppo del software fornendo funzionalità comuni, permettendo agli sviluppatori di evitare la necessità di scrivere codice da zero. Possono includere funzioni per l'elaborazione delle stringhe, la gestione dei file, l'accesso ai database, l'interazione con l'interfaccia grafica e molte altre funzionalità.
+
+In sintesi, le API definiscono l'interfaccia di comunicazione e specificano le regole per l'interazione tra le componenti software, mentre le librerie sono collezioni di codice predefinito che forniscono funzionalità specifiche per semplificare lo sviluppo del software. Le API possono essere fornite all'interno di librerie o essere l'interfaccia pubblica di una libreria.
+
+IN SINTESI
+
+API: Immagina un'API come un menu di un ristorante. L'API definisce quali piatti (funzionalità) sono disponibili e come puoi ordinarli (interagire con essi). Ti fornisce una descrizione delle opzioni e delle regole da seguire per comunicare con il ristorante.
+
+Librerie: Le librerie sono come le ricette di cucina. Sono un insieme di istruzioni predefinite che ti aiutano a preparare un determinato tipo di cibo (funzionalità). Le librerie contengono il codice già scritto che puoi utilizzare nel tuo progetto senza doverlo reinventare.
+
+In breve, le API definiscono l'interfaccia (menu) per interagire con un sistema o un servizio, mentre le librerie sono collezioni di codice riutilizzabile (ricette) che forniscono funzionalità specifiche da utilizzare nel tuo progetto.
+
+INTERFACCE
+
+Le interfacce vengono spesso definite come "contratti" perché stabiliscono un accordo formale tra le classi che le implementano e i clienti che le utilizzano. Questo accordo specifica quali metodi devono essere implementati dalle classi che implementano l'interfaccia e quali comportamenti devono essere forniti.
+Quando una classe implementa un'interfaccia, essa accetta il contratto definito dall'interfaccia e si impegna a fornire l'implementazione dei metodi specificati. In altre parole, la classe "promette" di rispettare le specifiche dell'interfaccia e di fornire le funzionalità richieste.
+
+COSTANTI ESERCIZIO:
+Avrei potuto anche non dichiarare le costanti all'interno della classe ed utilizzare direttaemtne le chiavi come sono definite nel file config.properties:URL(chiave) = jdbc:mysql://localhost:3306/corso(valore) ma per una serie di motivi si preferisce farlo:
+Leggibilità e manutenibilità: Utilizzando costanti con nomi descrittivi come "URL", "USERNAME" e "PASSWORD", il codice diventa più leggibile e comprensibile per gli sviluppatori. Inoltre, se le chiavi delle proprietà dovessero cambiare in futuro, sarà sufficiente modificare le costanti nella classe "Main" anziché cercare e correggere tutte le occorrenze nel codice.
+
+Evitare errori di battitura: L'utilizzo di costanti riduce il rischio di errori di battitura quando si accede alle chiavi delle proprietà. Invece di scrivere manualmente le chiavi in ogni parte del codice, si fa riferimento alle costanti, che assicurano la correttezza e coerenza delle chiavi.
+
+Facilità di manutenzione: Se si desidera modificare una chiave delle proprietà nel file di configurazione, sarà sufficiente modificare la corrispondente costante nella classe "Main". Questo semplifica la manutenzione del codice, in quanto tutte le occorrenze delle costanti saranno automaticamente aggiornate.
+Un'altro motivo potrebbe essere che non conosco il nome delle chiavi che sono all'interno del file config.properties e quindi definendole nella classe le ho a disposizione.
+
+Le costanti non sono direttamente collegate al file "config.properties". Invece, vengono utilizzate come convenzioni nel codice per rappresentare le chiavi delle proprietà nel file di configurazione.
+Nel codice fornito, le costanti come URL, USERNAME e PASSWORD vengono dichiarate come variabili di tipo String nella classe "Main" e vengono assegnate alle stringhe corrispondenti alle chiavi del file "config.properties". Ad esempio:
+
+public static final String URL = "URL";
+public static final String USERNAME = "USERNAME";
+public static final String PASSWORD = "PASSWORD";
+
+Successivamente, nel codice principale, queste costanti vengono utilizzate come argomenti per il metodo getProperty() dell'oggetto Properties per recuperare i valori corrispondenti alle chiavi nel file di configurazione:
+
+
+String urlDB = p.getProperty(URL);
+String username = p.getProperty(USERNAME);
+String password = p.getProperty(PASSWORD);
+
+Quando viene chiamato il metodo getProperty(), l'oggetto Properties cerca all'interno del file "config.properties" la chiave corrispondente al valore della costante fornita come argomento e restituisce il valore associato a quella chiave.
+
+Quindi, le costanti vengono utilizzate come riferimenti per identificare le chiavi del file di configurazione in modo più leggibile e manutenibile nel codice, facilitando l'utilizzo delle proprietà senza dover utilizzare stringhe "hard-coded" e rischiare errori di battitura.
+Le "stringhe hard-coded" (o letteralmente codificate) si riferiscono alla pratica di utilizzare stringhe testuali direttamente nel codice sorgente senza assegnarle a una variabile o costante. Queste stringhe sono letteralmente "codificate duramente" nel codice e possono essere considerate "rigide" in quanto non possono essere facilmente modificate o gestite in un'unica posizione.
+esempio hardcoded:
+
+String username = "admin";
+String password = "password123";
+
+risoluzione con costanti
+
+public static final String USERNAME = "admin";
+public static final String PASSWORD = "password123";
+
+// ...
+
+String username = USERNAME;
+String password = PASSWORD;
+
+
+PROPERTIES
+La classe Properties in Java è utilizzata per gestire le proprietà di un'applicazione.
+Una proprietà è una coppia chiave-valore, dove sia la chiave che il valore sono stringhe.
+Le Properties offrono un modo per memorizzare configurazioni, impostazioni o altre informazioni di un'applicazione in modo persistente. 
+Queste proprietà possono essere salvate su disco o caricate da file di configurazione, e possono essere facilmente modificate.
+
+Nel codice fornito, le Properties vengono utilizzate per caricare le informazioni di configurazione da un file denominato "config.properties".
+ Questo file di configurazione contiene le informazioni necessarie per stabilire una connessione al database.
+Le Properties sono utilizzate per memorizzare coppie chiave-valore. In questo caso, il file di configurazione contiene le seguenti chiavi: "URL", "USERNAME" e "PASSWORD", che corrispondono all'URL del database, all'username e alla password per l'accesso al database.
+Il codice legge il file di configurazione utilizzando la classe FileInputStream e carica le informazioni di configurazione nelle Properties tramite il metodo load(). Successivamente, le informazioni di configurazione vengono recuperate utilizzando il metodo getProperty() passando come argomento le chiavi corrispondenti.
+Infine, viene stabilita una connessione al database utilizzando le informazioni di configurazione lette dal file di configurazione. Viene eseguita una query per selezionare il campo "titolo" dalla tabella "libri" e il risultato viene stampato sulla console.
+In sintesi, l'utilizzo delle Properties in questo codice consente di caricare le informazioni di configurazione da un file esterno e utilizzarle per stabilire una connessione al database.
+
+
+
+CONNECTION E STATEMENT
+
+La classe Connection in Java rappresenta una connessione attiva a un database. È parte del framework JDBC (Java Database Connectivity) e fornisce un'interfaccia per comunicare con un database.
+La classe Connection viene utilizzata per stabilire una connessione con un database specifico, consentendo di eseguire query e aggiornamenti dei dati. Offre i seguenti metodi principali:
+
+createStatement(): Restituisce un oggetto di tipo Statement che può essere utilizzato per eseguire query SQL statiche.
+
+prepareStatement(String sql): Restituisce un oggetto di tipo PreparedStatement che può essere utilizzato per eseguire query SQL parametriche, consentendo la sostituzione dei parametri con valori specifici.
+
+altri...
+
+Per utilizzare la classe Connection, è necessario ottenere un'istanza di Connection utilizzando un driver JDBC specifico per il database. Ad esempio, nel codice fornito, DriverManager.getConnection(urlDB, username, password) viene utilizzato per ottenere un'istanza di Connection utilizzando l'URL di connessione, il nome utente e la password forniti come argomenti.
+Una volta ottenuta la connessione, è possibile utilizzare gli oggetti Statement, PreparedStatement e CallableStatement per eseguire le query desiderate e interagire con il database.
+In sintesi, la classe Connection fornisce un'interfaccia per stabilire una connessione con un database e consente di eseguire query e aggiornamenti dei dati tramite oggetti Statement e le sue varianti.
+
+Nel codice fornito, la classe Connection viene utilizzata per stabilire una connessione al database utilizzando le informazioni di configurazione fornite nel file "config.properties".
+La connessione al database viene creata utilizzando il metodo DriverManager.getConnection(), al quale vengono passati tre parametri: l'URL del database, l'username e la password. Questi valori vengono estratti dalle Properties caricate dal file di configurazione.
+Dopo aver stabilito la connessione, è possibile creare un oggetto Statement utilizzando il metodo createStatement() della connessione. L'oggetto Statement viene utilizzato per eseguire le query e gli aggiornamenti nel database.
+
+DRIVER MANAGER
+Il DriverManager è una classe fornita dall'API JDBC di Java. Fa parte del pacchetto java.sql e viene utilizzato per gestire i driver JDBC e stabilire la connessione con un database.
+Il DriverManager fornisce metodi statici per registrare e ottenere i driver JDBC necessari per la connessione a un database specifico. Questi driver sono forniti dai vendor dei database e devono essere inclusi nel classpath dell'applicazione per poter essere utilizzati.
+Drive manager viene utilizzata per ottenere un'istanza della classe Connection utilizzando l'URL di connessione, il nome utente e la password.
+Nel codice fornito, la linea Connection conn = DriverManager.getConnection(urlDB, username, password); è responsabile per ottenere una connessione al database utilizzando il driver JDBC appropriato.
+La classe DriverManager fornisce un'interfaccia(chiamata driver) per gestire i driver JDBC disponibili nel sistema e per ottenere istanze di Connection che rappresentano connessioni al database. Il metodo getConnection(url, username, password) di DriverManager viene utilizzato per creare una connessione al database specificato dall'URL di connessione, nome utente e password forniti come argomenti.
+Quindi, la riga di codice Connection conn = DriverManager.getConnection(urlDB, username, password); crea un oggetto di tipo Connection che rappresenta la connessione al database specificato, e tale oggetto viene assegnato alla variabile conn.
+In sostanza, DriverManager è utilizzato per gestire i driver JDBC, mentre Connection rappresenta una connessione attiva al database ottenuta tramite DriverManager.
+
+STATEMENT
+Statement è uninterfaccia in Java. Fa parte del framework JDBC (Java Database Connectivity) e viene utilizzata per eseguire le istruzioni SQL sul database tramite una connessione.
+L'interfaccia Statement fornisce metodi per eseguire query SQL statiche senza parametri. Alcuni dei metodi più comuni offerti da Statement includono:
+
+executeQuery(String sql): Esegue una query SQL che restituisce un oggetto ResultSet contenente i risultati della query.
+
+executeUpdate(String sql): Esegue un'istruzione SQL che modifica i dati nel database, come INSERT, UPDATE o DELETE. Restituisce il numero di righe interessate dalla modifica.
+
+execute(String sql): Esegue un'istruzione SQL che può essere una query o un'istruzione di aggiornamento dei dati. Restituisce un valore booleano che indica se l'istruzione è un risultato di query (true) o un'istruzione di aggiornamento dei dati (false).
+
+close(): Chiude l'oggetto Statement e rilascia le risorse associate ad esso.
+
+Tuttavia, la classe Statement non supporta le query SQL parametriche, ovvero query con parametri dinamici. Per le query parametriche, è consigliabile utilizzare la classe PreparedStatement, che estende la classe Statement e offre funzionalità per gestire i parametri.
+In sintesi, Statement è una classe che fornisce metodi per eseguire le istruzioni SQL statiche sul database.
+
+RESULTSET
+Nel contesto della programmazione con database, l'interfaccia ResultSet rappresenta un insieme di risultati ottenuti da un'operazione di query eseguita su un database. Fornisce metodi per accedere e manipolare i dati all'interno del risultato.
+Quando si esegue una query utilizzando un oggetto Statement, il metodo executeQuery() restituisce un oggetto ResultSet che rappresenta i risultati della query. L'oggetto ResultSet contiene una tabella virtuale che rappresenta il set di risultati restituiti dal database.
+In questo specifico caso, viene utilizzato l'oggetto ResultSet per ottenere i risultati di una query che seleziona il titolo dei libri dalla tabella "libri" nel database.
+La riga di codice ResultSet rs = stmt.executeQuery("select titolo from corso.libri"); esegue la query specificata, che seleziona il titolo dei libri dalla tabella "libri" nel database. Il risultato della query viene assegnato all'oggetto ResultSet denominato rs.
+Successivamente, viene utilizzato un ciclo while(rs.next()) per iterare attraverso i record nel ResultSet. Il metodo next() sposta il cursore del ResultSet al prossimo record disponibile. All'interno del ciclo, viene utilizzato il metodo getString(1) per ottenere il valore della colonna 1 (nel nostro caso, la colonna "titolo") del record corrente come una stringa.
+La riga System.out.println(rs.getString(1)); stampa il valore del titolo del libro corrente sulla console.
+In sintesi, il codice esegue una query per selezionare i titoli dei libri dalla tabella nel database e li stampa sulla console utilizzando un oggetto ResultSet.rrispondono all'URL del database, all'username e alla password per l'accesso al database.
+In definitiva, ResultSet fornisce un modo per iterare sui risultati di una query e accedere ai dati in modo sequenziale, simile a un iteratore.
+
+

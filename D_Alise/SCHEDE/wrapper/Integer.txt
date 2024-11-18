@@ -1,0 +1,35 @@
+Name: Integer
+Package: java.lang
+
+Descrizione:
+La classe Integer racchiude (wrap) un valore primitivo di tipo int in un oggetto. Un oggetto di tipo Integer contiene un singolo field (proprietà,attributo,istanza di classe) di cui tipo è int. In più questa classe è provvista di diversi metodi per convertire un int in un String e un String in un int e di sfruttare al suo interno costanti e metodi che non potrebbero essere utilizzati con un tipo primitivo.
+
+Costruttori:
+
+- Integer(int value): costruisce un un nuovo oggetto Integer con uno specifico valore int.
+
+- Integer(String s): costruisce un nuovo oggetto Integer che rappresenta un valore int tramite un parametro String..
+
+Metodi:
+
+valueOf(String s): Ci restituisce un oggetto Integer mantenendo il valore specificato in String
+
+parse(String s): Ci restituisce una variabile primitiva mantendendo il valore specificato in String
+
+intValue(): ci restituisce il valore dell'Integer in int primitivo.
+
+doubleValue(): ci restituisce il valore dell'Integer in primitivo double.
+
+longValue(): ci restituisce il valore dell'Integer in primitivo long.
+
+floatValue(): ci restituisce il valore dell'Integer in primitivo float.
+
+floatValue(): ci restituisce il valore dell'Integer in primitivo short.
+
+Fields o proprietà o attributi o metodi di classe:
+
+Integer.MIN_VALUE: prende il valore massimo che un int può avere(2 alla 31-1).
+
+Integer.MAX_VALUE: prende il valore minimo che un int può avere(-2 alla 31).
+
+Integer.SIZE restituisce il numero di bit per rappresentarlo in un valore int.

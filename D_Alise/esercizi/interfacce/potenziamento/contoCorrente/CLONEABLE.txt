@@ -1,0 +1,97 @@
+INTERFACCIA CLONEABLE
+
+In Java le variabili e i campi contengono referenze a oggetti; usando l’usuale assegnazione non si ha una copia dell’oggetto (deep copy) ma una copia delle referenza (shallow copy) che porta a una condivisione di memoria. Per evitare questo è possibile clonare un oggetto sfruttando il metodo clone di Object e l’interfaccia Cloneable.
+
+L’assegnamento può essere usato senza side effects in due casi:
+
+    tipi primitivi: quando si usano tipi primitivi non viene valorizzata la referenza ma il valore. Eseguendo un assegnamento si copia quindi il valore;
+    oggetti immutabili: alcuni oggetti Java (per esempio String) sono immutabili: una volta costruiti non possono cambiare il proprio stato interno (il valore dei campi). Eseguendo un assegnamento fra due oggetti immutabili si ha una condivisione di memoria che però non crea problemi in quanto l’oggetto condiviso non può essere modificato.
+
+Cloneable e clone
+
+La classe Object contiene un metodo clone con la seguente signature:
+
+protected Object clone() throws CloneNotSupportedException
+
+Possiamo notare tre cose importanti dalla firma di questo metodo:
+
+    il metodo è protected e quindi può essere invocato solo dalle sottoclassi;
+    ritorna un Object;
+    può lanciare una eccezione CloneNotSupportedException.
+
+L’interfaccia Cloneable è ancora più strana: dal nome ci aspetteremmo di trovare al suo interno un metodo clone mentre invece non contiene neanche un metodo!
+Cerchiamo di mettere un po’ di ordine: l’interfaccia Cloneable non contiene metodi in quanto è una interfaccia marker (allo stesso modo dell’interfaccia Serializable) implementando la quale si esplicita il fatto che un oggetto può essere clonato.
+L’eccezione CloneNotSupportedException viene lanciata dal metodo clone di Object se l’oggetto su cui è invocato il metodo non implementa questa interfaccia.
+Implementazione di Cloneable
+
+Vediamo come implementare correttamente la Cloneable: prendiamo una classe Persona con tre campi:
+
+public class Persona {
+	private final String nome;
+	private final String cognome;
+	private final String indirizzo;
+	//getter e setter
+}
+
+Una implementazione semplice è questa:
+
+public class Persona implements Cloneable {
+	private final String nome;
+	private final String cognome;
+	private final String indirizzo;
+	@Override
+	protected Object clone() throws CloneNotSupportedException {
+		return super.clone();
+	}
+	//getter e setter
+}
+
+Questa implementazione non è comoda da usare: è protected, ritorna un Object e lancia una eccezione che deve essere gestita.
+Per risolvere questi problemi riscriviamo il metodo con qualche accortezza:
+
+public Persona clone() {
+	try {
+		return (Persona) super.clone();
+	} catch (CloneNotSupportedException e) {
+		throw new RuntimeException(e);
+	}
+}
+
+In pratica abbiamo:
+
+    reso il metodo public in modo da porterlo invocare ovunque;
+    cambiato il tipo di ritorno del metodo (questa cosa può essere fatta solo se utilizza un jdk successivo alla versione 1.5) e aggiunto il cast dentro il metodo;
+    aggiunto un blocco try catch dentro il metodo, avendo implementato l’interfaccia Cloneable l’eccezione non verrà mai lanciata.
+
+In questo modo l’implementazione è un po’ più complicata, ma l’invocazione del metodo è molto più semplice. Infatti è sufficiente scrivere:
+
+Persona p1 = new Persona("Mario", "Rossi", "Via Firenze 1");
+Persona p2 = p1.clone();
+p1.setCognome("Verdi");
+System.out.println(!p1.getCognome().equals(p2.getCognome()));
+
+Clone di oggetti complessi
+
+L’implementazione standard di clone crea un nuovo oggetto e copia campo per campo i valori (l’effetto finale è quello di una assegnazione su ogni campo). La classe Persona di questo esempio conteneva tre campi di tipo String (classe immutabile) e quindi non ci sono stati problemi. Cambiamo le cose aggiungendo un campo java.util.Date con la data di nascita; stranamente l’oggetto Date non è immutabile in quanto contiene un metodo setTime (e altri metodi deprecati) che consente di cambiare il valore. Vediamo un esempio:
+
+Persona p1 = new Persona("Mario", "Rossi", "Via Firenze 1", new GregorianCalendar(2000, 0, 1).getTime());
+Persona p2 = p1.clone();
+p1.getDataDiNascita().setTime(System.currentTimeMillis());
+System.out.println(p1.getDataDiNascita().equals(p2.getDataDiNascita()));
+
+In questo caso abbiamo avuto una condivisione di memoria non voluta, cambiando un oggetto è stato modificato anche l’oggetto creato con il metodo clone. Per evitare questo problema riscriviamo il metodo clone:
+
+public Persona clone() {
+	try {
+		Persona p = (Persona) super.clone();
+		p.dataDiNascita = (Date) dataDiNascita.clone();
+		return p;
+	} catch (CloneNotSupportedException e) {
+		throw new RuntimeException(e);
+	}
+}
+
+In pratica l’implementazione corretta deve, dopo aver invocato super.clone(), clonare tutti i campi non primitivi e non immutabili per evitare condivisioni di memoria.
+Conclusioni
+
+Abbiamo visto in questo breve tutorial come implementare il metodo clone, ma conviene usare questo metodo invece di scrivere un semplice metodo copia in cui si copiano manualmente i campi che vogliamo? Ovviamente dipende dalla logica che vogliamo implementare, usando il metodo clone si ha il vantaggio di non dover clonare manualmente tutti i campi. Scrivendo un metodo custom c’è da scrivere più codice ma abbiamo anche una maggiore libertà nello scegliere cosa (e come) copiare

@@ -1,0 +1,63 @@
+COSTRUTTORE
+Il costruttore di una classe è un metodo speciale che viene chiamato quando si crea una nuova istanza della classe. 
+Il suo compito principale è di inizializzare le variabili di istanza dell'oggetto.
+Anche se puoi dichiarare le variabili di istanza con un valore di default quando le definisci, come ad esempio int myVar = 0;, 
+spesso è necessario assegnare valori diversi a queste variabili per ogni istanza della classe. 
+In questo caso, il costruttore viene utilizzato per inizializzare queste variabili di istanza.
+Quindi, in generale, il costruttore è spesso necessario quando si lavora con variabili di istanza, 
+anche se può essere vuoto se le variabili di istanza sono inizializzate con un valore di default e 
+non è necessario eseguire ulteriori operazioni all'interno del costruttore.
+
+SUPER
+La parola chiave super è utilizzata per riferirsi agli elementi (metodi, proprietà e variabili) della classe base. 
+Come per l’operatore this, anche super, viene utilizzato sia per le variabili (super.variabile), per invocare i metodi (super.metodo()), 
+per richiamare un costruttore da un costruttore secondario (super()). 
+È possibile riferirsi solo agli elementi contenuti nella classe base, non è consentito pertanto utilizzare super.super.variabile. 
+Se da una superclasse si ereditano degli elementi visibili, questi diventano degli elementi a tutti gli effetti della classe, 
+di conseguenza saranno accessibili anche tramite super.
+Il super in pratica sovrascrive il costruttore precedente(anche per il metodo e le variabili) fa una spece di override. Esempio ad una classe animale che ha il metodo faiVerso e il costruttore che riceve la variabile di istanza String verso vuota (non potendo specificare il tipo di verso generico dell'animale) se noi ad esempio nella sottaclasse Cane vogliamo definire il verso possiamo fare in due modi o tramite il super("bau") e cosi sovrascriviamo il paramentro String verso della classe animale oppure possiamo mettere String verso = "bau" nella variabile di istanza di Cane a questo punto però il costruttore di Animale non sarà più necessario se abbiamo solo la classe Cane e stiamo definendo il verso in questo modo. 
+
+STATIC
+Ricorda che l'attributo static lo usi o tra metodi statici o per le variabile statiche e devono essere all'interno di metodi statici come 
+il main.
+Le variabili di classe sono condivise da tutte le istanze della classe e vengono dichiarate con la parola chiave "static". 
+Questo significa che le variabili di classe vengono allocate una sola volta, indipendentemente dal numero di istanze della classe.
+
+Gli oggetti che creiamo possono avere delle variabili d'istanza che rappresentano lo stato
+dell'oggetto.
+Tali variabili se pubbliche sono richiamabili tramite l'istanza dell'oggetto se siamo in classi esterne.
+Invece se siamo all'interno della stessa classe è possibile utilizzarle da tutti i metodi non statici, e nel
+caso andassero in conflitto con gli identificatori delle variabili del metodo si possono distinguere
+tramite la keyword this.
+
+VARIABILI DI ISTANZA E DI CLASSE
+Le variabili di istanza sono definite all'interno di una classe, ma all'esterno di qualsiasi metodo.
+Sono differenti dalle variabili di classe cha hanno la keyword static.
+
+In sintesi, le variabili di istanza vengono utilizzate per conservare dati specifici per ogni istanza della classe, 
+mentre le variabili di classe vengono utilizzate per conservare dati condivisi da tutte le istanze della classe.
+
+Per contare il numero di istanze che vengono create della tua classe X, dovresti utilizzare una variabile di classe, in quanto questa viene condivisa da tutte le istanze della classe. In questo modo, ogni volta che viene creata una nuova istanza della classe X, puoi incrementare il valore della variabile di classe per tener traccia del numero di istanze attive.
+
+Ad esempio, potresti definire una variabile di classe numIstanze nella classe X e utilizzare un costruttore per incrementare il valore della variabile ogni volta che viene creata una nuova istanza della classe. Puoi quindi definire un metodo di classe getNumIstanze() per restituire il valore corrente della variabile di classe.
+
+public class X {
+    private static int numIstanze = 0; // variabile di classe
+
+    public X() {
+        numIstanze++; // incrementa la variabile di classe ogni volta che viene creato un nuovo oggetto
+    }
+
+    public static int getNumIstanze() {
+        return numIstanze; // restituisce il numero di istanze attive
+    }
+}
+
+UTILIZZO DEL THIS
+Il this non è necessario serve solo a distinguere una variabile di istanza corrente da una preimpostata
+In una classe, possono esistere variabili di istanza, variabili di classe e variabili locali,
+e spesso è necessario distinguere tra di esse in modo esplicito.
+Quando si utilizza this per riferirsi a una variabile di istanza, 
+si specifica in modo inequivocabile che si sta facendo riferimento alla variabile dell'istanza corrente della classe.
+Questo è particolarmente utile quando si lavora con classi complesse che hanno molte variabili di istanza o quando si utilizzano 
+nomi di variabili che possono essere ambigui o difficili da capire senza un contesto chiaro.

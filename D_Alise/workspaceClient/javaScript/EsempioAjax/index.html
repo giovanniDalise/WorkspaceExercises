@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <script>
+            let xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    let sezioneLibri = document.getElementById("libri");
+                    let arrayLibri = JSON.parse(this.responseText);
+                    arrayLibri.forEach(libro => {
+                        console.log(libro);
+                        sezioneLibri.innerHTML += JSON.stringify(libro) + "<br>";
+                    });
+                    xhttp.responsetext
+                }
+            };
+            xhttp.open("GET", "http://localhost:3003/libri", true);
+            xhttp.send();
+        </script>
+    </head>
+    <body>
+        <main>
+            <section><h1>Elenco Libri biblioteca</h1></section>
+            <section id="libri">
+            </section>
+        </main>
+    </body>
+</html>

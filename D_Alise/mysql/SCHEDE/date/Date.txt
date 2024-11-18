@@ -1,0 +1,61 @@
+Name:Date
+Package:java.util
+
+Descrizione:
+La classe Date rappresenta uno specifico istante di tempo, con precisione al millisecondo.
+
+Prima di JDK 1.1, la classe Date aveva due funzioni aggiuntive. Ha consentito l'interpretazione delle date come valori di anno, mese, giorno, ora, minuto e secondo. Ha anche consentito la formattazione e l'analisi delle stringhe di data. Sfortunatamente, l'API per queste funzioni non era suscettibile di internazionalizzazione. A partire da JDK 1.1, la classe Calendar deve essere utilizzata per la conversione tra i campi data e ora e la classe DateFormat deve essere utilizzata per formattare e analizzare le stringhe di data. I metodi corrispondenti in Date sono deprecati.
+
+Sebbene la classe Date abbia lo scopo di riflettere l'ora UTC (Coordinated Universal Time), potrebbe non farlo esattamente, a seconda dell'ambiente host della Java Virtual Machine. Quasi tutti i sistemi operativi moderni assumono che 1 giorno = 24 × 60 × 60 = 86400 secondi in tutti i casi. In UTC, tuttavia, circa una o due volte all'anno c'è un secondo in più, chiamato "secondo intercalare". Il secondo intercalare viene sempre aggiunto come ultimo secondo della giornata, e sempre il 31 dicembre o il 30 giugno. Ad esempio, l'ultimo minuto dell'anno 1995 era lungo 61 secondi, grazie all'aggiunta di un secondo intercalare. La maggior parte degli orologi dei computer non è sufficientemente precisa per poter riflettere la distinzione del secondo intercalare.
+
+Alcuni standard informatici sono definiti in termini di Greenwich Mean Time (GMT), che è equivalente all'ora universale (UT). GMT è il nome "civile" dello standard; UT è il nome "scientifico" dello stesso standard. La distinzione tra UTC e UT è che l'UTC si basa su un orologio atomico e l'UT si basa su osservazioni astronomiche, che per tutti gli scopi pratici è un capello invisibilmente sottile da dividere. Poiché la rotazione terrestre non è uniforme (rallenta e accelera in modi complicati), l'UT non scorre sempre uniformemente. I secondi intercalari vengono introdotti secondo necessità in UTC in modo da mantenere UTC entro 0,9 secondi da UT1, che è una versione di UT con alcune correzioni applicate. Esistono anche altri sistemi di data e ora; ad esempio, la scala temporale utilizzata dal sistema di posizionamento globale (GPS) basato su satellite è sincronizzata con l'ora UTC ma non viene regolata per i secondi intercalari. Un'interessante fonte di ulteriori informazioni è l'Osservatorio navale degli Stati Uniti, in particolare la Direzione del tempo a:
+
+         http://tycho.usno.navy.mil
+     
+
+e le loro definizioni di "Sistemi di tempo" in:
+
+         http://tycho.usno.navy.mil/systime.html
+
+In tutti i metodi della classe Date che accettano o restituiscono valori di anno, mese, data, ore, minuti e secondi, vengono utilizzate le seguenti rappresentazioni:
+
+    Un anno y è rappresentato dall'intero y - 1900.
+    Un mese è rappresentato da un numero intero compreso tra 0 e 11; 0 è gennaio, 1 è febbraio e così via; quindi l'11 è dicembre.
+    Una data (giorno del mese) è rappresentata da un numero intero da 1 a 31 nel solito modo.
+    Un'ora è rappresentata da un numero intero compreso tra 0 e 23. Pertanto, l'ora da mezzanotte all'una di notte è l'ora 0 e l'ora da mezzogiorno alle 13:00. è l'ora 12.
+    Un minuto è rappresentato da un numero intero da 0 a 59 nel solito modo.
+    Un secondo è rappresentato da un numero intero compreso tra 0 e 61; i valori 60 e 61 si verificano solo per i secondi intercalari e anche in questo caso solo nelle implementazioni Java che effettivamente tracciano correttamente i secondi intercalari. A causa del modo in cui vengono attualmente introdotti i secondi intercalari, è estremamente improbabile che si verifichino due secondi intercalari nello stesso minuto, ma questa specifica segue le convenzioni di data e ora per ISO C.
+
+In tutti i casi, le argomentazioni fornite ai metodi per questi scopi non devono rientrare negli intervalli indicati; ad esempio, una data può essere specificata come 32 gennaio e viene interpretata nel senso del 1 febbraio.
+
+Costruttori:
+Date():
+Alloca un oggetto Date e lo inizializza in modo che rappresenti l'ora in cui è stato allocato, misurata al millisecondo più vicino.
+
+Metodi:
+after(Date when):
+Verifica se questa data è successiva alla data specificata.
+
+before(Date when):
+Italiano
+
+Verifica se questa data è precedente alla data specificata
+
+clone():
+Restituisce una copia di questo oggetto
+
+compareTo(Date anotherDate):
+Confronta due date per l'ordinazione
+
+equals(Object obj):
+Confronta due date per verificarne l'uguaglianza.
+
+toInstant()
+Converte questo oggetto Date in un Instant.
+
+toString()
+Converte questo oggetto Date in una stringa del formato:
+
+setTime(long time)
+Imposta questo oggetto Date per rappresentare un punto nel tempo che è il tempo in millisecondi dopo il 1° gennaio 1970 00:00:00 GMT.N
+

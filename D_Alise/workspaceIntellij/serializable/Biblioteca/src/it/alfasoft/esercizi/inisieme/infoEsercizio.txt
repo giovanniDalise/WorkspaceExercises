@@ -1,0 +1,180 @@
+SPIEGAZIONE ESERCIZIO:
+
+INTERFACCIA SERIALIZABLE:
+
+L'implementazione dell'interfaccia Serializable è necessaria solo per le classi che desideri serializzare. Quando una classe implementa Serializable, indica che le sue istanze possono essere convertite in una sequenza di byte e quindi serializzate, ovvero salvate su un file, trasmesse attraverso una rete o memorizzate in un database.
+
+Nel caso del tuo codice, implementi Serializable sulla classe Libro perché desideri serializzare gli oggetti di tipo Libro. Questo ti consente di salvare un oggetto Libro su disco o trasmetterlo attraverso una rete come dati serializzati.
+
+D'altro canto, la classe Biblioteca contiene una lista di oggetti Libro ma non viene serializzata direttamente. La serializzazione di Biblioteca non è necessaria se il tuo scopo è solo salvare o caricare la lista dei libri. Invece, Biblioteca può gestire la serializzazione dei singoli oggetti Libro all'interno della lista.
+
+Se desideri serializzare anche la classe Biblioteca, dovresti implementare Serializable sulla classe Biblioteca stessa. Tuttavia, devi tenere presente che la serializzazione di una classe comporta anche la serializzazione di tutti i campi della classe, inclusa la lista di libri. Questo può influire sulle dimensioni del file serializzato e sulla gestione dei riferimenti tra oggetti serializzati.
+
+COSTANTE: String DATI_BIBLIOTECA_SER 
+
+Questa variabile è dichiarata come public, che significa che può essere accessibile da qualsiasi classe esterna. È anche dichiarata come static, il che significa che la variabile appartiene alla classe stessa anziché a un'istanza specifica della classe. Ciò consente di accedere alla variabile senza dover creare un'istanza della classe Biblioteca.
+
+Infine, la variabile è dichiarata come final(infatti è una costante), il che significa che il suo valore non può essere modificato dopo l'inizializzazione. In questo caso, la variabile è inizializzata con la stringa "datiBiblioteca.ser".
+
+La stringa "datiBiblioteca.ser" rappresenta il nome del file in cui i dati della biblioteca vengono serializzati e salvati. È un nome di file arbitrario scelto dal programmatore. Quando il codice accede al file per caricare o salvare i dati della biblioteca, utilizza questa variabile per fare riferimento al nome del file, rendendo più facile la modifica del nome del file in un'unica posizione all'interno del codice, se necessario.
+
+
+
+EXCEPTIONS:
+
+extends Throvable:
+
+L'estensione di Throwable nelle eccezioni personalizzate serve per indicare che queste eccezioni sono sottoclassi dirette di Throwable, che è la superclasse di tutte le eccezioni in Java.
+
+La classe Throwable rappresenta una condizione anomala o un evento eccezionale che può essere lanciato da un metodo. Sia le eccezioni che gli errori estendono Throwable, il che consente di trattare entrambi i tipi nello stesso modo. Tuttavia, le eccezioni sono generalmente utilizzate per rappresentare situazioni recuperabili, mentre gli errori indicano situazioni irrecuperabili o critiche per l'applicazione.
+
+Quando si definisce una nuova eccezione personalizzata, estendere Throwable (o una sua sottoclasse come Exception o RuntimeException) consente di sfruttare la gerarchia delle eccezioni di Java. Ciò significa che la tua eccezione personalizzata eredita i metodi e i comportamenti definiti nella classe Throwable e nelle sue sottoclassi.
+
+Ad esempio, Throwable fornisce i metodi getMessage(), printStackTrace(), getCause(), che possono essere utilizzati per ottenere informazioni sull'eccezione e gestirla correttamente. Inoltre, estendendo Throwable, la tua eccezione personalizzata può essere lanciata, catturata e gestita come qualsiasi altra eccezione in Java.
+
+In sintesi, estendere Throwable nella definizione di eccezioni personalizzate consente di sfruttare la struttura gerarchica delle eccezioni in Java e fornisce i metodi standard per la gestione e la propagazione delle eccezioni.
+
+
+
+FileNotFoundException:
+
+FileNotFoundException è un'eccezione controllata(checked) che viene lanciata quando un'applicazione tenta di aprire un file che non esiste.
+
+Nell'esercizio la FileNotFoundException viene gestita nel metodo caricaFile(anche in salvaFile). Questo metodo tenta di aprire il file specificato da DATI_BIBLIOTECA_SER utilizzando un FileInputStream. Se il file non viene trovato nel percorso specificato, viene sollevata la FileNotFoundException.
+
+La gestione dell'eccezione prevede la stampa della traccia degli errori utilizzando il metodo printStackTrace(). Questo fornisce informazioni dettagliate sull'errore che è stato generato, compreso il percorso del file che non è stato trovato.
+
+La ragione per cui viene gestita questa eccezione è che se il file della biblioteca non viene trovato, l'applicazione non sarà in grado di caricare i dati della biblioteca correttamente. Pertanto, l'eccezione viene catturata per permettere all'applicazione di gestire il problema in modo appropriato, ad esempio visualizzando un messaggio di errore o eseguendo un'azione alternativa.
+
+
+IOException:
+
+L'utilizzo di IOException nella dichiarazione del metodo caricaFile e salvaFile indica che questi metodi possono generare un'eccezione di tipo IOException. L'IOException è una classe di eccezioni che rappresenta un'eccezione di input/output, che può verificarsi quando si lavora con flussi di dati, come la lettura o la scrittura di file.
+
+Nel contesto dei metodi caricaFile e salvaFile, le operazioni coinvolgono la lettura o la scrittura di file utilizzando FileInputStream e FileOutputStream rispettivamente, che sono classi che potrebbero generare un'IOException se si verificano errori durante le operazioni di input/output.
+
+L'uso di IOException nel blocco catch del codice permette di gestire eventuali errori che si verificano durante la lettura o la scrittura dei file. Nel caso in cui si verifichi un'IOException, il codice all'interno del blocco catch viene eseguito per gestire l'errore, ad esempio visualizzare un messaggio di errore o eseguire azioni correttive.
+
+In breve, l'utilizzo di IOException nella dichiarazione dei metodi indica che questi metodi possono sollevare un'eccezione di tipo IOException e che il codice deve gestire tali eccezioni in modo appropriato.
+
+
+
+ECCEZIONE PERSONALIZZATA: SalvataggioException
+
+L'Exception personalizzata SalvataggioException  che estende Throwable viene lanciata nel metodo salvaFile per segnalare un problema durante il salvataggio dei dati della biblioteca.
+
+Nel contesto del codice, se si verifica un'eccezione di tipo FileNotFoundException o IOException durante la scrittura del file, viene stampata la traccia degli errori e viene lanciata una SalvataggioException
+
+Throwable è la superclasse di tutte le eccezioni in Java. Estendendo Throwable, la classe SalvataggioException diventa una classe di eccezioni personalizzata che può essere utilizzata per gestire specifici errori o situazioni di salvataggio nel contesto dell'applicazione.
+
+In sostanza, la SalvataggioException viene utilizzata per segnalare che si è verificato un problema durante il salvataggio dei dati della biblioteca, consentendo al chiamante del metodo salvaFile di gestire l'eccezione in modo appropriato. Ad esempio, il chiamante potrebbe visualizzare un messaggio di errore specifico per l'utente o eseguire azioni alternative per affrontare l'errore di salvataggio dei dati(cosa che non abbiamo fatto con DeserializationException ma non qui).
+
+
+ClassNotFoundException:
+
+Il blocco catch (ClassNotFoundException e) nel metodo caricaFile gestisce un'eccezione di tipo ClassNotFoundException. Questa eccezione viene sollevata quando si tenta di deserializzare un oggetto e non viene trovata la classe corrispondente.
+
+Nel contesto del codice fornito, se durante la deserializzazione del file viene incontrata un'istanza di classe non prevista, viene sollevata un'eccezione ClassNotFoundException. Questo può accadere se il file serializzato contiene dati che sono stati serializzati utilizzando classi che sono state modificate o rimosse dal programma.
+
+All'interno del blocco catch, viene eseguito del codice per gestire l'eccezione. Nel caso specifico, viene stampata la traccia degli errori utilizzando il metodo printStackTrace(). Questo consente di visualizzare le informazioni sull'eccezione, come il tipo di eccezione e la traccia degli errori, che fornisce dettagli sul punto in cui si è verificato l'errore.
+
+
+ECCEZIONE PERSONALIZZATA: DeserializationException
+
+Infine, viene lanciata una DeserializationException personalizzata con un messaggio di errore specifico, che estende l'eccezione Throwable. Questo permette di segnalare l'errore al chiamante del metodo caricaFile, consentendo loro di gestire l'eccezione in modo appropriato.
+Nella classe DeserializationException infatti abbiamo il costruttore che accetta una stringa come parametro, che rappresenta il messaggio di errore associato all'eccezione. Il costruttore utilizza la parola chiave super per richiamare il costruttore della classe genitore, Throwable, passando la stringa come argomento. In questo modo, il messaggio di errore viene inizializzato correttamente nella superclasse Throwable.
+
+TRY-WITH-RESOURCES
+
+Consente di dichiarare e inizializzare una risorsa all'interno di un blocco try e garantisce che la risorsa venga chiusa automaticamente alla fine del blocco try, indipendentemente dal fatto che si sia verificata un'eccezione o meno.
+
+Nel metodo salvaFile, viene utilizzato il try-with-resources per garantire che il FileOutputStream venga chiuso correttamente dopo che l'operazione di scrittura è stata completata. Ciò è realizzato attraverso la sintassi try (risorsa).
+In questo caso, il FileOutputStream viene aperto e inizializzato all'interno del blocco try. Alla fine del blocco try, indipendentemente dal fatto che si sia verificata un'eccezione o meno, la risorsa (FileOutputStream) verrà automaticamente chiusa correttamente grazie al meccanismo del try-with-resources.
+
+Ciò semplifica la gestione delle risorse, eliminando la necessità di chiudere manualmente la risorsa utilizzando il blocco finally o il metodo close(). Inoltre, in caso di eccezione, l'eccezione originale viene propagata e l'eccezione generata dalla chiusura della risorsa viene soppressa.
+
+Per utilizzare il try-with-resources è necessario implementare l'interfaccia Autoclosable e in questo caso abbiamo FileInputStrem,FileOutputStream,ObjectOutputStrem e ObjectInputStream che la implementano.
+
+
+
+CASTING del metodo caricaFile:
+
+Il casting libriCaricati = (List<Libro>) inputStream.readObject(); viene utilizzato per convertire l'oggetto letto dal flusso di input (inputStream) in un tipo specifico, che in questo caso è List<Libro>.
+
+Il metodo readObject() del ObjectInputStream legge un oggetto dal flusso di input e restituisce un valore di tipo Object. Tuttavia, poiché si sa che l'oggetto letto rappresenta una lista di libri (List<Libro>), è necessario eseguire il casting per convertirlo esplicitamente nel tipo corretto.
+
+Nel tuo codice, si suppone che l'oggetto letto dal flusso sia una lista di libri. Pertanto, viene eseguito il casting (List<Libro>) per assegnare l'oggetto letto alla variabile libriCaricati di tipo List<Libro>. Questo consente di utilizzare l'oggetto come una lista di libri e accedere ai suoi elementi.
+
+Tuttavia, è importante fare attenzione quando si effettua il casting, poiché può verificarsi una ClassCastException se l'oggetto letto non è effettivamente una lista di libri. È consigliabile eseguire controlli di tipo o gestire l'eccezione in modo appropriato per evitare potenziali problemi durante l'esecuzione del programma.
+
+
+
+SPIEGAZIONE METODI 
+
+
+caricaFile(): 
+
+List<Libro> libriCaricati = new ArrayList<Libro>();:
+Viene creata una nuova lista vuota di libri chiamata libriCaricati. Questa lista verrà utilizzata per memorizzare i libri letti dal file.
+
+
+try(FileInputStream fileInput = new FileInputStream(DATI_BIBLIOTECA_SER)){:
+Inizia un blocco try con il file DATI_BIBLIOTECA_SER che viene aperto come flusso di input (FileInputStream). Utilizzando il costruttore FileInputStream, viene aperto il file specificato e viene creato un oggetto fileInput che rappresenta il flusso di input per quel file.
+
+
+ObjectInputStream inputStream = new ObjectInputStream(fileInput);:
+Viene creato un ObjectInputStream chiamato inputStream, che viene utilizzato per leggere gli oggetti dal flusso di input fileInput. L'ObjectInputStream è un tipo di flusso di input che può leggere oggetti serializzati.
+
+
+libriCaricati = (List<Libro>) inputStream.readObject();:
+L'oggetto inputStream legge un oggetto dal flusso di input e viene eseguito un casting per convertirlo nel tipo List<Libro>. Poiché readObject() restituisce un valore di tipo Object, è necessario eseguire il casting per specificare che si tratta di una lista di libri. L'oggetto letto viene quindi assegnato alla variabile libriCaricati.
+
+
+Questa sequenza di istruzioni carica i dati dal file DATI_BIBLIOTECA_SER, legge l'oggetto serializzato dal flusso di input e lo converte in una lista di libri, che viene memorizzata nella variabile libriCaricati.
+
+this.libri = libriCaricati; 
+assegna il valore della variabile libriCaricati alla variabile libri dell'istanza corrente della classe Biblioteca.
+Nel contesto del metodo caricaFile(), libriCaricati è la lista di libri letti dal file e this.libri è la lista dei libri della biblioteca corrente. Attraverso questa assegnazione, la lista di libri letti viene memorizzata nella lista dei libri della biblioteca, sovrascrivendo eventuali libri già presenti.
+In altre parole, questa riga aggiorna la lista dei libri della biblioteca con i libri letti dal file, in modo che la biblioteca rifletta lo stato dei libri salvati nel file.
+
+
+
+salvaFile():
+
+try(FileOutputStream fileOutput = new FileOutputStream(DATI_BIBLIOTECA_SER)){: 
+Inizia un blocco try con il file DATI_BIBLIOTECA_SER che viene aperto come flusso di output (FileOutputStream). Utilizzando il costruttore FileOutputStream, viene creato il file specificato e viene creato un oggetto fileOutput che rappresenta il flusso di output per quel file.
+
+ObjectOutputStream outputStream = new ObjectOutputStream(fileOutput);: 
+Viene creato un ObjectOutputStream chiamato outputStream, che viene utilizzato per scrivere gli oggetti nel flusso di output fileOutput. L'ObjectOutputStream è un tipo di flusso di output che può scrivere oggetti serializzati.
+
+outputStream.writeObject(this.libri);:
+L'oggetto outputStream scrive l'oggetto this.libri nel flusso di output. L'oggetto this.libri rappresenta la lista dei libri della biblioteca corrente. La chiamata a writeObject() serializza l'oggetto e lo scrive nel flusso di output.
+
+Questa sequenza di istruzioni apre il file DATI_BIBLIOTECA_SER come flusso di output, crea un ObjectOutputStream per scrivere gli oggetti nel file e quindi scrive la lista dei libri della biblioteca nel flusso di output. In questo modo, la lista dei libri viene salvata nel file come oggetto serializzato.
+
+DOMANDA:
+
+Perchè è stato creato un metodo caricaBiblioteca non si poteva chiamare direttamnte il metodo caricaFile come abbiamo fatto per salvaFile?
+
+Il metodo caricaBiblioteca() è stato creato per separare le responsabilità e rendere il codice più modulare e leggibile. L'utilizzo di caricaBiblioteca() invece di chiamare direttamente caricaFile() offre i seguenti vantaggi:
+
+    Astrazione: Il metodo caricaBiblioteca() nasconde i dettagli di implementazione specifici della lettura del file e restituisce direttamente l'oggetto Biblioteca completo. Questo rende il codice più astratto e semplifica la comprensione del punto di ingresso principale del programma.
+
+    Possibilità di ulteriori operazioni: Nel caso in cui in futuro sia necessario eseguire altre operazioni prima o dopo il caricamento del file, il metodo caricaBiblioteca() fornisce uno spazio per gestirle. Ad esempio, potrebbe essere necessario effettuare operazioni di validazione o elaborazione sui dati caricati prima di restituire l'oggetto Biblioteca.
+
+    Gestione delle eccezioni: Nel metodo caricaBiblioteca() viene gestita l'eccezione DeserializationException, consentendo di affrontare eventuali errori di deserializzazione in modo specifico. Se caricaFile() fosse chiamato direttamente nel metodo main, sarebbe necessario gestire l'eccezione in quel punto specifico, aumentando la complessità del codice principale.
+
+In sintesi, l'utilizzo del metodo caricaBiblioteca() invece di chiamare direttamente caricaFile() offre una migliore astrazione, flessibilità e gestione delle eccezioni.
+
+
+
+Perchè i metodi aggiungiLibro cacnellaLibro salvaFile e caricaFile non sono statici?
+
+I metodi aggiungiLibro, cancellaLibro, salvaFile e caricaFile nella classe Biblioteca non sono dichiarati come static perché operano sullo stato interno dell'oggetto Biblioteca. Questi metodi agiscono direttamente sulla lista dei libri (libri) specifica per ogni istanza di Biblioteca.
+
+Se questi metodi fossero dichiarati come static, significherebbe che appartengono alla classe stessa anziché alle istanze della classe. Ciò comporterebbe che tali metodi non avrebbero accesso ai membri non statici della classe, come la lista dei libri (libri), a meno che non fossero passati come argomento. Inoltre, i metodi aggiungiLibro e cancellaLibro modificherebbero una copia statica dei libri anziché l'istanza specifica di Biblioteca su cui sono chiamati.
+
+Per gestire correttamente l'elenco dei libri specifico di ogni istanza di Biblioteca, è necessario che questi metodi siano non statici. In questo modo, i metodi possono accedere e modificare direttamente l'elenco dei libri all'interno dell'oggetto Biblioteca su cui sono chiamati.
+
+Dichiarando questi metodi come non statici, è possibile creare un'istanza di Biblioteca e utilizzare i metodi per manipolare l'elenco dei libri specifico di quella istanza.
+

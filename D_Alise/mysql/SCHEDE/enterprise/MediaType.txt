@@ -1,0 +1,42 @@
+package: javaw.ws.rs.core.MediaType
+Nome: MediaType
+
+Descrizione:
+
+Un'astrazione per un tipo di supporto. Le istanze sono immutabili.
+
+Costruttori:
+
+MediaType​():
+Crea una nuova istanza di MediaType, sia il tipo che il sottotipo sono caratteri jolly.
+
+
+MediaType​(String type, String subtype):
+Crea una nuova istanza di MediaType con il tipo e il sottotipo forniti.
+
+MediaType​(String type, String subtype, String charset):
+Crea una nuova istanza di MediaType con il tipo, il sottotipo e il parametro forniti.
+
+MediaType​(String type, String subtype, Map<String,String> parameters):
+Crea una nuova istanza di MediaType con il tipo, il sottotipo e i parametri forniti.
+
+Metodi:
+
+equals​(Object obj):
+Confronta obj con questo tipo di supporto per vedere se sono uguali confrontando tipo, sottotipo e parametri.
+
+getParameters​():
+Getter per una mappa di parametri di sola lettura.
+
+getSubtype​():
+Getter per sottotipo.
+
+getType​():
+Getter per tipo primario.
+
+toString​():
+Convertire il tipo di supporto in una stringa adatta all'uso come valore di un'intestazione HTTP corrispondente.
+
+valueOf​(String type):
+Crea una nuova istanza di MediaType analizzando la stringa fornita.
+

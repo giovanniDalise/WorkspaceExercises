@@ -1,0 +1,22 @@
+Name:Object
+Package:java.lang
+
+Descrizione: Object è la radice della gerarchia di classi. Ogni classe ha Object come superclasse. Tutti gli oggetti, inclusi gli array, implementano i metodi di questa classe.
+
+Costruttori:Object() 
+
+Metodi:
+clone():Crea e restituisce una copia di questo oggetto.
+
+equals(Obect obj):Indica se qualche altro oggetto è "uguale a" questo.
+
+finalize():Chiamato dal Garbage Collector su un oggetto quando il Garbage Collection determina che non ci sono più riferimenti all'oggetto.
+
+getClass():Restituisce la classe di runtime di questo oggetto.
+
+toString():Restituisce una rappresentazione in forma di stringa dell'oggetto.
+
+wait():Fa in modo che il thread corrente attenda finché un altro thread non richiama il metodo notify() o il metodo notifyAll() per questo oggetto.
+
+
+

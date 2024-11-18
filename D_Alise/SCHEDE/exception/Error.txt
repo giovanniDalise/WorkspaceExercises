@@ -1,0 +1,17 @@
+Name: Error
+Package: java.lang
+
+Descrizione:
+Errore è una sottoclasse di Throwable che indica problemi seri che un'applicazione non dovrebbe tentare di rilevare(tramite catch). La maggior parte di questi errori sono condizioni anormali. L'errore ThreadDeath, sebbene sia una condizione "normale", è anche una sottoclasse di Error perché la maggior parte delle applicazioni non dovrebbe tentare di rilevarlo(catch).
+Un metodo non è tenuto a dichiarare nella sua clausola throws eventuali sottoclassi di Error che potrebbero essere lanciate durante l'esecuzione del metodo ma non catturate, poiché questi errori sono condizioni anomale che non dovrebbero mai verificarsi. In altre parole, Error e le sue sottoclassi sono considerate eccezioni non controllate ai fini del controllo delle eccezioni in fase di compilazione.
+
+Costruttori:
+Error(): costruisce un nuovo error con null(valore o oggetto inesistente) come risposta.
+
+Error(String message): costruisce un nuovo error con uno specifico messaggio.
+
+Error(String message, Exception cause): costruisce un nuovo error con uno specifico messaggio e causa.
+
+Metodi:
+penso siano gli stessi del throwable.
+

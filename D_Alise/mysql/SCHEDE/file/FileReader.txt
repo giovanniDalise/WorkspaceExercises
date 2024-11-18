@@ -1,0 +1,20 @@
+Name: FileReader
+Package:java.io
+
+Descrizione: Classe per la lettura di file di caratteri. I costruttori di questa classe presuppongono che la codifica dei caratteri predefinita e la dimensione predefinita del byte-buffer siano appropriate. Per specificare personalmente questi valori, costruisci un InputStreamReader su un FileInputStream.
+
+FileReader è pensato per leggere flussi di caratteri. Per la lettura di flussi di byte non elaborati, prendere in considerazione l'utilizzo di un FileInputStream.
+
+Fields:inerenti alla classe Reader
+
+Costruttori:
+FileReader(File file):
+Crea un nuovo FileReader, dato il File da cui leggere.
+
+FileReader(FileDescriptor fd):
+Crea un nuovo FileReader, dato il FileDescriptor da cui leggere.
+
+FileReader(String fileName):
+Crea un nuovo FileReader, dato il nome del file da cui leggere.
+
+METODI: inerenti alle classi InputStreamReader, Reader, Object.

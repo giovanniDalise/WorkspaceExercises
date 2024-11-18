@@ -1,0 +1,30 @@
+Name: Writer
+Package: java.io
+
+Descrizione: Classe astratta per scrivere su flussi di caratteri. Gli unici metodi che una sottoclasse deve implementare sono write(char[], int, int), flush() e close(). La maggior parte delle sottoclassi, tuttavia, sovrascriverà alcuni dei metodi qui definiti per fornire maggiore efficienza, funzionalità aggiuntive o entrambi.
+
+Fields:
+lock:
+L'oggetto utilizzato per sincronizzare le operazioni su questo flusso.
+
+COSTRUTTI:
+Writer():
+Crea un nuovo scrittore del flusso di caratteri le cui sezioni critiche verranno sincronizzate sullo scrittore stesso.
+
+Writer(Object lock):
+Crea un nuovo writer del flusso di caratteri le cui sezioni critiche verranno sincronizzate sull'oggetto specificato.
+
+
+METODI:
+flush():
+Flushes dello stream.
+
+close():
+chiude lo strem dopo il flush.
+
+append(char c):
+Aggiunge il carattere specificato a questo writer.
+
+write(String):
+Scrive una stringa
+

@@ -1,0 +1,15 @@
+I METODI SETTER:
+Se nel main del programma nel costruttore di istanza (tra le parentesi) non inserisco niente, la mia istanza avra delle variabili con dei valori di default che saranno quelli definiti nella classe di derivazione. Se per esempio nella classe saranno vuoti allora anche nella mia istanza saranno vuoti. Ora ogni volta che creo un istanza io posso definire prima questi valori(per esempio facendoli inserire da un utente) che poi saranno sovrascitti al valore vuoto di default (sempre nel caso in cui sia vuoto).
+
+Le variabili della classe pure possono essere cambiate o inizializzate con un valore solo che puo essere controproducente in alcuni casi perchè vuol dire che poi ogni istanza avrà quello specifico valore. Questo cambiamento però non potrò avvenire se le variabili hanno come attributo private. 
+Nel caso in cui ci sia il private allora l'unico modo di cambiare la variabile è tramite un metodo setter che per il principio di incapsulamento fa si che queste variabili private siano cambiate esclusivamente all'interno di un metodo(setter).(se ho capito bene)
+Variabili private sono spesso necessaria per la sicurezza dei dati e per far si che le classi non vengano cambiate.
+
+Oltre a questa funzione di sicurezza allora a cosa servono i metodi setter?
+
+Il metodo setter è utile quando vuoi impostare i valori delle variabili di istanza di un oggetto in un momento successivo alla creazione dell'oggetto stesso, ad esempio se l'utente inserisce solo alcuni dei parametri necessari e vuoi completare l'inizializzazione dell'oggetto in un secondo momento.
+
+Ad esempio, supponiamo che l'utente inserisca solo il valore del raggio per creare l'oggetto Circle, mentre le coordinate del centro non vengono specificate. In questo caso, puoi creare l'oggetto Circle con il costruttore che prende solo il raggio, e successivamente utilizzare i metodi setter per impostare le coordinate del centro quando l'utente le inserisce.
+
+Inoltre, i metodi setter possono essere utili se hai bisogno di verificare che i valori inseriti per le variabili di istanza rispettino determinate condizioni (ad esempio, che il valore del raggio sia maggiore di zero). In questo caso, il metodo setter può eseguire la validazione del valore inserito e, se il valore è corretto, impostare il valore della variabile di istanza, altrimenti restituire un errore.
+ 

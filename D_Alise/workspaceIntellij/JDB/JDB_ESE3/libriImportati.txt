@@ -1,0 +1,4 @@
+12345678910, Moby Dick, Herman Melville, Einaudi
+12345678911, Il mio libro, Marco Rossi, Feltrinelli
+12345678912, Il suo libro, Gustavo Indivia, Giunti
+12345678913, Ancora un Libro, Luca Sorsi, La Sorsi

@@ -1,0 +1,40 @@
+La riga xhttp.onreadystatechange = function() { ... } imposta una funzione di callback che viene chiamata ogni volta che lo stato della richiesta AJAX cambia.
+
+L'oggetto XMLHttpRequest (abbreviato come xhttp nel tuo codice) ha una proprietà chiamata onreadystatechange, che può essere impostata con una funzione per gestire gli eventi di cambio di stato della richiesta. Questa funzione di callback viene eseguita ogni volta che il valore della proprietà readyState dell'oggetto XMLHttpRequest cambia.
+
+La proprietà readyState rappresenta lo stato della richiesta AJAX ed è un valore numerico che va da 0 a 4. I diversi valori di readyState rappresentano i seguenti stati:
+
+0: Richiesta non inizializzata.
+1: Connessione con il server stabilita.
+2: Richiesta ricevuta.
+3: Elaborazione della richiesta.
+4: Richiesta completata e risposta pronta.
+La funzione di callback impostata con xhttp.onreadystatechange viene chiamata ogni volta che lo stato della richiesta cambia. Puoi quindi utilizzare questa funzione per eseguire azioni specifiche in base allo stato della richiesta. Nel tuo caso, il codice all'interno della funzione di callback viene eseguito solo quando lo stato della richiesta è 4 (Richiesta completata e risposta pronta) e lo stato della risposta è 200 (OK).
+
+All'interno della funzione di callback, è possibile accedere alla risposta della richiesta utilizzando la proprietà responseText dell'oggetto XMLHttpRequest. Nel tuo codice, viene utilizzato this.responseText per ottenere la risposta del server e JSON.parse() viene utilizzato per convertire la risposta in un oggetto JavaScript.
+
+Quindi, la riga xhttp.onreadystatechange = function() { ... } imposta la funzione di callback per gestire gli eventi di cambio di stato della richiesta AJAX e definisce il comportamento che deve essere eseguito quando la richiesta è completata e la risposta è pronta.
+
+
+ASINCRONISMO
+ La riga xhttp.onreadystatechange = function() { ... } rappresenta l'asincronismo di AJAX e il modo in cui viene gestito il cambio di stato della richiesta.
+
+AJAX (Asynchronous JavaScript and XML) consente di effettuare richieste HTTP asincrone da un'applicazione web senza dover ricaricare l'intera pagina. L'asincronismo significa che la richiesta viene inviata al server e la pagina web continua ad eseguire altre operazioni senza attendere la risposta del server.
+
+La funzione di callback impostata con xhttp.onreadystatechange viene chiamata in modo asincrono ogni volta che lo stato della richiesta cambia. In questo modo, l'applicazione web può continuare a eseguire altre operazioni mentre aspetta la risposta del server.
+
+Quando la richiesta è completata e la risposta è pronta (stato 4), la funzione di callback viene eseguita e puoi gestire la risposta del server. Ad esempio, puoi manipolare i dati della risposta, aggiornare l'interfaccia utente o eseguire altre azioni necessarie.
+
+L'utilizzo della funzione di callback onreadystatechange è un modo comune per gestire l'asincronismo di AJAX e rispondere ai diversi stati della richiesta. Questo ti consente di scrivere un codice che gestisce correttamente la risposta del server quando è disponibile, senza bloccare l'esecuzione del resto del codice dell'applicazione web.
+
+
+
+CONSOLE.LOG (non necassario per la stampa dei libri su html, solo per controllo debug in console)
+
+La stampa dei dati sulla console mediante console.log() è un modo comune per effettuare il debug e verificare il corretto funzionamento del codice.
+
+Nel tuo codice, l'istruzione console.log(libro) viene utilizzata per visualizzare i dati di ogni libro ottenuti dalla risposta del server. Stampando i dati sulla console, puoi verificare se i dati vengono correttamente recuperati dal server e se contengono le informazioni desiderate.
+
+Utilizzare console.log() ti consente di ispezionare i dati e verificarne il contenuto. Puoi controllare la console del tuo browser (solitamente accessibile premendo F12 e selezionando la scheda "Console") per visualizzare gli output delle istruzioni console.log() durante l'esecuzione del codice. Ciò ti aiuta a identificare eventuali errori o problemi nelle risposte del server o nel processo di manipolazione dei dati.
+
+Una volta che hai verificato che i dati vengono correttamente recuperati e visualizzati sulla console, puoi poi utilizzare il codice appropriato per aggiornare l'interfaccia utente, ad esempio inserendo i dati nella sezione #libri dell'HTML come hai già fatto nel tuo codice con sezioneLibri.innerHTML += JSON.stringify(libro) + "<br>";.

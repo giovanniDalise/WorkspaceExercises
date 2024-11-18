@@ -1,0 +1,13 @@
+Nome:Interface Iterable<T>
+
+Package:java.lang
+
+Descrizione:L'implementazione di questa interfaccia consente a un oggetto di essere il target dell'istruzione "for-each loop". Vedere Ciclo For-each
+
+Metodi:
+forEach(Consumer<? super T> action):Esegue l'azione specificata per ogni elemento di Iterable finché tutti gli elementi non sono stati elaborati o l'azione genera un'eccezione.
+
+iterator():Restituisce un iteratore su elementi di tipo T.
+
+spliterator():Crea uno Spliterator sugli elementi descritti da questo Iterable.
+

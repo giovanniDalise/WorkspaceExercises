@@ -1,0 +1,38 @@
+Name: Double
+Package: java.lang
+
+Descrizione:
+La classe Double racchiude (wrap) un valore primitivo di tipo double in un oggetto. Un oggetto di tipo Double contiene un singolo field (proprietà,attributo,istanza di classe) di cui tipo è int. In più questa classe è provvista di diversi metodi per convertire un int in un String e un String in un int e di sfruttare al suo interno costanti e metodi che non potrebbero essere utilizzati con un tipo primitivo.
+
+Costruttori:
+
+- Double(double value): costruisce un un nuovo oggetto Double con uno specifico valore double.
+
+- Double(String s): costruisce un nuovo oggetto Double che rappresenta un valore double tramite un parametro String.
+
+Metodi:
+
+valueOf(String s): Ci restituisce un oggetto Double mantenendo il valore specificato in String
+
+parse(String s): Ci restituisce una variabile primitiva mantendendo il valore specificato in String
+
+isNaN(): ci restituisce una condizione vera se il valore del Double non è un valore numerico, Not-a-Number (NaN), altrimenti avremo una condizione falsa.
+
+intValue(): ci restituisce il valore del Double in int primitivo.
+
+doubleValue(): ci restituisce il valore del Double nel corrispettivo primitivo double.
+
+longValue(): ci restituisce il valore del Double in primitivo long.
+
+floatValue(): ci restituisce il valore del Double in primitivo float.
+
+floatValue(): ci restituisce il valore del Double in primitivo short.
+
+Fields o proprietà o attributi o metodi di classe:
+
+Double.MAX_VALUE: il valore massimo che un double puo assumere ((2-2 alla -52)*2 alla 1023).
+
+Double.MIN_VALUE: il valore minimo che un double puo assumere (2 alla -1074).
+
+Double.SIZE: restituisce il numero di bit per rappresentarlo in un valore double.
+

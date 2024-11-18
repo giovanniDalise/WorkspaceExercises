@@ -1,0 +1,24 @@
+Name:Enum
+
+Package:java.lang
+
+Descrizione:In Java, un enum (abbreviazione di enumerazione) è un tipo di dato speciale che consente di definire un insieme di costanti denominate. Fornisce un modo per rappresentare un numero fisso di valori predefiniti che sono correlati tra loro.
+
+Costruttore:
+Enum(String name, int ordinal)
+
+METODI:
+clone():
+Throws CloneNotSupportedException.
+
+compareTo(E o):
+Compares this enum with the specified object for order.
+
+valueOf(Class<T> enumType, String name)
+Returns the enum constant of the specified enum type with the specified name.
+
+name()
+Returns the name of this enum constant, exactly as declared in its enum declaration.
+
+equals(Object other)
+Returns true if the specified object is equal to this enum constant.

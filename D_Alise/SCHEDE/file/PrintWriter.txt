@@ -1,0 +1,60 @@
+Name: File Writer
+
+Package: java.io
+
+Descrizione:Stampa rappresentazioni formattate di oggetti in un flusso di output di testo. Questa classe implementa tutti i metodi di stampa presenti in PrintStream. Non contiene metodi per la scrittura di byte grezzi, per i quali un programma dovrebbe utilizzare flussi di byte non codificati.
+
+A differenza della classe PrintStream, se lo svuotamento automatico è abilitato, verrà eseguito solo quando viene richiamato uno dei metodi println, printf o format, piuttosto che ogni volta che viene emesso un carattere di nuova riga. Questi metodi utilizzano la nozione di separatore di riga propria della piattaforma piuttosto che il carattere di nuova riga.
+
+I metodi in questa classe non generano mai eccezioni I/O, sebbene alcuni dei suoi costruttori lo possano fare. Il client può chiedere se si sono verificati errori invocando checkError().
+
+Fields: 
+lock guarda la classe writer
+
+out:
+Il flusso di output dei caratteri sottostante di questo PrintWriter.
+
+COSTRUTTORI:
+PrintWriter(File file):
+Crea un nuovo PrintWriter, senza svuotamento riga automatico, con il file specificato.
+
+PrintWriter(File file, String csn):
+Crea un nuovo PrintWriter, senza svuotamento automatico della riga, con il file e il set di caratteri specificati.
+
+PrintWriter(String fileName):
+Crea un nuovo PrintWriter, senza svuotamento riga automatico, con il nome file specificato.
+
+METODI:
+append(char c):
+Aggiunge il carattere specificato a questo writer.
+
+close()
+Chiude lo stream e rilascia ogni risorsa di sistema associato ad esso
+
+flush():
+Flush lo stream
+
+print(String s):
+stampa una stringa
+
+print(Object obj):
+stampa un oggetto.
+
+print(int i):
+stampa un numero.
+
+format(Locale l, String format, Object... args):
+Scrive una stringa formattata in questo writer utilizzando la stringa di formato e gli argomenti specificati.
+
+printf(Locale l, String format, Object... args):
+Un metodo pratico per scrivere una stringa formattata in questo writer utilizzando la stringa di formato e gli argomenti specificati.
+
+println():
+Termina la riga corrente scrivendo la stringa del separatore di riga.
+
+write(String s):
+Scrive una stringa.
+
+
+
+

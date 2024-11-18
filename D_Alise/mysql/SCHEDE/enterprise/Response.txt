@@ -1,0 +1,51 @@
+package: java.ws.rs
+
+Nome:Response
+
+Descrizione:Definisce il contratto tra un'istanza restituita e il runtime quando un'applicazione deve fornire metadati al runtime.
+Una classe dell'applicazione non dovrebbe estendere direttamente questa classe. La classe di risposta è riservata per un'estensione da un provider di implementazione JAX-RS. Un'applicazione deve utilizzare uno dei metodi statici per creare un'istanza di risposta utilizzando un ResponseBuilder.
+
+Diversi metodi hanno parametri di tipo URI, UriBuilder fornisce metodi convenienti per creare valori come URI.create(java.lang.String).
+
+Costruttori:
+Response():Costruttore protetto, utilizzare uno dei metodi statici per ottenere un'istanza di Response.ResponseBuilder e ottenere una risposta da essa.
+
+Metodi:
+accepted​()	
+Create a new ResponseBuilder with an ACCEPTED status.
+
+accepted​(Object entity)	
+Create a new ResponseBuilder with an ACCEPTED status that contains a representation.
+
+bufferEntity​()	
+Buffer the message entity data.
+
+close​()	
+Close the underlying message entity input stream (if available and open) as well as releases any other resources associated with the response 
+
+created​(URI location)	
+Create a new ResponseBuilder for a created resource, set the location header using the supplied value.
+
+fromResponse​(Response response)	
+Create a new ResponseBuilder by performing a shallow copy of an existing Response.
+
+getAllowedMethods​()	
+Get the allowed HTTP methods from the Allow HTTP header.
+
+getCookies​()	
+Get any new cookies set on the response message.
+
+getDate​()	
+Get message date.
+
+getEntity​()	
+Get the message entity Java instance
+
+getStatus​()	
+Get the status code associated with the response.
+
+getMetadata​()	
+See getHeaders().
+
+ok​()	
+Create a new ResponseBuilder with an OK status.

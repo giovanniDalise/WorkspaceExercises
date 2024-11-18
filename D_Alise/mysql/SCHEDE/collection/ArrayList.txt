@@ -1,0 +1,46 @@
+Nome:ArrayList<E>
+
+package:java.util
+
+Descrizione:Implementazione dell'array ridimensionabile dell'interfaccia List. Implementa tutte le operazioni di elenco facoltative e consente tutti gli elementi, incluso null. Oltre a implementare l'interfaccia List, questa classe fornisce metodi per manipolare la dimensione dell'array utilizzato internamente per archiviare l'elenco. (Questa classe è approssimativamente equivalente a Vector, tranne per il fatto che non è sincronizzata.)
+
+Le operazioni size, isEmpty, get, set, iterator e listIterator vengono eseguite a tempo costante. L'operazione di aggiunta viene eseguita in un tempo costante ammortizzato, ovvero l'aggiunta di n elementi richiede un tempo O(n). Tutte le altre operazioni vengono eseguite in tempo lineare (in parole povere). Il fattore costante è basso rispetto a quello per l'implementazione LinkedList.
+
+Ogni istanza di ArrayList ha una capacità. La capacità è la dimensione dell'array utilizzato per memorizzare gli elementi nell'elenco. È sempre grande almeno quanto la dimensione dell'elenco. Man mano che gli elementi vengono aggiunti a un ArrayList, la sua capacità aumenta automaticamente. I dettagli della politica di crescita non sono specificati oltre al fatto che l'aggiunta di un elemento ha un costo temporale ammortizzato costante.
+
+Un'applicazione può aumentare la capacità di un'istanza di ArrayList prima di aggiungere un numero elevato di elementi utilizzando l'operazione sureCapacity. Ciò potrebbe ridurre la quantità di riallocazione incrementale.
+
+Si noti che questa implementazione non è sincronizzata. Se più thread accedono contemporaneamente a un'istanza di ArrayList e almeno uno dei thread modifica strutturalmente l'elenco, è necessario sincronizzarlo esternamente. (Una modifica strutturale è qualsiasi operazione che aggiunge o elimina uno o più elementi, o ridimensiona in modo esplicito l'array di supporto; la semplice impostazione del valore di un elemento non è una modifica strutturale). elenco. Se non esiste alcun oggetto di questo tipo, l'elenco deve essere "incapsulato" utilizzando il metodo Collections.synchronizedList. È meglio farlo al momento della creazione, per evitare accessi accidentali non sincronizzati all'elenco:
+
+   List list = Collections.synchronizedList(new ArrayList(...));
+
+Gli iteratori restituiti dai metodi iterator e listIterator di questa classe sono fail-fast: se l'elenco viene modificato strutturalmente in qualsiasi momento dopo la creazione dell'iteratore, in qualsiasi modo tranne che tramite i metodi remove o add dell'iteratore, l'iteratore genererà un'eccezione ConcurrentModificationException. Pertanto, di fronte a modifiche simultanee, l'iteratore fallisce rapidamente e in modo pulito, piuttosto che rischiare un comportamento arbitrario e non deterministico in un momento futuro indeterminato.
+
+Costruttori:
+ArrayList():Costruisce un elenco vuoto con una capacità iniziale di dieci.
+
+ArrayList(Collection<? extends E> c):Costruisce un elenco contenente gli elementi della raccolta specificata, nell'ordine in cui vengono restituiti dall'iteratore della raccolta.
+
+ArrayList(int initialCapacity):Costruisce un elenco vuoto con la capacità iniziale specificata.
+
+
+Metodi:
+forEach(Consumer<? super E> action):Esegue l'azione specificata per ogni elemento di Iterable finché tutti gli elementi non sono stati elaborati o l'azione genera un'eccezione.
+
+add(E e):Inserisce l'elemento specificato nella posizione specificata in questo lista.
+
+addAll(Collection<? extends E> c):Accoda tutti gli elementi nella raccolta specificata alla fine di questa lista, nell'ordine in cui vengono restituiti dall'Iterator della raccolta specificata.
+
+clear():Rimuove tutti gli elementi da questo lista.
+
+size():Restituisce il numero di elementi in questa lista.
+
+isEmpty():Returns true if this collection contains no elements.
+
+contains(Object o):Returns true if this lista contains the specified element.
+
+remove(Object o):Removes a single instance of the specified element from this lista, if it is present (optional operation).
+
+toArray():Returns an array containing all of the elements in this lista.
+
+clone():Restituisce una copia superficiale di questa istanza di ArrayList.

@@ -1,0 +1,38 @@
+Name: Arrays
+Package: java.util
+
+Questa classe contiene vari metodi per manipolare gli array (come l'ordinamento e la ricerca). Questa classe contiene anche una factory statica che consente di visualizzare gli array come elenchi.
+
+Tutti i metodi in questa classe generano un'eccezione NullPointerException, se il riferimento all'array specificato è nullo, tranne dove indicato.
+
+COSTRUTTORI:
+non presenti
+
+METODI:
+asList(T... a):
+Restituisce un elenco di dimensioni fisse supportato dalla matrice specificata.
+
+binarySearch(byte[] a, byte key):
+Cerca nella matrice di byte specificata il valore specificato utilizzando l'algoritmo di ricerca binaria.
+
+copyOf(boolean[] original, int newLength):
+Copia l'array specificato, troncando o riempiendo con false (se necessario) in modo che la copia abbia la lunghezza specificata.
+
+copyOfRange(boolean[] original, int from, int to):
+Copia l'intervallo specificato dell'array specificato in un nuovo array.
+
+deepEquals(Object[] a1, Object[] a2):
+Restituisce true se i due array specificati sono profondamente uguali tra loro.
+
+deepToString(Object[] a):
+Restituisce una rappresentazione in forma di stringa del "contenuto profondo" della matrice specificata.
+
+equals(boolean[] a, boolean[] a2):
+Restituisce true se i due array di valori booleani specificati sono uguali tra loro.
+
+fill(boolean[] a, boolean val):
+Assegna il valore booleano specificato a ciascun elemento della matrice di valori booleani specificata.
+
+
+
+

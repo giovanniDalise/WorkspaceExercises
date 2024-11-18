@@ -1,0 +1,15 @@
+package: javax.ws.rs.container
+Nome: ContainerResponseFilter
+
+Descrizione:
+
+Per impostazione predefinita, ovvero se non viene applicata alcuna associazione di nomi alla classe di implementazione del filtro, l'istanza del filtro viene applicata globalmente a qualsiasi risposta in uscita. Se è presente un'annotazione @NameBinding applicata al filtro, il filtro verrà eseguito solo per una risposta per la quale la richiesta è stata abbinata a un metodo di risorsa o sottorisorsa E il metodo o l'intera classe dell'applicazione JAX-RS personalizzata è associato alla stessa annotazione di associazione del nome.
+
+Implementa un filtro di risposta associato al nome nei casi in cui desideri limitare la funzionalità del filtro a una risorsa o un metodo di risorsa corrispondente. In altri casi, quando il filtro deve essere applicato globalmente a qualsiasi risposta in uscita, implementare un filtro di risposta globale non associato.
+
+I filtri che implementano questa interfaccia devono essere annotati con @Provider per essere rilevati dal runtime JAX-RS. Le istanze del filtro di risposta del contenitore possono anche essere rilevate e associate dinamicamente a metodi di risorse particolari.
+
+Metodi:
+
+filter​(ContainerRequestContext requestContext, ContainerResponseContext responseContext):
+Metodo di filtro chiamato dopo che è stata fornita una risposta per una richiesta (da un filtro di richiesta o da un metodo di risorsa corrispondente.

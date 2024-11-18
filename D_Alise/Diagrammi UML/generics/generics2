@@ -1,0 +1,55 @@
+<mxfile host="app.diagrams.net" modified="2023-05-11T05:34:11.700Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/112.0" etag="IlybqZc417io-APAgnxT" version="21.2.9" type="google">
+  <diagram name="Pagina-1" id="RaUXJns83hZo4eV6zI-D">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="PXyJ8Tv9jIFOTNOCOehs-1" value="Sportello(C)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="300" height="208" as="geometry" />
+        </mxCell>
+        <mxCell id="PXyJ8Tv9jIFOTNOCOehs-2" value="&lt;div&gt;-praticaCorrente:Pratica&lt;/div&gt;&lt;div&gt;-timestampPraticaCorrente:Long&lt;/div&gt;&lt;div&gt;-codaPratiche:Coda&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="PXyJ8Tv9jIFOTNOCOehs-1">
+          <mxGeometry y="26" width="300" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="PXyJ8Tv9jIFOTNOCOehs-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="PXyJ8Tv9jIFOTNOCOehs-1">
+          <mxGeometry y="110" width="300" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="PXyJ8Tv9jIFOTNOCOehs-4" value="&lt;div&gt;+ Sportello(coda:Coda)&lt;/div&gt;&lt;div&gt;-isLibero():boolean&lt;/div&gt;&lt;div&gt;+selezionePratica():void&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="PXyJ8Tv9jIFOTNOCOehs-1">
+          <mxGeometry y="118" width="300" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="PXyJ8Tv9jIFOTNOCOehs-6" value="Pratica implements Comparable(C)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="40" width="300" height="208" as="geometry" />
+        </mxCell>
+        <mxCell id="PXyJ8Tv9jIFOTNOCOehs-7" value="&lt;div&gt;- esaminata:Boolean&lt;/div&gt;&lt;div&gt;-timestamInizio:long&lt;/div&gt;&lt;div&gt;-timestampFine:long&lt;/div&gt;&lt;div&gt;-durata:long&lt;/div&gt;&lt;div&gt;-progressivo:int&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="PXyJ8Tv9jIFOTNOCOehs-6">
+          <mxGeometry y="26" width="300" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="PXyJ8Tv9jIFOTNOCOehs-8" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="PXyJ8Tv9jIFOTNOCOehs-6">
+          <mxGeometry y="110" width="300" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="PXyJ8Tv9jIFOTNOCOehs-9" value="&lt;div&gt;+Pratica(progressivo:int)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="PXyJ8Tv9jIFOTNOCOehs-6">
+          <mxGeometry y="118" width="300" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="PXyJ8Tv9jIFOTNOCOehs-10" value="Coda" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="280" width="300" height="208" as="geometry" />
+        </mxCell>
+        <mxCell id="PXyJ8Tv9jIFOTNOCOehs-11" value="- pratiche:Queue" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="PXyJ8Tv9jIFOTNOCOehs-10">
+          <mxGeometry y="26" width="300" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="PXyJ8Tv9jIFOTNOCOehs-12" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="PXyJ8Tv9jIFOTNOCOehs-10">
+          <mxGeometry y="110" width="300" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="PXyJ8Tv9jIFOTNOCOehs-13" value="&lt;div&gt;+Coda():&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ generaProgressivo(): int&lt;/div&gt;&lt;div&gt;+visualizzaCoda():List&amp;lt;Pratica&amp;gt;&lt;/div&gt;&lt;div&gt;+getPraticaSuccessica():Pratica&lt;/div&gt;&lt;div&gt;+getPraticheAperte():int&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="PXyJ8Tv9jIFOTNOCOehs-10">
+          <mxGeometry y="118" width="300" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="PXyJ8Tv9jIFOTNOCOehs-19" value="Ambulatorio (C)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="414" y="280" width="300" height="124" as="geometry" />
+        </mxCell>
+        <mxCell id="PXyJ8Tv9jIFOTNOCOehs-21" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="PXyJ8Tv9jIFOTNOCOehs-19">
+          <mxGeometry y="26" width="300" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="PXyJ8Tv9jIFOTNOCOehs-22" value="&lt;div&gt;+ main(args:String[]): void&lt;/div&gt;&lt;div&gt;-accettarePrenotazioni()&lt;/div&gt;&lt;div&gt;-isAperto().&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="PXyJ8Tv9jIFOTNOCOehs-19">
+          <mxGeometry y="34" width="300" height="90" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

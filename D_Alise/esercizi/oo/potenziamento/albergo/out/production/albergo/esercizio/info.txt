@@ -1,0 +1,31 @@
+Il metodo sovrappone viene utilizzato per verificare se due periodi di prenotazione si sovrappongono.
+
+Nel contesto del sistema di prenotazione dell'hotel, il metodo overlaps viene chiamato per confrontare il periodo di prenotazione corrente con un altro periodo specificato come argomento. Restituisce true se i due periodi si sovrappongono, altrimenti restituisce false.
+
+La logica all'interno del metodo overlaps utilizza confronti tra le date di inizio e fine dei due periodi per determinare se c'è una sovrapposizione. Vi sono quattro possibili scenari da considerare:
+
+Il periodo corrente inizia dopo la fine dell'altro periodo: endDate.isBefore(otherStartDate).
+Il periodo corrente termina prima dell'inizio dell'altro periodo: startDate.isAfter(otherEndDate).
+Il periodo corrente inizia prima dell'altro periodo e termina durante l'altro periodo: !endDate.isBefore(otherStartDate) && !startDate.isAfter(otherEndDate).
+Il periodo corrente inizia durante l'altro periodo e termina dopo l'altro periodo: !startDate.isAfter(otherEndDate) && !endDate.isBefore(otherStartDate).
+Se uno qualsiasi dei primi due scenari si verifica, i periodi non si sovrappongono e il metodo restituisce false. Se uno dei due ultimi scenari si verifica, i periodi si sovrappongono e il metodo restituisce true.
+
+Ad esempio, consideriamo due periodi di prenotazione:
+
+Periodo A: startDate = 2023-06-10, endDate = 2023-06-15
+Periodo B: otherStartDate = 2023-06-12, otherEndDate = 2023-06-18
+Applicando la logica nel metodo overlaps, otteniamo i seguenti confronti:
+
+endDate.isBefore(otherStartDate): 2023-06-15 è precedente a 2023-06-12? No.
+startDate.isAfter(otherEndDate): 2023-06-10 è successivo a 2023-06-18? No.
+!endDate.isBefore(otherStartDate) && !startDate.isAfter(otherEndDate): Nessuno dei due è vero.
+!startDate.isAfter(otherEndDate) && !endDate.isBefore(otherStartDate): Entrambi sono veri.
+Poiché l'ultimo scenario si verifica, i periodi A e B si sovrappongono, e quindi il metodo overlaps restituisce true.
+
+Questo metodo è utilizzato all'interno del sistema di prenotazione dell'hotel per garantire che due periodi di prenotazione non si sovrappongano. In caso di sovrapposizione, viene rifiutata la prenotazione.
+
+
+PROVE
+- fai quache prenotazione occupando delle camere in un certo periodo di tempo
+- verifica la non disponibilità delle camere in caso di sovrapposizione di prenotazione
+- verifica la disponibilità delle camere in caso di numero maggiore di ospiti per specifica capienza ospiti della camera.

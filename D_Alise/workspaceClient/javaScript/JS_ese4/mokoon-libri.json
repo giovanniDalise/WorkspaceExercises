@@ -1,0 +1,554 @@
+{
+  "uuid": "926975e9-875b-407d-a548-0bf9eb02823d",
+  "lastMigration": 27,
+  "name": "Servizio di Gestione Libri",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3003,
+  "hostname": "",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "3d861361-f016-4dff-ba42-b325de330be4",
+      "type": "http",
+      "documentation": "Elenco dei libri",
+      "method": "get",
+      "endpoint": "libri",
+      "responses": [
+        {
+          "uuid": "e09e4186-f76b-4761-ae0c-dc77edabfae6",
+          "body": "[\n  {\n    \"titolo\": \"tit1\",\n    \"autore\": \"aut1\",\n    \"editore\": \"edi1\"\n  },\n  {\n    \"titolo,\": \"tit2\",\n    \"autore\": \"aut2\",\n    \"editore\": \"edi2\"\n  },\n  {\n    \"titolo\": \"tit3\",\n    \"autore\": \"aut3\",\n    \"editore\": \"edi3\"\n  },\n  {\n    \"titolo\": \"tit4\",\n    \"autore\": \"aut4\",\n    \"editore\": \"edi4\"\n  }\n]",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Elenco dei libri restituito con successo",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "ffc4478f-e365-43e5-9316-7028d676a7ca",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "0cc0d879-1692-42ba-be51-cbdd04541ee9",
+      "type": "http",
+      "documentation": "Crea un nuovo libro",
+      "method": "post",
+      "endpoint": "libri",
+      "responses": [
+        {
+          "uuid": "96dfd383-bbf6-4265-8dbc-ec58351f3c2d",
+          "body": "",
+          "latency": 0,
+          "statusCode": 201,
+          "label": "Libro creato con successo",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "header",
+              "modifier": "Authorization",
+              "value": "luca",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "body",
+              "modifier": "",
+              "value": "",
+              "invert": true,
+              "operator": "null"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "08f38d72-e2e1-4d0f-a9bc-526670a57bbf",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 401,
+          "label": "Utente non autorizzato",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "header",
+              "modifier": "Authorization",
+              "value": "luca",
+              "invert": true,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "94687e4e-7761-4720-9001-10ffe1470d19",
+          "body": "Dati inseriti non corretti!",
+          "latency": 0,
+          "statusCode": 400,
+          "label": "Dati non corretti",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "",
+              "value": "",
+              "invert": false,
+              "operator": "null"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "25cf24b8-b0ff-490d-b687-1d4b9a00f247",
+      "type": "http",
+      "documentation": "Dettagli del libro",
+      "method": "get",
+      "endpoint": "libri/:id",
+      "responses": [
+        {
+          "uuid": "78c042db-5b30-4092-a17f-411f8e296809",
+          "body": "{\n  \"titolo\": \"tit1\",\n  \"autore\": \"aut1\",\n  \"editore\": \"edi1\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Dettagli del libro restituiti con successo",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "params",
+              "modifier": "id",
+              "value": "1",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "c451a927-7113-4d24-b3c0-54adb0ee644b",
+          "body": "",
+          "latency": 0,
+          "statusCode": 404,
+          "label": "Libro non trovato",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "params",
+              "modifier": "id",
+              "value": "1",
+              "invert": true,
+              "operator": "equals"
+            },
+            {
+              "target": "params",
+              "modifier": "id",
+              "value": "2",
+              "invert": true,
+              "operator": "equals"
+            },
+            {
+              "target": "params",
+              "modifier": "id",
+              "value": "3",
+              "invert": true,
+              "operator": "equals"
+            },
+            {
+              "target": "params",
+              "modifier": "id",
+              "value": "4",
+              "invert": true,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "514c2bdc-b372-47fa-ad52-397da2019e00",
+          "body": "{\"titolo\":\"tit2\",\"autore\":\"aut2\",\"editore\":\"edi2\"}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "params",
+              "modifier": "id",
+              "value": "2",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "5414a63b-8e4a-4c64-a961-26e7ce7a7c53",
+          "body": "{\"titolo\":\"tit3\",\"autore\":\"aut3\",\"editore\":\"edi3\"}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "params",
+              "modifier": "id",
+              "value": "3",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "5d9befa1-420c-41fb-b531-2a68145ebbbc",
+          "body": "{\n  \"titolo\": \"tit4\",\n  \"autore\": \"aut4\",\n  \"editore\": \"edi4\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "params",
+              "modifier": "id",
+              "value": "4",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "045c39ce-3382-4799-b9f6-560915914fee",
+      "type": "http",
+      "documentation": "Aggiorna un libro esistente",
+      "method": "put",
+      "endpoint": "libri/:id",
+      "responses": [
+        {
+          "uuid": "3523aae0-a2fc-497f-b089-3efb5e75f7d0",
+          "body": "",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Libro aggiornato con successo",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "params",
+              "modifier": "{{urlParam 'id'}}",
+              "value": "1",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "e8840840-6a90-4b99-91a6-9ca19ae4f8ef",
+          "body": "",
+          "latency": 0,
+          "statusCode": 404,
+          "label": "Libro non trovato",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "ab6b7dee-5612-448c-a8f0-717fc5f55a37",
+      "type": "http",
+      "documentation": "Elimina un libro esistente",
+      "method": "delete",
+      "endpoint": "libri/:id",
+      "responses": [
+        {
+          "uuid": "67831c06-8d56-4d7b-8508-97779b0c678e",
+          "body": "",
+          "latency": 0,
+          "statusCode": 204,
+          "label": "Libro eliminato con successo",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "529c624f-adcd-4566-b1ae-66bf9c90b8dd",
+          "body": "",
+          "latency": 0,
+          "statusCode": 404,
+          "label": "Libro non trovato",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "4d791cef-6217-4159-9fe8-4909c858aa02",
+      "type": "http",
+      "documentation": "lista degli allievi della classe",
+      "method": "get",
+      "endpoint": "classe",
+      "responses": [
+        {
+          "uuid": "4d2622a7-b337-49b2-91c5-bcce48458623",
+          "body": "{\n   {\"Pippo\"}\n   {\"Pippo\"}   \n   {\"Pippo\"}   \n   {\"Pippo\"}   \n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [
+            {
+              "key": "",
+              "value": ""
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "",
+              "value": "",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "3d861361-f016-4dff-ba42-b325de330be4"
+    },
+    {
+      "type": "route",
+      "uuid": "0cc0d879-1692-42ba-be51-cbdd04541ee9"
+    },
+    {
+      "type": "route",
+      "uuid": "25cf24b8-b0ff-490d-b687-1d4b9a00f247"
+    },
+    {
+      "type": "route",
+      "uuid": "045c39ce-3382-4799-b9f6-560915914fee"
+    },
+    {
+      "type": "route",
+      "uuid": "ab6b7dee-5612-448c-a8f0-717fc5f55a37"
+    },
+    {
+      "type": "route",
+      "uuid": "4d791cef-6217-4159-9fe8-4909c858aa02"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": []
+}

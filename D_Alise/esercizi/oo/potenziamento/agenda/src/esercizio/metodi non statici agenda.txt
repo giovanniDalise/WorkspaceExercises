@@ -1,0 +1,21 @@
+DOMANDA:
+Ho una classe Bootstrap dove ho solo la parte front end una classe agenda dove ho la lista contatti e i metodi per aggiungere ricercare ed eliminare i contatti e la classe contatto con gli attributi nome numero e email contatto. Secondo te è più giusto che faccia i metodi statici o non statici nella classe agenda?
+
+RISPOSTA
+La scelta di implementare i metodi come statici o non statici nella classe Agenda dipende dalla struttura del tuo programma e dal modo in cui intendi utilizzare la classe Agenda.
+
+Ecco alcune considerazioni che possono aiutarti a prendere una decisione:
+
+Coerenza concettuale: Se la classe Agenda rappresenta un'istanza specifica di un'agenda, potrebbe essere più coerente implementare i metodi come non statici. In questo modo, ogni istanza di Agenda avrebbe la propria lista di contatti e i metodi opererebbero su quella specifica istanza.
+
+Condivisione dei dati: Se i dati della lista dei contatti devono essere condivisi tra diverse istanze di Agenda o tra diverse parti del programma, potrebbe essere utile implementare i metodi come statici. In questo modo, la lista dei contatti sarebbe condivisa tra tutte le istanze di Agenda e potrebbe essere accessibile da diverse parti del programma senza dover creare istanze aggiuntive.
+
+Utilizzo dei metodi: Considera come intendi utilizzare i metodi della classe Agenda. Se i metodi verranno chiamati frequentemente da altre parti del programma, potrebbe essere più conveniente implementarli come metodi statici per evitare la creazione di istanze ripetute. D'altra parte, se i metodi saranno principalmente utilizzati all'interno delle istanze di Agenda, potrebbe essere più appropriato implementarli come metodi non statici.
+
+In generale, se la classe Agenda ha uno stato che deve essere mantenuto e se l'uso della classe prevede la creazione di diverse istanze con liste di contatti indipendenti, è più comune e logico implementare i metodi come non statici. D'altra parte, se l'uso della classe prevede una condivisione di dati tra diverse parti del programma o se i metodi sono più utilizzati come funzioni di utilità indipendenti dalla specifica istanza di Agenda, potrebbe essere appropriato implementarli come metodi statici.
+
+In ogni caso, è importante valutare attentamente le esigenze specifiche del tuo programma e prendere una decisione coerente con la logica e l'architettura del tuo sistema.
+
+
+
+

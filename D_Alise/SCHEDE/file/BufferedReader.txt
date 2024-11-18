@@ -1,0 +1,38 @@
+Name: BufferedReader
+Package: java.io
+
+Descrizione:
+Legge il testo da un flusso di input di caratteri, bufferizzando i caratteri in modo da fornire una lettura efficiente di caratteri, matrici e righe.
+
+È possibile specificare la dimensione del buffer o utilizzare la dimensione predefinita. Il valore predefinito è abbastanza grande per la maggior parte degli scopi.
+
+In generale, ogni richiesta di lettura effettuata da un Reader provoca una corrispondente richiesta di lettura del carattere sottostante o del flusso di byte. È quindi consigliabile avvolgere un BufferedReader attorno a qualsiasi Reader le cui operazioni read() possono essere costose, come FileReader e InputStreamReader. Per esempio,
+
+ BufferedReader in
+   = new BufferedReader(new FileReader("foo.in"));
+
+bufferizzerà l'input dal file specificato. Senza buffering, ogni invocazione di read() o readLine() potrebbe far sì che i byte vengano letti dal file, convertiti in caratteri e quindi restituiti, il che può essere molto inefficiente.
+
+I programmi che utilizzano DataInputStreams per l'input testuale possono essere localizzati sostituendo ogni DataInputStream con un BufferedReader appropriato.
+
+Field: inerenti alla classe Reader
+
+COSTRUTTORI:
+BufferedReader (Reader in):
+Crea un flusso di input di caratteri nel buffer che usa un buffer di input di dimensioni predefinite.
+
+BufferedReader(Reader in, int sz)
+Crea un flusso di input di caratteri nel buffer che usa un buffer di input delle dimensioni specificate.
+
+METODI:
+close():
+Chiude il flusso e rilascia tutte le risorse di sistema ad esso associate.
+
+lines():
+Restituisce uno Stream, i cui elementi sono righe lette da questo BufferedReader.
+
+readLines();
+Legge una linea di testo.
+
+
+

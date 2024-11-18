@@ -1,0 +1,16 @@
+{
+  "name": "booksmongo",
+  "version": "1.0.0",
+  "description": "implementazione MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "juan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongodb": "^5.7.0",
+    "typescript": "^5.1.6"
+  }
+}

@@ -1,0 +1,22 @@
+packaage: javax.ws.rs.core
+
+Nome: Class Application
+
+Descrizione:
+Definisce i componenti di un'applicazione JAX-RS e fornisce metadati aggiuntivi. Un'applicazione o un'implementazione JAX-RS fornisce una sottoclasse concreta di questa classe astratta.
+L'istanza creata dall'implementazione di una sottoclasse dell'applicazione può essere inserita nelle classi di risorse e nei provider utilizzando il contesto.
+
+Nel caso in cui uno qualsiasi dei metodi della sottoclasse dell'applicazione o il suo costruttore generi un'eccezione RuntimeException, la distribuzione dell'applicazione DOVREBBE essere interrotta con un errore.
+
+Costruttore:
+Application()
+
+Metodi:
+getClasses​()	
+Get a set of root resource, provider and feature classes.
+
+getProperties​()	
+Get a map of custom application-wide properties.
+
+getSingletons​()	
+Get a set of root resource, provider and feature instances.

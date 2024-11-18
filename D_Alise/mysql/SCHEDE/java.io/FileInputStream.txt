@@ -1,0 +1,32 @@
+Name:FileInputStream
+
+Package:java.io
+
+Descrizione:Un FileInputStream ottiene i byte di input da un file in un file system. I file disponibili dipendono dall'ambiente host.
+FileInputStream è pensato per leggere flussi di byte grezzi come i dati immagine. Per leggere flussi di caratteri, prendi in considerazione l'utilizzo di FileReader.
+
+Costruttori:
+FileInputStream(File file)
+Creates a FileInputStream by opening a connection to an actual file, the file named by the File object file in the file system.
+
+FileInputStream(FileDescriptor fdObj)
+Creates a FileInputStream by using the file descriptor fdObj, which represents an existing connection to an actual file in the file system.
+
+FileInputStream(String name)
+Creates a FileInputStream by opening a connection to an actual file, the file named by the path name name in the file system.
+
+METODI:
+available()
+Returns an estimate of the number of remaining bytes that can be read (or skipped over) from this input stream without blocking by the next invocation of a method for this input stream.
+
+close()
+Closes this file input stream and releases any system resources associated with the stream.
+
+finalize()
+Ensures that the close method of this file input stream is called when there are no more references to it.
+
+read()
+Reads a byte of data from this input stream.
+
+skip(long n)
+Skips over and discards n bytes of data from the input stream.

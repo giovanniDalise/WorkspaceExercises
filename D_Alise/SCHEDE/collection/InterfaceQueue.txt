@@ -1,0 +1,34 @@
+Nome: Interface Queue<E>
+
+Package:java.util
+
+Descrizione:Una collezione pensata per contenere gli elementi prima della lavorazione. Oltre alle operazioni di raccolta di base, le code forniscono ulteriori operazioni di inserimento, estrazione e ispezione. Ciascuno di questi metodi esiste in due forme: uno lancia un'eccezione se l'operazione fallisce, l'altro restituisce un valore speciale (null o false, a seconda dell'operazione). L'ultima forma dell'operazione di inserimento è progettata specificamente per l'uso con implementazioni Queue a capacità limitata; nella maggior parte delle implementazioni, le operazioni di inserimento non possono fallire.
+Riepilogo dei metodi Queue
+(guarda schemino su documentazione queue
+
+Le code in genere, ma non necessariamente, ordinano gli elementi in un modo FIFO (first-in-first-out). Tra le eccezioni vi sono le code di priorità, che ordinano gli elementi secondo un comparatore fornito, o l'ordinamento naturale degli elementi, e le code LIFO (o pile) che ordinano gli elementi LIFO (last-in-first-out). Qualunque sia l'ordinamento utilizzato, la testa della coda è quell'elemento che verrebbe rimosso da una chiamata a remove() o poll(). In una coda FIFO, tutti i nuovi elementi vengono inseriti in coda alla coda. Altri tipi di code possono utilizzare regole di posizionamento diverse. Ogni implementazione di Queue deve specificare le proprie proprietà di ordinamento.
+
+Il metodo offer inserisce un elemento se possibile, altrimenti restituisce false. Ciò differisce dal metodo Collection.add, che può non riuscire ad aggiungere un elemento solo generando un'eccezione non verificata. Il metodo dell'offerta è progettato per essere utilizzato quando il guasto è un'occorrenza normale, piuttosto che eccezionale, ad esempio nelle code a capacità fissa (o "limitate").
+
+I metodi remove() e poll() rimuovono e restituiscono l'inizio della coda. Esattamente quale elemento viene rimosso dalla coda è una funzione della politica di ordinamento della coda, che differisce da implementazione a implementazione. I metodi remove() e poll() differiscono solo nel loro comportamento quando la coda è vuota: il metodo remove() genera un'eccezione, mentre il metodo poll() restituisce null.
+
+I metodi element() e peek() restituiscono, ma non rimuovono, l'inizio della coda.
+
+L'interfaccia Queue non definisce i metodi di coda di blocco, che sono comuni nella programmazione concorrente. Questi metodi, che attendono la visualizzazione degli elementi o la disponibilità di spazio, sono definiti nell'interfaccia BlockingQueue, che estende questa interfaccia.
+
+Le implementazioni della coda in genere non consentono l'inserimento di elementi null, sebbene alcune implementazioni, come LinkedList, non proibiscano l'inserimento di null. Anche nelle implementazioni che lo consentono, null non dovrebbe essere inserito in una Queue, in quanto null è utilizzato anche come valore di ritorno speciale dal metodo poll per indicare che la coda non contiene elementi.
+
+Le implementazioni della coda in genere non definiscono le versioni basate sugli elementi dei metodi equals e hashCode, ma ereditano invece le versioni basate sull'identità dalla classe Object, poiché l'uguaglianza basata sugli elementi non è sempre ben definita per le code con gli stessi elementi ma diverse proprietà di ordinamento.
+
+Metodi:
+add(E e):Inserisce l'elemento specificato in questa coda se è possibile farlo immediatamente senza violare le limitazioni di capacità, restituendo true in caso di successo e generando un'eccezione IllegalStateException se non è attualmente disponibile spazio.
+
+element():Recupera, ma non rimuove, l'inizio di questa coda.
+
+offer(E e):Inserisce l'elemento specificato in questa coda se è possibile farlo immediatamente senza violare le limitazioni di capacità.
+
+peek():Recupera, ma non rimuove, l'intestazione di questa coda o restituisce null se questa coda è vuota.
+
+poll():Recupera e rimuove l'intestazione di questa coda o restituisce null se questa coda è vuota.
+
+queue():Recupera e rimuove l'intestazione di questa coda.

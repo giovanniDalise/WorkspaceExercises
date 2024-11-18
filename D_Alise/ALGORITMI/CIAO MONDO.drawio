@@ -1,0 +1,31 @@
+<mxfile host="app.diagrams.net" modified="2023-04-04T10:04:18.211Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/111.0" etag="ayARaBb7DnfeuiOz_SG0" version="21.1.4" type="google">
+  <diagram name="Pagina-1" id="PdGr3hInESBV8fcOvJXR">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Ga4xfCkf2KRy6lJ9_Zgu-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Ga4xfCkf2KRy6lJ9_Zgu-1" target="Ga4xfCkf2KRy6lJ9_Zgu-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ga4xfCkf2KRy6lJ9_Zgu-1" value="START" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="30" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Ga4xfCkf2KRy6lJ9_Zgu-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Ga4xfCkf2KRy6lJ9_Zgu-5" target="Ga4xfCkf2KRy6lJ9_Zgu-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ga4xfCkf2KRy6lJ9_Zgu-5" value="SCRIVI CIAO MONDO" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="110" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Ga4xfCkf2KRy6lJ9_Zgu-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Ga4xfCkf2KRy6lJ9_Zgu-6" target="Ga4xfCkf2KRy6lJ9_Zgu-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ga4xfCkf2KRy6lJ9_Zgu-6" value="&quot;CIAO MONDO&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Ga4xfCkf2KRy6lJ9_Zgu-10" value="END" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="300" width="120" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

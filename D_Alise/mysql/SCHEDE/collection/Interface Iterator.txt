@@ -1,0 +1,21 @@
+Nome:Interface Iterator<E>
+
+package: java.util
+
+Descrizione: 
+Iterator è un interfaccia di Java Collections Framework
+In Java, un Iterator è un costrutto utilizzato per attraversare o scorrere la raccolta.
+L'interfaccia Java Iterator sostituisce l'enumeratore utilizzato in precedenza per scorrere alcune semplici raccolte come i vettori.
+
+Le principali differenze tra Java Iterator ed Enumerator sono:
+Notevole miglioramento nei nomi dei metodi.
+È possibile rimuovere gli elementi del metodo dalla raccolta che viene attraversata utilizzando un iteratore.
+
+Metodi:
+next():Restituisce l'elemento successivo nella raccolta.
+
+hasNext():restituisce vero se l'iterazione ha altri elementi
+
+forEachRemaining(Consumer<? super E> action):Esegue l'azione specificata su ciascuno degli elementi rimanenti della raccolta fino a quando tutti gli elementi non sono esauriti o l'azione genera un'eccezione. Le eccezioni generate dall'azione vengono propagate al chiamante.
+
+remove():Rimuove l'ultimo elemento restituito dall'iteratore che esegue l'iterazione sulla raccolta sottostante. Il metodo remove () può essere chiamato solo una volta per ogni chiamata next ().

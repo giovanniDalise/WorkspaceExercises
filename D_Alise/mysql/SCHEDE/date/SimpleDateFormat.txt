@@ -1,0 +1,39 @@
+Name: SimpleDateFormat
+Package: java.text
+
+Descrizione:SimpleDateFormat è una classe concreta per la formattazione e l'analisi delle date in modo sensibile alle impostazioni locali. Consente la formattazione (data → testo), l'analisi (testo → data) e la normalizzazione. GUARDA RESTO DELLA DESCRIZIONE SU APPI
+
+Field:
+inerenti a DateFormat
+
+Construttori:
+SimpleDateFormat():
+Costruisce un oggetto SimpleDateFormat usando il modello predefinito e i simboli del formato della data per le impostazioni locali FORMAT predefinite.
+
+SimpleDateFormat(String pattern):
+Constructs a SimpleDateFormat using the given pattern and the default date format symbols for the default FORMAT locale.
+
+SimpleDateFormat(String pattern, DateFormatSymbols formatSymbols):
+Costruisce un oggetto SimpleDateFormat utilizzando il modello specificato e i simboli del formato di data predefinito per le impostazioni locali FORMAT predefinite.
+
+SimpleDateFormat(String pattern, Locale locale):
+Costruisce un oggetto SimpleDateFormat utilizzando il modello specificato e i simboli del formato di data predefinito per le impostazioni locali specificate.
+
+Metodi:
+applyLocalizedPattern(String pattern):
+Applica la stringa del modello localizzato specificata a questo formato di data.
+
+applyPattern(String pattern):
+Applica la stringa del modello data a questo formato di data.
+
+clone():
+Crea una copia di questo SimpleDateFormat.
+
+equals(Object obj):
+Confronta l'oggetto dato con questo SimpleDateFormat per verificarne l'uguaglianza.
+
+format(Date date, StringBuffer toAppendTo, FieldPosition pos):
+Formatta la data specificata in una stringa di data/ora e aggiunge il risultato all'oggetto StringBuffer specificato.
+
+parse(String text, ParsePosition pos):
+Analizza il testo da una stringa per produrre una data.

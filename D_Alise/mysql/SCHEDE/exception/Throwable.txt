@@ -1,0 +1,22 @@
+Name: Throwable
+Package: java.lang
+
+Descrizione:
+Throwable è la superclass di tutti gli error ed exceptions nel linguaggio java. Solo gli oggetti che sono instanziati in questa classe (o un oggetto della sua sottoclasse) sono lanciati(fatti partire penso)da java dal comando throw. Ugualmente solo questa classe o una delle sue sottoclassi può essere il tipo di argomento in una clausola catch. Ai fini del controllo delle eccezioni in fase di compilazione, Throwable e qualsiasi sottoclasse di Throwable che non sia anche una sottoclasse di RuntimeException o Error sono considerate eccezioni controllate.
+Le istanze di due sottoclassi, Error ed Exception, sono convenzionalmente utilizzate per indicare che si sono verificate situazioni eccezionali. In genere, queste istanze vengono appena create nel contesto della situazione eccezionale in modo da includere informazioni rilevanti (come i dati di traccia dello stack).
+Un throwable contiene un'istantanea dello stack di esecuzione del suo thread nel momento in cui è stato creato. Può anche contenere una stringa di messaggio che fornisce ulteriori informazioni sull'errore. Nel tempo, un oggetto da lancio può sopprimere la propagazione di altri throwable. Infine, il throwable può contenere anche una causa(potrei dire generante forse): un altro throwable che ha fatto costruire questo thwoable. La registrazione di questa informazione causale è indicata come la funzione di eccezione concatenata, poiché la causa può, essa stessa, avere una causa e così via, portando a una "catena" di eccezioni, ciascuna causata da un'altra.
+
+Costruttori:
+Throwable(): costruisce un nuovo throwable con null(valore o oggetto inesistente) come risposta.
+
+Throwable(String message): costruisce un nuovo throwable con uno specifico messaggio.
+
+Throwable(String message, Throwable cause): costruisce un nuovo throwable con uno specifico messaggio e causa.
+
+Metodi:
+- getCause(): ci restituisce la causa del throwable oppure un valore null nel caso di non esistenza o di sconosciuto.
+
+- getMessage(): ci restituisce il messaggio in stringa del throwable.
+
+-printStackTrace(): stampa il throwable e il suo backtrace(o stacktrace rappresenta la traccia di cosa è accaduto quando si è verificato un errore) nello specificato print stream.
+

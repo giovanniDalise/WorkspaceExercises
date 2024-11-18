@@ -1,0 +1,35 @@
+Name: File
+Package: java.io
+
+Descrizione:
+File è una rappresentazione astratta dei nomi di percorso di file e directory.
+Le interfacce utente e i sistemi operativi utilizzano stringhe di percorso(path) dipendenti dal sistema per denominare file e directory. Questa classe presenta una visione astratta, indipendente dal sistema, dei percorsi gerarchici. Un percorso astratto ha due componenti:
+
+1.Una stringa di prefisso facoltativa dipendente dal sistema, ad esempio un identificatore di unità disco, "/" per la directory principale UNIX o "\\\\" per un percorso UNC di Microsoft Windows
+2. Una sequenza di zero o più nomi di stringhe.
+
+Il primo nome in un percorso astratto può essere un nome di directory o, nel caso di percorsi UNC di Microsoft Windows, un nome host. Ogni nome successivo in un percorso astratto denota una directory; il cognome può indicare una directory o un file. Il percorso astratto vuoto non ha prefisso e una sequenza di nomi vuota.
+
+COSTRUTTORI:
+File(File padre, String figlio)
+Crea una nuova istanza di File da un percorso astratto padre e da una stringa di percorso figlio.
+
+File(String percorso)
+Crea una nuova istanza di File convertendo la stringa del percorso specificato in un percorso astratto.
+
+File (String genitore, String figlio)
+Crea una nuova istanza di File da una stringa del nome di percorso padre e da una stringa del nome di percorso figlio.
+
+METODI:
+
+canExecute():Verifica se l'applicazione può eseguire il file indicato da questo percorso astratto.
+
+canRead():Verifica se l'applicazione può leggere il file indicato da questo percorso astratto.
+
+canWrite():Tests whether the application can modify the file denoted by this abstract pathname.
+
+
+
+
+
+

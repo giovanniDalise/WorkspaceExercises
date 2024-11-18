@@ -1,0 +1,12 @@
+Scrivi un programma che gestisce una classe di studenti, con variabili di istanza come il nome dello studente, l'età, il voto medio e l'indirizzo email. Implementa metodi per aggiungere uno studente alla classe, per cercare uno studente per nome o per email e per calcolare la media dei voti degli studenti nel database.
+
+già fatto in altri modi
+
+Scrivi un programma che rappresenta un'agenda telefonica, con variabili di istanza come il nome della persona, il numero di telefono e l'indirizzo email. Implementa metodi per aggiungere una persona all'agenda, per cercare una persona per nome o per numero di telefono e per rimuovere una persona dall'agenda.
+
+
+Scrivi un programma che rappresenta un sistema di prenotazione per un hotel, con variabili di istanza come la data di arrivo, la data di partenza e il numero di ospiti. Implementa metodi per prenotare una stanza, per cercare le camere disponibili per un certo periodo di tempo e per calcolare il costo totale della prenotazione.
+
+fatto fino qua
+
+Scrivi un programma che rappresenta un sistema di gestione delle prenotazioni per un ristorante, con variabili di istanza come la data e l'ora della prenotazione, il numero di ospiti e il nome della persona che ha effettuato la prenotazione. Implementa metodi per prenotare un tavolo, per cercare i tavoli disponibili per un certo periodo di tempo e per cancellare una prenotazione.

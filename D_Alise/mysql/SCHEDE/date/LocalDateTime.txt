@@ -1,0 +1,61 @@
+Name: LocalDateTime
+Package: java.time
+
+Descrizione:Una data-ora senza fuso orario nel sistema di calendario ISO-8601, ad esempio 2007-12-03T10:15:30.
+
+LocalDateTime è un oggetto data-ora immutabile che rappresenta una data-ora, spesso visualizzata come anno-mese-giorno-ora-minuto-secondo. È possibile accedere anche ad altri campi di data e ora, come giorno dell'anno, giorno della settimana e settimana dell'anno. Il tempo è rappresentato con precisione al nanosecondo. Ad esempio, il valore "2nd October 2007 at 13:45.30.123456789" può essere archiviato in LocalDateTime.
+
+Questa classe non memorizza o rappresenta un fuso orario. Invece, è una descrizione della data, usata per i compleanni, combinata con l'ora locale come si vede su un orologio da parete. Non può rappresentare un istante sulla linea del tempo senza informazioni aggiuntive come un offset o un fuso orario.
+
+Il sistema di calendario ISO-8601 è il moderno sistema di calendario civile utilizzato oggi nella maggior parte del mondo. È equivalente al sistema prolettico del calendario gregoriano, in cui le regole odierne per gli anni bisestili vengono applicate per sempre. Per la maggior parte delle applicazioni scritte oggi, le regole ISO-8601 sono del tutto adatte. Tuttavia, qualsiasi applicazione che faccia uso di date storiche e richieda che siano accurate riterrà inadatto l'approccio ISO-8601.
+
+Questa è una classe basata sul valore; l'uso di operazioni sensibili all'identità (inclusa l'uguaglianza dei riferimenti (==), il codice hash dell'identità o la sincronizzazione) su istanze di LocalDateTime può avere risultati imprevedibili e deve essere evitato. Il metodo uguale dovrebbe essere utilizzato per i confronti.
+
+Fields:
+MAX:
+Il LocalDateTime massimo supportato '+999999999-12-31T23:59:59.999999999'.
+MIN
+Il LocalDateTime minimo supportato'-999999999-01-01T00:00:00'.
+
+Metodi:
+adjustInto(Temporal temporal):
+Regola l'oggetto temporale specificato in modo che abbia la stessa data e ora di questo oggetto.
+
+atOffset(ZoneOffset offset):
+Combina questa data-ora con un offset per creare un OffsetDateTime.
+
+atZone(ZoneId zone):
+Combina questa data-ora con un fuso orario per creare un ZonedDateTime.
+
+getDayOfYear():
+ottieni il giorno dell'anno
+
+getHour():
+ottieni l'ora del giorno
+
+compareTo(ChronoLocalDateTime<?> other):
+Confronta questa data-ora con un'altra data-ora.
+
+equals(Object obj):
+Controlla se questa data-ora è uguale a un'altra data-ora.
+
+now():
+Ottiene la data-ora corrente dall'orologio di sistema nel fuso orario predefinito.
+
+of(int year, int month, int dayOfMonth, int hour, int minute):
+Ottiene un'istanza di LocalDateTime da anno, mese, giorno, ora e minuto, impostando il secondo e il nanosecondo su zero.
+
+toString():
+Restituisce questa data-ora come una stringa, ad esempio 2007-12-03T10:15:30.
+
+toLocalDate():
+Ottiene la parte LocalDate di questa data-ora
+
+toLocalTime():
+Ottiene la parte LocalTime di questa data-ora.
+
+
+
+
+
+

@@ -1,0 +1,53 @@
+Name: LocalDate
+Package: java.time
+Descrizione:Una data senza fuso orario nel sistema di calendario ISO-8601, ad esempio 2007-12-03.
+
+LocalDate è un oggetto data-ora immutabile che rappresenta una data, spesso visualizzata come anno-mese-giorno. È possibile accedere anche ad altri campi data, come giorno dell'anno, giorno della settimana e settimana dell'anno. Ad esempio, il valore "2nd October 2007" può essere memorizzato in LocalDate.
+
+Questa classe non memorizza né rappresenta un'ora o un fuso orario. Invece, è una descrizione della data, usata per i compleanni. Non può rappresentare un istante sulla linea del tempo senza informazioni aggiuntive come un offset o un fuso orario.
+
+Il sistema di calendario ISO-8601 è il moderno sistema di calendario civile utilizzato oggi nella maggior parte del mondo. È equivalente al sistema prolettico del calendario gregoriano, in cui le regole odierne per gli anni bisestili vengono applicate per sempre. Per la maggior parte delle applicazioni scritte oggi, le regole ISO-8601 sono del tutto adatte. Tuttavia, qualsiasi applicazione che faccia uso di date storiche e richieda che siano accurate riterrà inadatto l'approccio ISO-8601.
+
+Questa è una classe basata sul valore; l'uso di operazioni sensibili all'identità (inclusa l'uguaglianza dei riferimenti (==), il codice hash dell'identità o la sincronizzazione) su istanze di LocalDate può avere risultati imprevedibili e deve essere evitato. Il metodo uguale dovrebbe essere utilizzato per i confronti.
+
+Fields: 
+MAX: La data locale massima supportata, '+999999999-12-31'.
+MIN: La data locale minima supportata, '-999999999-01-01'.
+
+Metodi:
+parse(CharSequence text):
+Ottiene un'istanza di LocalDate da una stringa di testo come 2007-12-03.
+
+adjustInto(Temporal temporal):
+Regola l'oggetto temporale specificato in modo che abbia la stessa data di questo oggetto.
+
+atStartOfDay():
+Combina questa data con l'ora di mezzanotte per creare un LocalDateTime all'inizio di questa data.
+
+atTime(int hour, int minute):
+Combina questa data con un'ora per creare un LocalDateTime.
+
+compareTo(ChronoLocalDate other):
+Confronta questa data con un'altra data.
+
+equals(Object obj):
+Controlla se questa data è uguale a un'altra data.
+
+format(DateTimeFormatter formatter):
+Formatta questa data utilizzando il formattatore specificato.
+
+isLeapYear():
+Controlla se l'anno è un anno bisestile, secondo le regole del sistema di calendario prolettico ISO.
+
+lengthOfMonth():
+Restituisce la durata del mese rappresentato da questa data.
+
+now():
+Ottiene la data corrente dall'orologio di sistema nel fuso orario predefinito.
+
+
+
+
+
+
+

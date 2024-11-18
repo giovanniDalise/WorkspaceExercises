@@ -1,0 +1,26 @@
+Name: String
+Package: java.lang
+
+Descrizione:
+Rapprensenta una stringa di caratteri.
+
+Costruttori:
+
+- String(): inizializza un oggetto stringa appena creato in modo da rappresentare una sequenza di caratteri vuoti.
+
+- String(String original): inizializza un oggetto stringa appena creato in modo da rappresentare la stessa sequenza di caratteri o argomenti in altre parole l'appena creata stringa è la copia dell'argomento della stringa.
+
+
+Metodi:
+
+toUpperCase(): converte tutti i caratteri della stringa in maiuscole.
+
+lenght(): per vedere la lunghezza di una parola in caratteri.
+
+String.format(): sostituisce dei numeri a delle parole utilizzando dei valori ad esempio:
+
+count = 4;
+
+System.out.println(String.format("La frase contiene %d parole",count));
+
+come vedi ci sono anche qui le parentesi del metodo  

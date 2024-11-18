@@ -1,0 +1,17 @@
+Name: Exception
+Package: java.lang
+
+Descrizione:
+La classe Exception e le sue sottoclassi sono una forma di Throwable che indica le condizioni che un'applicazione potrebbe voler catturare.
+La classe Exception e tutte le sottoclassi che non sono anche sottoclassi di RuntimeException sono eccezioni controllate. Le eccezioni controllate devono essere dichiarate in una clausola throws del metodo o del costruttore se possono essere generate dall'esecuzione del metodo o del costruttore e propagarsi all'esterno del limite del metodo o del costruttore.
+
+Costruttori:
+Exception(): costruisce un nuovo exception con null(valore o oggetto inesistente) come risposta.
+
+Exception(String message): costruisce un nuovo exception con uno specifico messaggio.
+
+Exception(String message, Exception cause): costruisce un nuovo exception con uno specifico messaggio e causa.
+
+Metodi:
+penso siano gli stessi del throwable.
+

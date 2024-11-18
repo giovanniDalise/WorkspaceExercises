@@ -1,0 +1,13 @@
+1. Scrivi un programma che prende in input un array di interi e restituisce la somma di tutti i numeri pari all'interno dell'array.
+2. Scrivi un programma che prende in input un array di stringhe e restituisce la stringa più lunga presente nell'array.
+
+fino qua
+
+3. Scrivi un programma che prende in input due array di interi della stessa lunghezza e restituisce un array che contiene la somma dei corrispondenti elementi dei due array.
+4. Scrivi un programma che prende in input un array di interi e restituisce true se l'array è ordinato in modo crescente, false altrimenti.
+5. Scrivi un programma che prende in input un array di interi e restituisce un nuovo array contenente tutti gli elementi pari e successivamente quelli dispari
+6. Scrivi un programma che prende in input un array di interi e restituisce l'indice dell'elemento minimo nell'array.
+7. Scrivi un programma che prende in input un array di stringhe e un carattere, e restituisce un nuovo array contenente tutte le stringhe che iniziano con il carattere dato.
+8. Scrivi un programma che prende in input un array di interi e un intero target, e restituisce true se esiste una coppia di numeri nell'array che sommati danno come risultato l'intero target, false altrimenti.
+9. Scrivi un programma che prende in input un array di interi e restituisce un nuovo array contenente solo i numeri dispari presenti nell'array originale, ordinati in modo decrescente.
+10. Scrivi un programma che prende in input due array di interi e restituisce un array contenente gli elementi che sono presenti in entrambi gli array.

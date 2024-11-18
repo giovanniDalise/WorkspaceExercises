@@ -1,0 +1,173 @@
+<mxfile host="app.diagrams.net" modified="2023-04-06T14:09:03.596Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/111.0" etag="xxZ5x5b2FdjVM8iMwzwj" version="21.1.4" type="google">
+  <diagram name="Pagina-1" id="Ja9aDEnZTkdaRGvW2fB8">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ptjTK9qq1TTvSzxXCJFy-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.521;entryY=0.025;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="ptjTK9qq1TTvSzxXCJFy-1" target="ptjTK9qq1TTvSzxXCJFy-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ptjTK9qq1TTvSzxXCJFy-1" value="INIZIO" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="354" y="-30" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ptjTK9qq1TTvSzxXCJFy-49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="ptjTK9qq1TTvSzxXCJFy-3" target="ptjTK9qq1TTvSzxXCJFy-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ptjTK9qq1TTvSzxXCJFy-3" value="REDDITO LORDO" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="338.5" y="110" width="146" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ptjTK9qq1TTvSzxXCJFy-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="ptjTK9qq1TTvSzxXCJFy-5" target="ptjTK9qq1TTvSzxXCJFy-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ptjTK9qq1TTvSzxXCJFy-5" value="&quot;INSERIRE REDDITO LORDO&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="333.5" y="50" width="156" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ptjTK9qq1TTvSzxXCJFy-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="ptjTK9qq1TTvSzxXCJFy-9" target="ptjTK9qq1TTvSzxXCJFy-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ptjTK9qq1TTvSzxXCJFy-9" value="TASSAZIONE = 0" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="351.5" y="170" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ptjTK9qq1TTvSzxXCJFy-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="ptjTK9qq1TTvSzxXCJFy-10">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="569.5" y="650" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="570" y="535" />
+              <mxPoint x="570" y="515" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ptjTK9qq1TTvSzxXCJFy-55" value="vero" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="ptjTK9qq1TTvSzxXCJFy-10" target="ptjTK9qq1TTvSzxXCJFy-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ptjTK9qq1TTvSzxXCJFy-10" value="REDDITO LORDO&amp;lt;= 15K" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="349.5" y="480" width="110" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="ptjTK9qq1TTvSzxXCJFy-14" value="FALSO" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="489.5" y="495" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ptjTK9qq1TTvSzxXCJFy-68" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.412;exitY=1.008;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="ptjTK9qq1TTvSzxXCJFy-17" target="ptjTK9qq1TTvSzxXCJFy-66">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ptjTK9qq1TTvSzxXCJFy-17" value="&amp;nbsp;TASSAZIONE= REDDITO LORDO * 23 /100" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="660" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ptjTK9qq1TTvSzxXCJFy-71" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.564;entryY=-0.022;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="ptjTK9qq1TTvSzxXCJFy-18" target="ptjTK9qq1TTvSzxXCJFy-70">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ptjTK9qq1TTvSzxXCJFy-18" value="&quot;RISULTATO&quot; + TASSAZIONE" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="1290" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ptjTK9qq1TTvSzxXCJFy-51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="ptjTK9qq1TTvSzxXCJFy-22" target="ptjTK9qq1TTvSzxXCJFy-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ptjTK9qq1TTvSzxXCJFy-22" value="int primo = 3450&lt;sub&gt;;&lt;/sub&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="351.5" y="230" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ptjTK9qq1TTvSzxXCJFy-52" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.478;entryY=-0.008;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="ptjTK9qq1TTvSzxXCJFy-23" target="ptjTK9qq1TTvSzxXCJFy-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ptjTK9qq1TTvSzxXCJFy-23" value="int secondo = 3250" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="344.5" y="290" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ptjTK9qq1TTvSzxXCJFy-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="ptjTK9qq1TTvSzxXCJFy-24" target="ptjTK9qq1TTvSzxXCJFy-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ptjTK9qq1TTvSzxXCJFy-24" value="int terzo = 7700" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="344.5" y="340" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ptjTK9qq1TTvSzxXCJFy-56" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="ptjTK9qq1TTvSzxXCJFy-26" target="ptjTK9qq1TTvSzxXCJFy-35">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ptjTK9qq1TTvSzxXCJFy-62" value="true" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="ptjTK9qq1TTvSzxXCJFy-26" target="ptjTK9qq1TTvSzxXCJFy-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ptjTK9qq1TTvSzxXCJFy-26" value="REDDITO LORDO &amp;lt;= 28K" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="498" y="650" width="130" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="ptjTK9qq1TTvSzxXCJFy-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ptjTK9qq1TTvSzxXCJFy-29" target="ptjTK9qq1TTvSzxXCJFy-31">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="760" y="820" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ptjTK9qq1TTvSzxXCJFy-29" value="differenza = REDDITO LORDO - 15000&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="700" y="730" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ptjTK9qq1TTvSzxXCJFy-64" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ptjTK9qq1TTvSzxXCJFy-31" target="ptjTK9qq1TTvSzxXCJFy-63">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="740" y="1144" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ptjTK9qq1TTvSzxXCJFy-31" value="tassazione = differenza * 25 /100 + primo" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="700" y="820" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ptjTK9qq1TTvSzxXCJFy-54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="ptjTK9qq1TTvSzxXCJFy-32" target="ptjTK9qq1TTvSzxXCJFy-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ptjTK9qq1TTvSzxXCJFy-32" value="differenza = 0" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="344.5" y="390" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ptjTK9qq1TTvSzxXCJFy-57" value="true" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.539;entryY=-0.006;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="ptjTK9qq1TTvSzxXCJFy-35" target="ptjTK9qq1TTvSzxXCJFy-38">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ptjTK9qq1TTvSzxXCJFy-58" value="false" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.465;entryY=0.006;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="ptjTK9qq1TTvSzxXCJFy-35" target="ptjTK9qq1TTvSzxXCJFy-42">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ptjTK9qq1TTvSzxXCJFy-35" value="REDDITO LORDO &amp;lt;= 50K" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="379.5" y="760" width="110" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="ptjTK9qq1TTvSzxXCJFy-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ptjTK9qq1TTvSzxXCJFy-38">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="590" y="920" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ptjTK9qq1TTvSzxXCJFy-38" value="differenza = REDDITO LORDO - 28000" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="530" y="840" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ptjTK9qq1TTvSzxXCJFy-61" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.99;entryY=0.6;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="ptjTK9qq1TTvSzxXCJFy-40" target="ptjTK9qq1TTvSzxXCJFy-59">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ptjTK9qq1TTvSzxXCJFy-40" value="tassazione = differenza * 35/100 + primo + secondo" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="530" y="920" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ptjTK9qq1TTvSzxXCJFy-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ptjTK9qq1TTvSzxXCJFy-42">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="284.5" y="940" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ptjTK9qq1TTvSzxXCJFy-42" value="differenza = REDDITO LORDO - 50k" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="224.5" y="850" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ptjTK9qq1TTvSzxXCJFy-60" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.01;entryY=0.58;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.472;exitY=0.994;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="ptjTK9qq1TTvSzxXCJFy-44" target="ptjTK9qq1TTvSzxXCJFy-59">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ptjTK9qq1TTvSzxXCJFy-44" value="tassazione = differenza * 43 / 100 + primo + secondo + terzo" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="224" y="940" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ptjTK9qq1TTvSzxXCJFy-65" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="ptjTK9qq1TTvSzxXCJFy-59" target="ptjTK9qq1TTvSzxXCJFy-63">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ptjTK9qq1TTvSzxXCJFy-59" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="409.5" y="1040" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ptjTK9qq1TTvSzxXCJFy-67" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="ptjTK9qq1TTvSzxXCJFy-63" target="ptjTK9qq1TTvSzxXCJFy-66">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ptjTK9qq1TTvSzxXCJFy-63" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="538" y="1119" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ptjTK9qq1TTvSzxXCJFy-69" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.564;entryY=0.01;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="ptjTK9qq1TTvSzxXCJFy-66" target="ptjTK9qq1TTvSzxXCJFy-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ptjTK9qq1TTvSzxXCJFy-66" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="239.5" y="1190" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ptjTK9qq1TTvSzxXCJFy-70" value="end" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="1360" width="120" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

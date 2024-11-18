@@ -1,0 +1,25 @@
+ESEMPIO OVERRIDE EQUALS:
+spiegato bene nella classe vestito del package esercizi/interfacce/negozioVestiti
+SPIEGAZIONE OVERRIDE CON OBJECT
+
+In Java, quando confronti due oggetti usando il metodo equals(), di default viene fatto un confronto tra i riferimenti degli oggetti. Ciò significa che due oggetti saranno considerati uguali solo se si riferiscono allo stesso oggetto in memoria.
+
+Tuttavia, per molte classi personalizzate, questo non è sufficiente. Ad esempio, considera una classe Persona che ha le proprietà nome, cognome e età. Se vuoi confrontare due oggetti Persona per vedere se rappresentano la stessa persona, dovrai confrontare le proprietà nome e cognome delle due persone. Il confronto tra i riferimenti degli oggetti non è sufficiente in questo caso.
+
+Per questo motivo, spesso è necessario definire un comportamento di confronto personalizzato per una determinata classe, in modo che possa effettuare il confronto in base alle proprietà specifiche della classe. Per fare ciò, è necessario ridefinire il metodo equals() nella classe personalizzata.
+
+La ridefinizione del metodo equals() consente di confrontare oggetti sulla base delle proprietà specifiche della classe, come nel caso della classe Persona che confronta le proprietà nome e cognome. In questo modo, puoi determinare se due oggetti rappresentano la stessa cosa in base alle proprietà specifiche della classe, invece che solo confrontare i riferimenti degli oggetti.
+
+RIFERIMENTO 
+
+In Java, un riferimento è un'indicazione sulla posizione in memoria di un oggetto. Quando crei un nuovo oggetto, viene allocato nella memoria e un riferimento ad esso viene restituito.
+
+Ad esempio, se dichiari una variabile persona di tipo Persona, come qui:
+
+Persona persona = new Persona("Mario", "Rossi", 30);
+
+La variabile persona è un riferimento all'oggetto Persona che hai creato usando il costruttore. In altre parole, persona non è l'oggetto stesso, ma solo un riferimento all'oggetto che hai creato. Puoi pensare a un riferimento come a un'etichetta che punta all'oggetto nella memoria.
+
+Quando confronti due oggetti in Java, di solito non confronti direttamente l'oggetto stesso, ma confronti i loro riferimenti. Se i due riferimenti puntano allo stesso oggetto, allora i due oggetti sono considerati uguali, tranne nel caso descritto nel paragrafo di sopra dell'override(classi personalizzate).
+
+

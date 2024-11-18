@@ -1,0 +1,169 @@
+JOIN:
+La clausola JOIN non crea una nuova tabella, ma combina i dati da più tabelle in base alle corrispondenze delle chiavi specificate.
+Quando esegui una query con una clausola JOIN, il risultato restituito è un insieme di righe che rappresentano le combinazioni dei dati dalle tabelle coinvolte nella join. La struttura delle tabelle originali rimane inalterata.
+Quindi, per chiarire, la clausola JOIN combina i dati in base alle corrispondenze delle chiavi e restituisce un risultato che può essere considerato come una "visione" delle corrispondenze tra le tabelle coinvolte, senza creare una nuova tabella fisica.
+In SQL gli operatori "JOIN" e "INNER JOIN" sono equivalenti e possono essere utilizzati in modo intercambiabile. Entrambi gli operatori eseguono un'operazione di join interna tra le tabelle coinvolte nella query.
+
+ESEMPIO:
+
+CREATE TABLE corso.autori (
+    autoreId int NOT NULL,
+    nome varchar(20) NULL,
+    primary key (autoreId));
+
+CREATE TABLE corso.editori (
+    editoreId int NOT NULL,
+    nome varchar(20) NULL,
+    primary key (editoreId));
+
+CREATE TABLE corso.libri (
+    libroId int NOT NULL,
+    titolo varchar(20) NULL,
+    autore int NULL,
+    editore int NULL,
+	foreign key (autore) REFERENCES corso.autori(autoreId),
+    foreign key (editore) REFERENCES corso.editori(editoreId),
+    primary key (libroId));
+
+INSERT INTO corso.autori 
+    (autoreId,nome)
+VALUES
+    (1,'Melville'),
+    (2,'Foscolo'),
+    (3,'Calvino'),
+    (4,'Petrarca');
+    
+INSERT INTO corso.editori 
+    (editoreId,nome)
+VALUES
+    (1,'Bonpiani'),
+    (2,'Feltrinelli'),
+    (3,'Einaudi'), 
+    (4,'Giunti');
+
+INSERT INTO corso.libri 
+    (libroId,titolo,autore,editore)
+VALUES
+    (1,'Moby Dick',1,1),
+    (2,'Sonetti',2,2),
+    (3,'Il Barone Rampante',3,3),
+    (4,'Le Citta Invisibili',3,1),
+    (5,'Codex Seraphinianus',null,2),
+    (6,'Il Mio Libro',null,null);
+    
+SELECT corso.libri.titolo, corso.autori.nome
+FROM corso.libri
+JOIN corso.autori ON corso.libri.autore = corso.autori.autoreId;  
+
+-- esempio alias con editori
+SELECT l.titolo as LibroTitolo, e.nome as EditoreNome
+FROM corso.libri as l
+JOIN corso.editori as e ON l.editore = e.editoreId; 
+
+ATTENZIONE!!!
+Nella definizione delle tabelle e delle relazioni tra di esse, è spesso necessario definire le tabelle padre (o principali) prima delle tabelle figlie (o dipendenti). Questo perché le tabelle figlie possono fare riferimento alle chiavi primarie delle tabelle padre come chiavi esterne.
+
+Nel tuo esempio, la tabella "libri" ha due colonne, "autore" e "editore", che sono chiavi esterne che fanno riferimento alle tabelle "autori" ed "editori" rispettivamente. Pertanto, per creare correttamente la tabella "libri" e stabilire le relazioni con le altre due tabelle, devi prima aver creato le tabelle "autori" ed "editori".
+
+In generale, quando si creano tabelle con dipendenze tra di loro, è buona pratica creare prima le tabelle padre e successivamente le tabelle figlie. In questo modo, le dipendenze e le relazioni tra le tabelle possono essere correttamente stabilite utilizzando chiavi esterne.
+
+
+PRIMAY KEY e FOREIGN KEY:
+Le chiavi esterne (foreign key) e la chiave primaria (primary key) in una tabella relazionale fanno riferimento alle righe (tuple) all'interno della tabella.
+
+   foreign key (autore) REFERENCES corso.autori(autoreId),
+   foreign key (editore) REFERENCES corso.editori(editoreId),
+
+Relazione molti a uno nel caso dei libri agli autori (più libri fanno riferimento (REFERENCES) allo stesso autore, ossia più righe nella tabella libri potranno avere lo stesso riferimento univoco  alla riga della colonna autoreId che sarà la primary key della tabella corso.autori. Ponendoci invece ipoteticamente dal lato dell'autore la relazione sarà di uno a molti (un autore o primary key autoreId fa riferimento a molti libri o foreign key libriId). Ovviamento lo stesso vale per gli editori.
+
+La chiave primaria è un attributo o una combinazione di attributi che identifica univocamente ogni riga nella tabella. Serve come identificatore unico per una riga specifica all'interno della tabella. Ogni riga ha un valore distinto per la chiave primaria e non può essere duplicata.
+
+Le chiavi esterne, invece, sono attributi che fanno riferimento alla chiave primaria di un'altra tabella. Rappresentano una relazione tra due tabelle e vengono utilizzate per stabilire connessioni tra i dati in tabelle diverse. Le chiavi esterne consentono di mantenere l'integrità referenziale tra le tabelle, garantendo che le righe collegate abbiano valori corrispondenti nelle colonne delle chiavi esterne e delle chiavi primarie.
+
+In sostanza, le chiavi primarie e le chiavi esterne collegano le righe tra le tabelle e consentono di stabilire relazioni tra i dati nelle tabelle relazionali.
+
+
+
+
+
+SINTASSI:
+
+SELECT corso.libri.titolo, corso.autori.nome
+FROM corso.libri
+JOIN corso.autori ON corso.libri.autore = corso.autori.autoreId;  
+
+Come prima cosa selezioniamo con il SELECT le colonne che vogliamo vedere nella query (puoi utilizzare anche * per vederle tutte ma ricorda che potrebbe portare a risultati indesiderati se le tabelle contengono molte colonne o se le colonne non sono necessarie per il risultato desiderato, dato che * selezionerà tuttele colonne di entrambe le tabelle e magari non vogliamo vederle tutte, a noi interessano le corrispondenze tra primary key e foreign keys. Inoltre, se entrambe le tabelle hanno colonne con lo stesso nome, potrebbe causare ambiguità nel risultato. ), con il FROM invece si stabilisce la tabella di partenza (la prima tabella o tabella di sinistra nel caso di left o right join), con il JOIN (da stabilire il tipo) invece avremo la seconda tabella presa in considerazione(tabella di destra), infine la clausola ON specifica le condizioni di join. Qui viene stabilita la corrispondenza tra le chiavi delle tabelle coinvolte nella join. Puoi definire le condizioni utilizzando gli operatori di confronto, come "=" per una corrispondenza esatta tra le chiavi.
+
+
+ALIAS:
+Gli alias nelle query SQL vengono utilizzati per fornire nomi alternativi alle tabelle o alle colonne, al fine di semplificare la sintassi della query o renderla più leggibile. L'alias può essere utilizzato sia per le tabelle che per le colonne.si utilizza AS per rinominare.
+
+Prima però è da precisare che come ordine di esecuzione delle clausole avremo per prima il FROM poi il JOIN con all'interno la condizione ON e solo dopo il SELECT per questo motivo ti troverai nel secondo esempio delle colonne le prime colonne già definite come L.titolo e A.nome perchè fa riferimento al FROM e JOIN che anticipano il SELECT dove abbiamo rinominato corso.libri AS L e corso.autori AS A (ricorda che corso e il nome che abbiamo dato al database e successivamente abbiamo il nome delle nostre due tabelle). Ovviamente questo esempio non puo essere fatto nel primo caso dato che abbiamo utilizzato l'*.
+
+Per tabelle:
+SELECT * (giusto per concentrarci unicamente sulle taballe perchè * come abbiamo scritto sopra non è una buona pratica in questo contesto)
+FROM corso.libri AS L
+JOIN corso.autori AS A ON L.autore = A.autoreId;
+
+Per colonne:
+SELECT L.titolo AS TitoloLibro, A.nome AS NomeAutore
+FROM corso.libri AS L
+JOIN corso.autori AS A ON L.autore = A.autoreId;
+
+L'uso di alias nelle query SQL è opzionale e dipende dalle tue preferenze personali o dalle esigenze specifiche della query. Gli alias possono rendere le query più concise e comprensibili, soprattutto quando si lavora con tabelle o colonne che hanno nomi lunghi o complessi.
+
+L'utilizzo dell'operatore "AS" per creare alias non è sempre necessario. In molti casi, è possibile assegnare un alias a una colonna o a una tabella semplicemente specificando il nuovo nome dopo il nome originale senza l'utilizzo di "AS".
+
+Ecco un esempio che illustra l'utilizzo dell'alias senza l'operatore "AS":
+
+SELECT l.titolo titolo_libro, a.nome nome_autore, e.nome nome_editore
+FROM corso.libri l
+JOIN corso.autori a ON l.autore = a.autoreId
+JOIN corso.editori e ON l.editore = e.editoreId;
+
+In questo caso, gli alias "titolo_libro", "nome_autore" e "nome_editore" vengono assegnati direttamente dopo i nomi delle colonne selezionate. L'utilizzo di "AS" per creare l'alias è opzionale in questo contesto.
+
+Nell'esempio appena fatto eseguiamo più join contemporaneamente nella stessa query senza problemi, collegando le tabelle attraverso le corrispondenti chiavi primarie e chiavi esterne. Nell' esempio, stai unendo le tabelle "libri", "autori" ed "editori" utilizzando due join consecutive.
+
+
+DIFFERENZE JOIN 
+    Inner Join: L'Inner Join restituisce solo le righe che hanno corrispondenze tra le tabelle coinvolte nella join. In altre parole, restituisce solo le righe in cui le chiavi di join si trovano sia nella tabella di sinistra che nella tabella di destra. Le righe che non hanno corrispondenze vengono escluse dal risultato.
+
+    Left Join: Il Left Join restituisce tutte le righe dalla tabella di sinistra (prima tabella menzionata nella clausola FROM) e le righe corrispondenti dalla tabella di destra (seconda tabella menzionata nella clausola JOIN) in base alla condizione di join specificata. Se una riga nella tabella di sinistra non ha una corrispondenza nella tabella di destra, vengono restituiti valori null per le colonne della tabella di destra.
+
+    Right Join: Il Right Join è simile al Left Join, ma inverte le tabelle coinvolte. Restituisce tutte le righe dalla tabella di destra e le righe corrispondenti dalla tabella di sinistra. Se una riga nella tabella di destra non ha una corrispondenza nella tabella di sinistra, vengono restituiti valori null per le colonne della tabella di sinistra.
+
+    Outer Join: L'Outer Join è un termine generico che può essere usato per indicare un Left Join, un Right Join o un Full Join (che include tutte le righe da entrambe le tabelle, indipendentemente dalla corrispondenza). In alcuni database, l'Outer Join può essere specificato come una clausola separata, mentre in altri database viene implementato utilizzando il Left Join o il Right Join insieme a un Union di un altro join simmetrico.
+
+In sintesi nel caso dell'Inner Join, solo le righe che hanno corrispondenze vengono restituite. Le righe che non hanno una corrispondenza tra le tabelle coinvolte vengono escluse dal risultato.
+
+Nel caso del Left Join, vengono restituite tutte le righe dalla tabella di sinistra (prima tabella menzionata nella clausola FROM) e le righe corrispondenti dalla tabella di destra (seconda tabella menzionata nella clausola JOIN). Se una riga nella tabella di sinistra non ha una corrispondenza nella tabella di destra, vengono restituiti valori null per le colonne della tabella di destra.
+
+Nel caso del Right Join, l'operazione è simile al Left Join ma invertita. Vengono restituite tutte le righe dalla tabella di destra e le righe corrispondenti dalla tabella di sinistra. Se una riga nella tabella di destra non ha una corrispondenza nella tabella di sinistra, vengono restituiti valori null per le colonne della tabella di sinistra.
+
+Nel caso dell'Outer Join, che può essere un termine generico per indicare sia il Left Join che il Right Join, vengono restituite tutte le righe da entrambe le tabelle, indipendentemente dalla corrispondenza. Se non c'è una corrispondenza, i valori null vengono riempiti nelle colonne corrispondenti.
+
+Recupero degli autori con un Left Join:
+SELECT a.nome AS nome_autore, l.titolo AS titolo_libro
+FROM corso.autori a
+LEFT JOIN corso.libri l ON a.autoreId = l.autore;
+
+In questo esempio, stiamo recuperando gli autori dalla tabella "corso.autori" e utilizzando un Left Join con la tabella "corso.libri". Vengono restituiti tutti gli autori, anche se non hanno libri corrispondenti. Se un autore non ha libri associati, verranno restituiti valori null per le colonne relative ai libri.
+
+Recupero degli editori con un Right Join:
+SELECT e.nome AS nome_editore, l.titolo AS titolo_libro
+FROM corso.editori e
+RIGHT JOIN corso.libri l ON e.editoreId = l.editore;
+
+In questo esempio, stiamo recuperando gli editori dalla tabella "corso.editori" e utilizzando un Right Join con la tabella "corso.libri". Vengono restituiti tutti gli editori, anche se non hanno libri corrispondenti. Se un editore non ha libri associati, verranno restituiti valori null per le colonne relative ai libri.
+
+Recupero di tutti i libri con i relativi autori ed editori utilizzando UNION:
+SELECT l.titolo AS titolo_libro, a.nome AS nome_autore, NULL AS nome_editore
+FROM corso.libri l
+JOIN corso.autori a ON l.autore = a.autoreId
+UNION
+SELECT l.titolo AS titolo_libro, NULL AS nome_autore, e.nome AS nome_editore
+FROM corso.libri l
+JOIN corso.editori e ON l.editore = e.editoreId;
+
+In questo esempio, stiamo recuperando tutti i libri dalla tabella "corso.libri" e unendo le informazioni degli autori dalla tabella "corso.autori" e degli editori dalla tabella "corso.editori" utilizzando UNION. La prima query seleziona il titolo del libro e il nome dell'autore, mentre la seconda query seleziona il titolo del libro e il nome dell'editore. I risultati delle due query vengono uniti tramite UNION per ottenere tutti i libri con i relativi autori ed editori.

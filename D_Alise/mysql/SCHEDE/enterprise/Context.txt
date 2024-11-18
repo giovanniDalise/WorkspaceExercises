@@ -1,0 +1,5 @@
+package: java.ws.rs
+
+Nome:Context
+
+Descrizione:Questa annotazione viene utilizzata per inserire informazioni in un campo di classe, proprietà di bean o parametro di metodo.

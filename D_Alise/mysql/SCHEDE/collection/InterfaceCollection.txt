@@ -1,0 +1,27 @@
+Nome:Interface Collection<E>
+
+Package:java.util
+
+Descrizione:L'interfaccia radice nella gerarchia della raccolta. Una collezione rappresenta un gruppo di oggetti, noti come i suoi elementi. Alcune raccolte consentono elementi duplicati e altre no. Alcuni sono ordinati e altri non ordinati. Il JDK non fornisce alcuna implementazione diretta di questa interfaccia: fornisce implementazioni di sottointerfacce più specifiche come Set e List. Questa interfaccia viene in genere utilizzata per passare raccolte e manipolarle dove si desidera la massima generalità.
+Alcune operazioni di raccolta che eseguono l'attraversamento ricorsivo della raccolta potrebbero non riuscire con un'eccezione per le istanze autoreferenziali in cui la raccolta contiene se stessa direttamente o indirettamente. Ciò include i metodi clone(), equals(), hashCode() e toString(). Le implementazioni possono facoltativamente gestire lo scenario autoreferenziale, tuttavia la maggior parte delle implementazioni attuali non lo fa.
+
+Metodi:
+add(E e):Assicura che questa raccolta contenga l'elemento specificato (operazione facoltativa).
+
+addAll(Collection<? extends E> c):Aggiunge a questa raccolta tutti gli elementi della raccolta specificata (operazione facoltativa).
+
+clear():Rimuove tutti gli elementi da questa raccolta (operazione facoltativa).
+
+size():Restituisce il numero di elementi in questa raccolta.
+
+equals(Object o):Confronta l'oggetto specificato con questa raccolta per verificarne l'uguaglianza.
+
+isEmpty():Returns true if this collection contains no elements.
+
+contains(Object o):Returns true if this collection contains the specified element.
+
+remove(Object o):Removes a single instance of the specified element from this collection, if it is present (optional operation).
+
+stream():Restituisce un flusso sequenziale con questa raccolta come origine.
+
+toArray():Returns an array containing all of the elements in this collection.

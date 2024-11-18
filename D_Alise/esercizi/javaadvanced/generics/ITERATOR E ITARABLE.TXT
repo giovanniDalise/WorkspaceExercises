@@ -1,0 +1,10 @@
+ITERATOR E ITERABLE
+In Java, Iterator e Iterable sono due interfacce utilizzate per lavorare con le collezioni di oggetti.
+
+Iterable è un'interfaccia che deve essere implementata dalle classi che rappresentano una collezione di oggetti e permettono di iterare sugli elementi della collezione. L'interfaccia Iterable ha un solo metodo astratto chiamato iterator(), che restituisce un'istanza di Iterator.
+
+Iterator è un'interfaccia che rappresenta un oggetto utilizzato per iterare sugli elementi di una collezione. L'interfaccia Iterator ha tre metodi astratti: hasNext(), next() e remove(). Il metodo hasNext() restituisce true se la collezione ha un altro elemento, false altrimenti. Il metodo next() restituisce l'elemento successivo della collezione. Il metodo remove() rimuove l'elemento corrente dalla collezione.
+
+La differenza principale tra Iterator e Iterable è che Iterable è utilizzato per ottenere un'istanza di Iterator che può essere utilizzata per iterare gli elementi della collezione, mentre Iterator è utilizzato per effettuare l'iterazione vera e propria.
+
+In sintesi, Iterable è un'interfaccia che deve essere implementata dalle classi che rappresentano una collezione di oggetti e che permettono di iterare sugli elementi della collezione, mentre Iterator è un'interfaccia che rappresenta un oggetto utilizzato per iterare sugli elementi di una collezione.

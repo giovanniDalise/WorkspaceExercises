@@ -1,0 +1,58 @@
+Name:Enum DateTimeFormatter
+Package:java.time.format
+
+Descrizione:Formattatore per la stampa e l'analisi di oggetti data-ora.
+
+Questa classe fornisce il punto di ingresso principale dell'applicazione per la stampa e l'analisi e fornisce implementazioni comuni di DateTimeFormatter:
+
+    Utilizzo di costanti predefinite, come ISO_LOCAL_DATE
+    Usando lettere modello, come uuuu-MMM-dd
+    Utilizzo di stili localizzati, come lungo o medio
+
+Formattatori più complessi sono forniti da DateTimeFormatterBuilder.
+
+Le principali classi data-ora forniscono due metodi: uno per la formattazione, format(DateTimeFormatter formatter) e uno per l'analisi, parse(CharSequence text, DateTimeFormatter formatter).
+
+Per esempio:
+
+      LocalDate date = LocalDate.now();
+      String text = date.format(formatter);
+      LocalDate parsedDate = LocalDate.parse(text, formattatore);
+     
+
+Oltre al formato, è possibile creare formattatori con Locale, Chronology, ZoneId e DecimalStyle desiderati.
+
+Il metodo withLocale restituisce un nuovo formattatore che sovrascrive la locale. Le impostazioni locali influiscono su alcuni aspetti della formattazione e dell'analisi. Ad esempio, ofLocalizedDate fornisce un formattatore che utilizza il formato della data specifico della locale.
+
+Il metodo withChronology restituisce un nuovo formattatore che sovrascrive la cronologia. Se sottoposto a override, il valore data-ora viene convertito nella cronologia prima della formattazione. Durante l'analisi, il valore data-ora viene convertito nella cronologia prima di essere restituito.
+
+Il metodo withZone restituisce un nuovo formattatore che esegue l'override della zona. Se sottoposto a override, il valore data-ora viene convertito in un ZonedDateTime con lo ZoneId richiesto prima della formattazione. Durante l'analisi, lo ZoneId viene applicato prima che venga restituito il valore.
+
+Il metodo withDecimalStyle restituisce un nuovo formattatore che esegue l'override di DecimalStyle. I simboli DecimalStyle vengono utilizzati per la formattazione e l'analisi.
+
+Alcune applicazioni potrebbero dover utilizzare la vecchia classe java.text.Format per la formattazione. Il metodo toFormat() restituisce un'implementazione di java.text.Format.
+
+GUARDA I PARAMETRI DI FORMATTAZIONE NELLA DOCUMENTAZIONE API
+
+Field:vedi documentazione
+
+Metodi:
+format(TemporalAccessor temporal):
+Formatta un oggetto data-ora utilizzando questo formattatore
+
+getChronology():
+Ottiene la cronologia prioritaria da utilizzare durante la formattazione.
+
+ofPattern(String pattern):
+Crea un formattatore utilizzando il modello specificato.
+
+parse (testo CharSequence):
+Analizza completamente il testo producendo un oggetto temporale.
+
+toString():
+Restituisce una descrizione dei formattatori sottostanti.
+
+
+
+
+

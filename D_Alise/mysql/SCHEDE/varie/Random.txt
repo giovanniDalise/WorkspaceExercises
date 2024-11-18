@@ -1,0 +1,14 @@
+Name: Random
+Package: java.util
+
+Descrizione:
+La classe random ci restituisce dei numeri casuali da 0(inclusivo) al numero tra parentesi (esclusivo).
+
+Costruttori:
+Random() crea un nuovo numero random
+
+
+Metodi:
+
+- ints(): ci restituisce un numero illimtato di stream di valori.
+

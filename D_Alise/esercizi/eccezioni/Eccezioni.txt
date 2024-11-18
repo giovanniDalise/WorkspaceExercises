@@ -1,0 +1,9 @@
+- Scrivi un programma che chiede all'utente di inserire un numero intero positivo. Se l'utente inserisce un valore negativo o non intero, stampa un messaggio di errore e chiedi di inserire un nuovo valore.
+
+- Scrivi un programma che chiede all'utente di inserire un numero intero e calcola il fattoriale di quel numero. Se l'utente inserisce un valore negativo, stampa un messaggio di errore e chiedi di inserire un nuovo valore.
+
+- Scrivi un programma che chiede all'utente di inserire una stringa. Se la stringa contiene un carattere tra questi: ', $,&, stampa un messaggio di errore e chiedi di inserire una nuova stringa.
+
+- Scrivi un programma che chiede all'utente di inserire una data nel formato "GG/MM/AAAA". Se l'utente inserisce una data non valida (ad esempio "31/02/2022"), stampa un messaggio di errore e chiedi di inserire una nuova data.
+
+- Scrivi un programma che chiede all'utente di inserire una password. Se la password non rispetta determinati criteri (ad esempio deve avere almeno 8 caratteri e contenere almeno una lettera maiuscola e un numero), stampa un messaggio di errore e chiedi di inserire una nuova password.

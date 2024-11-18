@@ -1,0 +1,23 @@
+Creare gli algoritmi e successivamente scrivere il codice usando dei seguenti problemi usando le strutture di controllo dell'iterazione:
+
+- Scrivi un algoritmo che calcoli la somma dei numeri da 1 a 100.
+- Scrivi un algoritmo che calcoli la somma dei numeri da 1 a N (dove N è un numero casuale).
+- Scrivi un algoritmo che calcoli la somma dei numeri inseriti dall'utente finchè l'utente non inserisce il numero -1
+
+
+-Scrivi un algoritmo che calcoli il prodotto dei numeri da 1 a 100.
+-Scrivi un algoritmo che calcoli il prodotto dei numeri da 1 a N (dove N è un numero casuale).
+-Scrivi un algoritmo che calcoli il prodotto dei numeri da 1 inseriti dall'utente finchè l'utente non inserisce il numero -1
+
+- Scrivi un algoritmo che calcoli il fattoriale di 20
+- Scrivi un algoritmo che calcoli il fattoriale di N (dove N è un numero casuale).
+
+- Scrivi un algoritmo che calcoli la potenza di un numero X elevato ad N senza usare Math.pow (dove X ed N sono numeri inseriti dall'utente).
+
+- Scrivi un algoritmo che calcoli il resto della divisione tra due numeri A e B senza utilizzare il modulo.
+
+- Scrivi un algoritmo che calcoli il numero di cifre di un numero N (dove N è un numero inserito dall'utente).
+
+- Scrivi un algoritmo che trovi il massimo comun divisore (MCD) tra due numeri A e B (dove A e B sono inseriti dall'utente) - INFO: https://it.wikipedia.org/wiki/Algoritmo_di_Euclide
+
+COMPLETATO!

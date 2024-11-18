@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Libreria</title>
+        <link rel="stylesheet" href="style.css">
+        
+    </head>
+    <body>
+        <main class="library">
+            <h1>Libreria</h1>
+            <form id="book-form">
+                <input type="text" id="title-input" placeholder="Titolo" ><!--placeholder da un seggiremnto visivo all'interno di un elemento di input-->
+                <input type="text" id="author-input" placeholder="Autore">
+                <button type="submit">Aggiungi libro</button>
+            </form>
+            <div id="book-list"></div>
+            <br>
+            <input type="text" id="cerca-libri" placeholder="Inserisci libro">
+            <button type="submit" id="cerca" onclick ="search()">cerca</button>
+            <label id="res"></label>
+            <section><h1>Elenco Libri biblioteca</h1></section>
+            <section id="libri">
+            </section>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>
+<!--Il <form> è utilizzato per creare un modulo che consente agli utenti di inserire e inviare dati al server o
+     di gestire gli eventi associati al modulo utilizzando JavaScript. In questo caso specifico, 
+    il form viene utilizzato per consentire agli utenti di aggiungere libri alla libreria.-->

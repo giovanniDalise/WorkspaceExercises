@@ -1,0 +1,66 @@
+La classe "File" in Java è una classe che rappresenta un'astrazione dei file e delle directory nel sistema operativo. Fornisce metodi per creare, eliminare, rinominare, copiare e spostare file o directory. La classe "File" può essere utilizzata per manipolare sia file che directory, anche se le operazioni specifiche disponibili possono variare a seconda del tipo di oggetto che si sta manipolando.
+
+
+Costruttori:
+
+        "File(String pathname)": Crea un oggetto "File" a partire da un percorso  
+         specificato come stringa.
+
+        "File(String parent, String child)": Crea un oggetto "File" a partire da un 
+         percorso padre e un percorso figlio.
+
+
+
+    Metodi per ottenere informazioni sul file o sulla directory:
+
+        "exists()": Restituisce un valore booleano che indica se il file o la directory 
+         esistono.
+
+        "isFile()": Restituisce un valore booleano che indica se il file esiste ed è un 
+         file regolare.
+
+        "isDirectory()": Restituisce un valore booleano che indica se il file esiste ed è 
+        una directory.
+
+        "getName()": Restituisce il nome del file o della directory.
+
+        "getPath()": Restituisce il percorso assoluto del file o della directory.
+
+
+
+    Metodi per manipolare il file o la directory:
+
+        "createNewFile()": Crea un nuovo file nel percorso specificato.
+
+        "delete()": Elimina il file o la directory.
+
+        "renameTo(File dest)": Rinomina il file o la directory specificata con un nuovo 
+        nome specificato.
+
+        "mkdir()": Crea una nuova directory nel percorso specificato.
+
+        "listFiles()": Restituisce un array di oggetti "File" che rappresentano i file e  
+        le directory all'interno di una directory specificata.
+
+
+
+createNewFile()
+
+Se si chiama il metodo createNewFile() su un oggetto File per creare un nuovo file,ma il file con lo stesso nome esiste già, il comportamento dipende dalla situazione.
+
+Se il file con lo stesso nome esiste ed è un file regolare:
+Il metodo createNewFile() restituirà false, indicando che il file non è stato creato.
+Il file originale non viene sovrascritto o modificato.
+
+Se il file con lo stesso nome esiste ed è una directory:
+Il metodo createNewFile() restituirà false, indicando che il file non è stato creato.
+La directory esistente non viene modificata o eliminata.
+
+Se il file con lo stesso nome esiste ed è un collegamento simbolico (symbolic link):
+Il comportamento può variare a seconda del sistema operativo e della configurazione.
+In alcuni casi, il metodo createNewFile() restituirà false e il collegamento simbolico non verrà sovrascritto o modificato.
+In altri casi, il collegamento simbolico potrebbe essere sovrascritto con un nuovo file.
+
+In generale, il metodo createNewFile() restituirà false se il file con lo stesso nome esiste già. È possibile utilizzare questa informazione per prendere decisioni appropriate nel proprio codice, ad esempio eseguendo un'operazione alternativa o rinominando il file esistente prima di chiamare createNewFile() per creare un nuovo file con lo stesso nome.
+
+

@@ -1,0 +1,30 @@
+Name:InputStream
+
+Package:java.io
+
+Descrizione:Questa classe astratta è la superclasse di tutte le classi che rappresentano un flusso di input di byte.
+
+Le applicazioni che devono definire una sottoclasse di InputStream devono sempre fornire un metodo che restituisca il successivo byte di input.
+
+Costruttore:
+InputStreami()
+
+METODI:
+available()
+Returns an estimate of the number of bytes that can be read (or skipped over) from this input stream without blocking by the next invocation of a method for this input stream.
+
+close()
+Closes this input stream and releases any system resources associated with the stream.
+
+read()
+Reads the next byte of data from the input stream.
+
+mark(int readlimit)
+Marks the current position in this input stream.
+
+reset()
+Repositions this stream to the position at the time the mark method was last called on this input stream.
+
+skip(long n)
+Skips over and discards n bytes of data from this input stream.
+

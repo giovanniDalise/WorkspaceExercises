@@ -1,0 +1,104 @@
+SEGNAPOSTI VALUES ?
+La porzione di codice VALUES (?, ?) viene utilizzata per definire i valori da inserire nella tabella del database. Nello specifico, il punto interrogativo ? è un segnaposto (placeholder) per i valori dei campi "titolo" e "autore" che verranno forniti in seguito mediante l'uso del metodo setString() dell'oggetto PreparedStatement.
+
+Quando viene eseguito il metodo executeUpdate() sull'oggetto PreparedStatement, i valori corrispondenti ai segnaposto ? vengono sostituiti con i valori effettivi e la query di inserimento viene eseguita nel database. In questo modo è possibile inserire dinamicamente i valori provenienti dal file nella tabella del database senza doverli codificare esplicitamente nella query SQL.
+
+PREPAREDSTATEMENT INTERFACCIA
+Un prepared statement (istruzione preparata) è un oggetto che rappresenta una query SQL precompilata e parametrizzata. Al contrario delle query SQL tradizionali, i prepared statement separano la struttura della query dalla specifica dei valori dei parametri.
+Ecco come funziona il processo di utilizzo di un prepared statement:
+Preparazione della query: La query SQL viene scritta con segnaposti ? al posto dei valori dei parametri. Ad esempio: 
+
+"INSERT INTO tabella (colonna1, colonna2) VALUES (?, ?)".
+
+Creazione del prepared statement: L'oggetto PreparedStatement viene creato utilizzando un oggetto Connection. La query SQL viene passata al metodo prepareStatement() dell'oggetto Connection. Ad esempio:
+
+PreparedStatement statement = connection.prepareStatement("INSERT INTO tabella (colonna1, colonna2) VALUES (?, ?)");
+
+Fornitura dei valori dei parametri: I valori dei parametri vengono forniti utilizzando i metodi setTipo() dell'oggetto PreparedStatement. È necessario fornire i valori dei parametri nella stessa sequenza in cui compaiono i segnaposti nella query. Ad esempio:
+
+statement.setString(1, valore1);
+statement.setInt(2, valore2);
+
+Esecuzione della query: La query viene eseguita invocando il metodo executeUpdate() sull'oggetto PreparedStatement. La query viene inviata al database con i valori dei parametri sostituiti e il database esegue l'operazione richiesta. Ad esempio:
+
+statement.executeUpdate();
+
+Il metodo executeUpdate() invia l'istruzione SQL al database e restituisce un intero che rappresenta il numero di righe che sono state modificate o influenzate dall'istruzione. 
+Il metodo executeUpdate() dell'oggetto statement per eseguire l'istruzione di inserimento nel database. Questo metodo restituisce il numero di righe che sono state modificate, ovvero il numero di libri inseriti nel database.
+Il valore restituito da executeUpdate() viene ignorato nel codice fornito, ma potrebbe essere utilizzato per verificare il successo dell'operazione di inserimento o per scopi di logging.
+
+L'utilizzo dei prepared statement offre diversi vantaggi, tra cui:
+
+Sicurezza: Aiuta a prevenire attacchi di SQL injection, poiché i valori dei parametri vengono gestiti in modo sicuro e automaticamente sanificati.
+
+Prestazioni: I prepared statement possono essere compilati e riutilizzati con valori diversi, riducendo il tempo di elaborazione rispetto all'invio ripetuto di query non parametrizzate.
+
+Leggibilità e manutenibilità: Separare la query SQL dalla specifica dei valori dei parametri rende il codice più leggibile e manutenibile.
+
+Compatibilità: I prepared statement sono supportati da diversi database e driver JDBC.
+
+In conclusione, i prepared statement sono uno strumento potente e consigliato per eseguire query parametrizzate in modo sicuro ed efficiente.
+
+
+VARIANTE SENZA AUTOINCREMENTO SU SQL DELL'ID LIBRO
+se desideri specificare il valore dell'ID manualmente, puoi includere il numero di ID desiderato nel file libri.txt per ogni riga corrispondente al libro.
+
+Ad esempio, se il file libri.txt ha il seguente formato:
+
+1,Libro 1,Autore 1
+2,Libro 2,Autore 2
+3,Libro 3,Autore 3
+
+Puoi modificare il codice per leggere il valore dell'ID dalla riga e assegnarlo alla colonna libroId nell'operazione di inserimento. In questo caso, dovresti modificare il ciclo while nel seguente modo:
+
+while ((line = reader.readLine()) != null) {
+    String[] bookData = line.split(",");
+    int libroId = Integer.parseInt(bookData[0]);
+    String title = bookData[1];
+    String author = bookData[2];
+
+    statement.setInt(1, libroId);
+    statement.setString(2, title);
+    statement.setString(3, author);
+    statement.executeUpdate();
+}
+In questo modo, il valore dell'ID specificato nel file libri.txt verrà utilizzato per la colonna libroId durante l'operazione di inserimento.
+
+Ricordati che hai utilizzato la virgola per dividere le linee e prima di essa non dovrai mettere spazi vuoti. Ad esempio aò posto di Libro 1, Autore 1 se scrivessimo Moby Dick, Herman Melville la virgola viene utilizzata per spaziare le stringhe come varchar nella tabella ma la separazione tramite la virgola di questi due valori(libro e autore) prevede che prima della virgola non ci siano spazi vuoti( non avrebbe senzo mettere uno spazio vuoto dopo dick o melville).
+
+Il motivo per cui viene utilizzato Integer.parseInt() per convertire una stringa in un numero intero è perché l'ID del libro nel file libri.txt viene fornito come stringa e deve essere convertito in un valore intero prima di poterlo utilizzare come parametro nel metodo setInt() del PreparedStatement.
+
+Quindi, se il valore dell'ID del libro nel file libri.txt è rappresentato come una stringa, è necessario convertirlo in un valore intero utilizzando Integer.parseInt() per poterlo assegnare correttamente al parametro dell'istruzione SQL.
+
+Inoltre, l'utilizzo di int o Integer dipende anche dalle specifiche del database con cui stai lavorando. Alcuni database possono richiedere l'uso di int come tipo di dato per rappresentare numeri interi, mentre altri possono richiedere l'uso di Integer. È importante consultare la documentazione del database o le specifiche del progetto per determinare quale tipo di dato utilizzare correttamente.
+
+
+DIFFERENZ TRA STATEMENT E PREPARED STATEMENT 
+Quando si utilizza un PreparedStatement, non è necessario utilizzare un oggetto Statement separato con createStatement(). L'oggetto PreparedStatement è una sottoclasse di Statement e può essere utilizzato per eseguire query parametrizzate con valori inseriti in modo sicuro.
+
+La differenza principale tra Statement e PreparedStatement è che quest'ultimo consente di creare query parametrizzate con segnaposto (?) al posto dei valori effettivi. Questi segnaposto possono essere successivamente impostati utilizzando i metodi setX() di PreparedStatement per fornire i valori in modo sicuro, evitando così gli attacchi di SQL injection.
+
+L'utilizzo di PreparedStatement è generalmente consigliato rispetto a Statement quando si lavora con query parametrizzate, poiché migliora la sicurezza e le prestazioni delle operazioni di database.
+
+Quindi, nel tuo codice, puoi utilizzare solo PreparedStatement per eseguire le tue query senza la necessità di utilizzare createStatement().
+
+In pratica utiliziamo PreparedStatement quando dobbiamo parametrizzare la query ossia inserire dei valori particolari nella query perciò la inizializiamo prima come stringa e poi la completiamo con i metodi setTipo diversamente da Statement che viene utilizzata con valori predefiniti ad esempio in una SELECT dove andremo ad utilizzare dei parametri(ad esempio una semplice select di tutti i campi di una tabella) predefiniti e non da inserire ( all'opposto un esempio del genere potrebbe essere in una ricerca in un database dove andremo a visualizzare campi diversi a secondo il tipo di ricerca, siccome non avremo una sola ricerca predefinita ma potremo decidere al momento quale ricerca utilizzare allora dovremo parametrizzare la query usando i segnaposti,nell'esercizio jdb_ese3 hai tutti gli esempi).
+
+Quindi la sintassi di Statement prevede che dopo aver instanziato Statement, utilizzeremo il metodo executeQuery sullo statement instanziato e tra parentesi metteremo la query che vorremo eseguire come abbiamo detto senza parametri o segnaposti (?), questa query nella stessa riga di codice sarà assegnata ad una nuova ResultSet.
+L'interfaccia ResultSet rappresenta un insieme di risultati ottenuti da un'operazione di query eseguita su un database. Fornisce metodi per accedere e manipolare i dati all'interno del risultato.
+Quando si esegue una query utilizzando un oggetto Statement, il metodo executeQuery() restituisce un oggetto ResultSet che rappresenta i risultati della query. L'oggetto ResultSet contiene una tabella virtuale che rappresenta il set di risultati restituiti dal database. Quindi tramite un ciclo (sempre nell'esempio di una SELECT) con i get io potrò in ogni nuovo ciclo assegnare a delle variabili i singoli campi de delle mie tuple e stamparle e poi cominciare con un nuovo ciclo eseguendo le stesse operazioni questo tramite il metodo next di ResultSet che scorre tutte le tuple della tabella virtuale rappresentante la quiery fatta a sql; fino a che non trova più nulla e si ferma.ResultSet con questo metodo capiamo che si comporta come un iterator.
+
+Nella sitassi invece di PreparedStatement noi come abbiamo detto creiamo la nostra query personalizzata e parametrizzata sotto forma di stringa (quindi assegnata ad una variabile String) che successivamente verrà completata tramite dei set e non dei get come nell'esempio di resultset sopra.
+Tramite il metodo prepareStatement di connection noi poi potremo inserire tra parentesi una query parametrica (ossia la nostra Stringa che abbiamo creato prima) e ci darà la possibilità di instanziare nuovo oggetto (ricorda che sono interfacce non so se è corretto dire oggetto) Prepared Statement(un po come fa il metodo executeQuery di statement per ResultSet) , che rappresenta la quiery preparata.
+Successivamente chiameremo i metodi della nostra Prepared Statement instanziata per i get o set Tipo (come facevamo per resultset) ed infine il metodo executeUpdate per le eseguire le operazioni di DML sulla tabella.
+
+
+DISCORSO INTERFACCIA E OGGETTO: 
+Esempio exequteQuery che restituisce ResultSet
+Quando si dice che executeQuery restituisce un istanza di ResultSet si sbaglia, ResultSet è un'interfaccia in Java e non un oggetto diretto. L'interfaccia ResultSet definisce i metodi per accedere ai dati restituiti da una query di selezione, ma l'oggetto effettivo restituito da executeQuery è un'implementazione concreta dell'interfaccia ResultSet, fornita dalla libreria JDBC (Java Database Connectivity).
+
+Quando si esegue executeQuery, si otterrà un'istanza di una classe che implementa l'interfaccia ResultSet. Questa classe concreta conterrà i dati effettivi restituiti dalla query di selezione e fornirà i metodi per accedere a tali dati.
+
+Quindi, per essere più precisi, è corretto dire che executeQuery restituisce un'istanza di un oggetto che implementa l'interfaccia ResultSet. Ad esempio, potrebbe restituire un'istanza di java.sql.ResultSet, che è una delle implementazioni comuni dell'interfaccia ResultSet nel contesto della connessione a un database utilizzando JDBC.
+
+

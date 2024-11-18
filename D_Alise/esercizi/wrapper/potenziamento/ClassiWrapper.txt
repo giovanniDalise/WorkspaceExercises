@@ -1,0 +1,21 @@
+- Scrivi un programma che prenda in input un numero intero e lo converta in un oggetto di classe Integer.
+- Scrivi un programma che prenda in input un numero decimale e lo converta in un oggetto di classe Double.
+- Scrivi un programma che prenda in input una stringa rappresentante un numero intero e lo converta in un oggetto di classe Integer.
+- Scrivi un programma che prenda in input una stringa rappresentante un numero decimale e lo converta in un oggetto di classe Double.
+- Scrivi un programma che prenda in input una stringa rappresentante un numero e restituisca true se è un numero intero, false altrimenti.
+fatto fino qua
+- Scrivi un programma che prenda in input una stringa rappresentante un numero e restituisca true se è un numero decimale, false altrimenti.
+- Scrivi un programma che prenda in input un oggetto di classe Integer e restituisca la rappresentazione binaria del numero.
+- Scrivi un programma che prenda in input un oggetto di classe Integer e restituisca la rappresentazione esadecimale del numero.
+- Scrivi un programma che prenda in input un oggetto di classe Double e restituisca la rappresentazione esadecimale del numero.
+- Scrivi un programma che prenda in input un oggetto di classe Integer e restituisca il numero invertito (es. 1234 diventa 4321).
+- Scrivi un programma che prenda in input un oggetto di classe Integer e restituisca la somma delle cifre del numero.
+- Scrivi un programma che prenda in input un oggetto di classe Integer e restituisca true se il numero è pari, false altrimenti.
+- Scrivi un programma che prenda in input un oggetto di classe Integer e restituisca true se il numero è dispari, false altrimenti.
+- Scrivi un programma che prenda in input un oggetto di classe Integer e restituisca true se il numero è primo, false altrimenti.
+- Scrivi un programma che prenda in input un oggetto di classe Integer e restituisca la lista dei suoi divisori.
+- Scrivi un programma che prenda in input un oggetto di classe Double e restituisca la parte intera del numero.
+- Scrivi un programma che prenda in input un oggetto di classe Double e restituisca la parte frazionaria del numero.
+- Scrivi un programma che prenda in input un oggetto di classe Double e restituisca il numero arrotondato all'intero più vicino.
+- Scrivi un programma che prenda in input un oggetto di classe Double e restituisca il numero arrotondato per eccesso all'intero più vicino.
+- Scrivi un programma che prenda in input un oggetto di classe Double e restituisca il numero arrotondato per difetto all'intero più vicino.

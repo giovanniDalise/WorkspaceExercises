@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Libreria</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <main class="library">
+            <h1>Libreria</h1>
+            <button id="view-books-button">Visualizza libri</button>
+            <section id="book-list"></section>
+            <br>
+            <form id="book-form">
+                <label>Titolo</label>
+                <input type="text" id="title-input" placeholder="Titolo" >
+                <label>Autore</label>
+                <input type="text" id="author-input" placeholder="Autore">
+                <label>Editore</label>
+                <input type="text" id="edithor-input" placeholder="Editore">                
+                <button type="submit">Aggiungi libro</button>
+            </form>
+            <button type="submit" id="cerca">Cerca Libro</button>
+            <button type="submit" id="elimina">Elimina Libro</button>
+            <button type="submit" id="modifica">Modifica Libro</button>
+            <section><h1>Elenco Libri biblioteca</h1></section>
+            <section id="libri"></section>
+        </main>
+    </body>
+</html>
+<!--quando si tratta di un pulsante (<button>), il tipo di evento predefinito è il "click". 
+    Quindi, se hai un pulsante all'interno del tuo modulo (<form>) e desideri gestire l'evento
+         di invio del modulo, devi specificare l'evento "submit" esplicitamente per il modulo.
+L'evento "submit" viene generato quando viene inviato un modulo. Ad esempio, quando viene fatto
+ clic sul pulsante "Invia" all'interno di un modulo, viene generato l'evento "submit". Puoi associare 
+ una funzione di gestione dell'evento "submit" al modulo per eseguire azioni personalizzate quando il
+  modulo viene inviato.-->

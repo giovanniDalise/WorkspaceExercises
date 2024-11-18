@@ -1,0 +1,20 @@
+- creare un'interfaccia che si occupa di effettuare le seguenti operazioni:
+    - aggiunta oggetto
+    - ricerca oggetto
+    - lista oggetti
+    - cancellazione oggetto
+    e poi creare un programma per la gestione dei prodotti di un magazzino utilizzando l'interfaccia creata
+
+- creare un'interfaccia che rappresenta tutte azioni di un veicolo, per esempio:
+    - vaiAvanti
+    - vaiIndietro
+    - svoltaASinistra
+    - svoltaADestra
+    - etc...
+    Poi creare un programma che permette di muovere un veicolo all'interno di un piano cartesiano con `x` e `y` che vanno da 0 a 100, fornendo la possibilità di indicare a quale cordinate
+    si trova il veicolo.
+
+
+- Crea un'interfaccia "Esportabile" che ha un metodo "esporta" che restituisce una rappresentazione in formato stringa dell'oggetto, 
+    e l'interfaccia "Storage" con il metodo "write" e "read" per scrivere e leggere su uno storage delle stringhe. 
+    Implementa quindi il programma della biblioteca con la possibilità di salvarla su file e riaprirla.

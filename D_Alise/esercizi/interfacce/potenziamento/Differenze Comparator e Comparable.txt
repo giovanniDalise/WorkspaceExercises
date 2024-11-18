@@ -1,0 +1,50 @@
+Differenze Comparator e Comparable:
+L'interfaccia "Comparator" è un'altra interfaccia in Java utilizzata per la comparazione di oggetti, ma a differenza di "Comparable", non richiede che la classe degli oggetti da confrontare implementi l'interfaccia stessa. Invece, si utilizza un'implementazione separata della classe "Comparator" per definire come gli oggetti dovrebbero essere comparati.
+
+In pratica, mentre l'interfaccia "Comparable" è implementata dalla classe degli oggetti da confrontare, l'interfaccia "Comparator" è implementata da una classe separata che viene utilizzata per confrontare gli oggetti della classe specifica. Il metodo "compare" di "Comparator" prende in input due oggetti e restituisce un valore negativo se il primo oggetto è inferiore al secondo, zero se i due oggetti sono uguali e un valore positivo se il primo oggetto è superiore al secondo.
+
+L'utilizzo dell'interfaccia "Comparator" consente di definire più di un modo per confrontare gli oggetti della classe, senza modificare la classe stessa. Ciò significa che è possibile ordinare gli oggetti in base a criteri diversi in base alle esigenze dell'applicazione.
+
+In sintesi, l'interfaccia "Comparable" è utilizzata per definire il modo in cui gli oggetti di una classe devono essere confrontati, mentre l'interfaccia "Comparator" è utilizzata per definire un modo per confrontare gli oggetti di una classe senza modificare la classe stessa.
+
+ESEMPIO: 
+
+Se vuoi ordinare gli oggetti della classe "Disco" per prezzo, puoi farlo implementando l'interfaccia "Comparable" direttamente nella classe "Disco". Ciò significa che la classe "Disco" deve avere un metodo "compareTo" che confronta gli oggetti "Disco" in base al loro prezzo.
+
+Ad esempio, puoi definire il metodo "compareTo" nella classe "Disco" come segue:
+
+public int compareTo(Disco other) {
+    return Double.compare(this.prezzo, other.prezzo);
+}
+
+In questo modo, gli oggetti "Disco" possono essere ordinati in base al loro prezzo utilizzando il metodo "sort" dell'array di oggetti "Disco" o un oggetto "Collections.sort" per una lista di oggetti "Disco".
+
+Se invece vuoi ordinare gli oggetti "Disco" in base ad altri criteri, come ad esempio l'autore o il nome, puoi creare un'implementazione separata dell'interfaccia "Comparator". Ad esempio, puoi creare una classe "ComparatorPerAutore" che implementa "Comparator" e definire un metodo "compare" che confronta gli oggetti "Disco" in base al loro autore:
+
+
+public class ComparatorPerAutore implements Comparator<Disco> {
+    public int compare(Disco d1, Disco d2) {
+        return d1.getAutore().compareTo(d2.getAutore());
+    }
+}
+
+In questo caso, per ordinare gli oggetti "Disco" in base all'autore, puoi utilizzare l'oggetto "ComparatorPerAutore" con il metodo "sort" dell'array di oggetti "Disco" o l'oggetto "Collections.sort" per una lista di oggetti "Disco".
+
+In sintesi, l'implementazione dell'interfaccia "Comparable" nella classe "Disco" consente di ordinare gli oggetti "Disco" in base al prezzo, mentre l'utilizzo di un'implementazione separata di "Comparator" consente di definire altri criteri di ordinamento per gli oggetti "Disco".
+
+Ovviamente ricordati di implementare Comparable in primo caso su Disco
+
+public class Disco implements Comparable<Disco> {
+    private String nome;
+    private String autore;
+    private double prezzo;
+    private int quantita;
+
+    public int compareTo(Disco other) {
+        return Double.compare(this.prezzo, other.prezzo);
+    }
+}
+
+
+ATTENZIONE Comparable ha il metodo compareTo già implementato(non stiamo dando noi un nome al metodo) che noi socrasciviamo per dargli un diverso funzionamento con il metodo compare di Double (se avessi dovuto ordinarlo per esempio avrei utilizzato il compareTo di String).
+Mentre Comparator ha il metodo compare che comunque noi sovrascriviamo per esempio in film con il compareTo di String.

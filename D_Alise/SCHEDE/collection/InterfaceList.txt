@@ -1,0 +1,51 @@
+Nome: Interface List<E>
+
+Package:java.util
+
+Descrizione:Una raccolta ordinata (nota anche come sequenza). L'utente di questa interfaccia ha un controllo preciso su dove viene inserito ogni elemento nell'elenco. L'utente può accedere agli elementi in base al loro indice intero (posizione nell'elenco) e cercare gli elementi nell'elenco.
+
+A differenza degli insiemi, gli elenchi in genere consentono elementi duplicati. Più formalmente, gli elenchi in genere consentono coppie di elementi e1 ed e2 tali che e1.equals(e2) e in genere consentono più elementi null se consentono elementi null. Non è inconcepibile che qualcuno possa voler implementare un elenco che proibisca i duplicati, generando eccezioni di runtime quando l'utente tenta di inserirle, ma ci aspettiamo che questo utilizzo sia raro.
+
+L'interfaccia List pone clausole aggiuntive, oltre a quelle specificate nell'interfaccia Collection, sui contratti dei metodi iteratore, add, remove, equals e hashCode. Dichiarazioni per altri metodi ereditati sono incluse anche qui per comodità.
+
+L'interfaccia List fornisce quattro metodi per l'accesso posizionale (indicizzato) agli elementi della lista. Gli elenchi (come gli array Java) sono a base zero. Si noti che queste operazioni possono essere eseguite in un tempo proporzionale al valore dell'indice per alcune implementazioni (la classe LinkedList, ad esempio). Pertanto, l'iterazione sugli elementi in un elenco è in genere preferibile all'indicizzazione attraverso di esso se il chiamante non conosce l'implementazione.
+
+L'interfaccia List fornisce un iteratore speciale, chiamato ListIterator, che consente l'inserimento e la sostituzione di elementi e l'accesso bidirezionale oltre alle normali operazioni fornite dall'interfaccia Iterator. Viene fornito un metodo per ottenere un iteratore di elenco che inizia in una posizione specificata nell'elenco.
+
+L'interfaccia List fornisce due metodi per cercare un oggetto specificato. Dal punto di vista delle prestazioni, questi metodi devono essere utilizzati con cautela. In molte implementazioni eseguiranno costose ricerche lineari.
+
+L'interfaccia List fornisce due metodi per inserire e rimuovere in modo efficiente più elementi in un punto arbitrario dell'elenco.
+
+Nota: sebbene sia consentito che le liste contengano se stesse come elementi, si consiglia estrema cautela: i metodi equals e hashCode non sono più ben definiti in tale lista.
+
+Alcune implementazioni di elenchi hanno restrizioni sugli elementi che possono contenere. Ad esempio, alcune implementazioni proibiscono elementi nulli e alcune hanno restrizioni sui tipi dei loro elementi.
+
+Metodi:Metodi:
+add(E e):Assicura che questa raccolta contenga l'elemento specificato (operazione facoltativa).
+
+addAll(Collection<? extends E> c):Aggiunge a questa raccolta tutti gli elementi della raccolta specificata (operazione facoltativa).
+
+add(int index, E element):Inserisce l'elemento specificato nella posizione specificata in questo elenco (operazione facoltativa).
+
+clear():Rimuove tutti gli elementi da questa raccolta (operazione facoltativa).
+
+size():Restituisce il numero di elementi in questa raccolta.
+
+get(int index):Restituisce l'elemento nella posizione specificata in questo elenco.
+
+equals(Object o):Confronta l'oggetto specificato con questa raccolta per verificarne l'uguaglianza.
+
+isEmpty():Returns true if this collection contains no elements.
+
+indexOf(Object o):Restituisce l'indice della prima occorrenza dell'elemento specificato in questo elenco oppure -1 se questo elenco non contiene l'elemento.
+
+contains(Object o):Returns true if this collection contains the specified element.
+
+remove(Object o):Removes a single instance of the specified element from this collection, if it is present (optional operation).
+
+set(int index, E element):Sostituisce l'elemento nella posizione specificata in questo elenco con l'elemento specificato (operazione facoltativa).
+
+sort(Comparator<? super E> c):Ordina questo elenco in base all'ordine indotto dal comparatore specificato.
+
+toArray():Returns an array containing all of the elements in this collection.
+

@@ -1,0 +1,49 @@
+<mxfile host="app.diagrams.net" modified="2023-04-27T08:02:41.075Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/112.0" etag="iQQ-7QrHgUcbkCxNDo4w" version="21.2.3" type="google">
+  <diagram name="Pagina-1" id="Nd7i-DgOXOGVRJIxDCo2">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="WErX7rtjrbpy9T3sHOnW-1" value="Studente" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="40" width="250" height="276" as="geometry">
+            <mxRectangle x="120" y="40" width="90" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WErX7rtjrbpy9T3sHOnW-2" value="&lt;div&gt;- nome: String&lt;/div&gt;&lt;div&gt;-cognome:String&lt;/div&gt;&lt;div&gt;- email String&lt;/div&gt;&lt;div&gt;- eta: int&lt;/div&gt;&lt;div&gt;- voto: float&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="WErX7rtjrbpy9T3sHOnW-1">
+          <mxGeometry y="26" width="250" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="WErX7rtjrbpy9T3sHOnW-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="WErX7rtjrbpy9T3sHOnW-1">
+          <mxGeometry y="116" width="250" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="WErX7rtjrbpy9T3sHOnW-4" value="&lt;div&gt;+ Studente(nome:String,cognome:String,&lt;/div&gt;&lt;div&gt;email:String,eta:int,voto:float):Studente&lt;/div&gt;&lt;div&gt;+getNome():&lt;/div&gt;&lt;div&gt;+getEta():&lt;/div&gt;&lt;div&gt;+getVotoMedio():&lt;/div&gt;&lt;div&gt;+getEmail():&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="WErX7rtjrbpy9T3sHOnW-1">
+          <mxGeometry y="124" width="250" height="152" as="geometry" />
+        </mxCell>
+        <mxCell id="WErX7rtjrbpy9T3sHOnW-5" value="Classe" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="40" width="250" height="276" as="geometry">
+            <mxRectangle x="120" y="40" width="90" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WErX7rtjrbpy9T3sHOnW-6" value="&lt;div&gt;- elencoStudenti: Studente[]&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- numStudenti: int&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="WErX7rtjrbpy9T3sHOnW-5">
+          <mxGeometry y="26" width="250" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="WErX7rtjrbpy9T3sHOnW-7" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="WErX7rtjrbpy9T3sHOnW-5">
+          <mxGeometry y="116" width="250" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="WErX7rtjrbpy9T3sHOnW-8" value="&lt;div&gt;+Classe()&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ aggiungiStudente (Studente):boolean&lt;/div&gt;&lt;div&gt;+ cercaStudente(String nome,String email):&lt;/div&gt;&lt;div&gt;Studente&lt;/div&gt;&lt;div&gt;+ calcolaMediaVoti():float&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="WErX7rtjrbpy9T3sHOnW-5">
+          <mxGeometry y="124" width="250" height="152" as="geometry" />
+        </mxCell>
+        <mxCell id="WErX7rtjrbpy9T3sHOnW-10" value="BootStrap" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="350" width="230" height="186" as="geometry">
+            <mxRectangle x="120" y="40" width="90" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WErX7rtjrbpy9T3sHOnW-12" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="WErX7rtjrbpy9T3sHOnW-10">
+          <mxGeometry y="26" width="230" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="WErX7rtjrbpy9T3sHOnW-13" value="&lt;div&gt;+main(String[])&lt;br&gt;&lt;/div&gt;&lt;div&gt;+Studente setDatiStudente():&lt;br&gt;&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="WErX7rtjrbpy9T3sHOnW-10">
+          <mxGeometry y="34" width="230" height="152" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

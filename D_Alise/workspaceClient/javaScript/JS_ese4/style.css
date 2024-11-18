@@ -1,0 +1,26 @@
+.library {
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+form input {
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 5px;
+}
+
+form button {
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 5px;
+}
+
+#book-list {
+    margin-top: 20px;
+    text-align: left;
+}

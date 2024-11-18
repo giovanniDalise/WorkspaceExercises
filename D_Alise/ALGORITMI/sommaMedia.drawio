@@ -1,0 +1,73 @@
+<mxfile host="app.diagrams.net" modified="2023-04-03T10:04:16.066Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/111.0" etag="O46NmhHW5i_JYuFuvOVZ" version="21.1.4" type="google">
+  <diagram name="Pagina-1" id="WRjGhkgV9DkwnwTibvOc">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="S1AAQ17HqzU0BE7upOUH-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="S1AAQ17HqzU0BE7upOUH-1" target="S1AAQ17HqzU0BE7upOUH-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="S1AAQ17HqzU0BE7upOUH-1" value="START" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="-10" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="S1AAQ17HqzU0BE7upOUH-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="S1AAQ17HqzU0BE7upOUH-2" target="S1AAQ17HqzU0BE7upOUH-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="S1AAQ17HqzU0BE7upOUH-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.667;entryY=-0.067;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="S1AAQ17HqzU0BE7upOUH-2" target="S1AAQ17HqzU0BE7upOUH-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="S1AAQ17HqzU0BE7upOUH-2" value="NUMERO 1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="140" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="S1AAQ17HqzU0BE7upOUH-3" value="NUMERO 2" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="190" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="S1AAQ17HqzU0BE7upOUH-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="S1AAQ17HqzU0BE7upOUH-4" target="S1AAQ17HqzU0BE7upOUH-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="S1AAQ17HqzU0BE7upOUH-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="S1AAQ17HqzU0BE7upOUH-4" target="S1AAQ17HqzU0BE7upOUH-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="S1AAQ17HqzU0BE7upOUH-4" value="NUMERO3" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="230" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="S1AAQ17HqzU0BE7upOUH-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="S1AAQ17HqzU0BE7upOUH-7" target="S1AAQ17HqzU0BE7upOUH-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="S1AAQ17HqzU0BE7upOUH-7" value="SOMMA = NUMERO1 + NUMERO 2 + NUMERO 3" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="280" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="S1AAQ17HqzU0BE7upOUH-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="S1AAQ17HqzU0BE7upOUH-10" target="S1AAQ17HqzU0BE7upOUH-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="S1AAQ17HqzU0BE7upOUH-10" value="SOMMA = 0" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="60" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="S1AAQ17HqzU0BE7upOUH-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="S1AAQ17HqzU0BE7upOUH-11" target="S1AAQ17HqzU0BE7upOUH-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="S1AAQ17HqzU0BE7upOUH-11" value="MEDIA = 0" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="90" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="S1AAQ17HqzU0BE7upOUH-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="S1AAQ17HqzU0BE7upOUH-11" target="S1AAQ17HqzU0BE7upOUH-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="S1AAQ17HqzU0BE7upOUH-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="S1AAQ17HqzU0BE7upOUH-17" target="S1AAQ17HqzU0BE7upOUH-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="S1AAQ17HqzU0BE7upOUH-17" value="MEDIA = SOMMA/3" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="360" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="S1AAQ17HqzU0BE7upOUH-27" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="S1AAQ17HqzU0BE7upOUH-22" target="S1AAQ17HqzU0BE7upOUH-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="S1AAQ17HqzU0BE7upOUH-22" value="&quot;LA SOMMA DEI 3 NUMERI è &quot; + SOMMA &quot; E LA MEDIA INVECE &quot; + MEDIA" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="245" y="440" width="290" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="S1AAQ17HqzU0BE7upOUH-25" value="END" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="510" width="120" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

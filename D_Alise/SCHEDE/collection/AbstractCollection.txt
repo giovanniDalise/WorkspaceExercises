@@ -1,0 +1,34 @@
+Nome: AbstractCollection<E>
+Package:java.util
+
+Descrizione:
+Questa classe fornisce un'implementazione scheletrica dell'interfaccia Collection, per ridurre al minimo lo sforzo richiesto per implementare questa interfaccia.
+
+Per implementare una raccolta immodificabile, il programmatore deve solo estendere questa classe e fornire implementazioni per i metodi iteratore e size. (L'iteratore restituito dal metodo iteratore deve implementare hasNext e next.)
+
+Per implementare una raccolta modificabile, il programmatore deve inoltre eseguire l'override del metodo add di questa classe (che altrimenti genera un'eccezione UnsupportedOperationException) e l'iteratore restituito dal metodo iteratore deve inoltre implementare il relativo metodo remove.
+
+Il programmatore dovrebbe generalmente fornire un void (nessun argomento) e un costruttore Collection, come consigliato nella specifica dell'interfaccia Collection.
+
+La documentazione per ogni metodo non astratto in questa classe ne descrive in dettaglio l'implementazione. Ciascuno di questi metodi può essere sovrascritto se la raccolta implementata ammette un'implementazione più efficiente.
+
+Questa classe è un membro di Java Collections Framework.
+
+Metodi:
+add(E e):Assicura che questa raccolta contenga l'elemento specificato (operazione facoltativa).
+
+addAll(Collection<? extends E> c):Aggiunge a questa raccolta tutti gli elementi della raccolta specificata (operazione facoltativa).
+
+clear():Rimuove tutti gli elementi da questa raccolta (operazione facoltativa).
+
+size():Restituisce il numero di elementi in questa raccolta.
+
+contains(Object o):Returns true if this collection contains the specified element.
+
+remove(Object o):Removes a single instance of the specified element from this collection, if it is present (optional operation).
+
+stream():Restituisce un flusso sequenziale con questa raccolta come origine.
+
+toArray():Returns an array containing all of the elements in this collection.
+
+toString():Returns a string representation of this collection.

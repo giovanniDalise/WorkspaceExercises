@@ -1,0 +1,17 @@
+Crea un programma che rappresenta la classe "Veicolo" con attributi come "marca", "modello" e "anno di fabbricazione" e una classe figlia "Automobile" con attributi specifici come "cilindrata" e "numero di porte". Nel main, crea un'istanza di Automobile e stampa i suoi attributi.
+
+Crea un programma che rappresenta la classe "FormaGeometrica" con metodi per il calcolo dell'area e del perimetro e una classe figlia "Rettangolo" che estende la classe FormaGeometrica e ha attributi specifici come "lunghezza" e "larghezza". Nel main, crea un'istanza di Rettangolo e stampa il suo perimetro.
+
+Crea un programma che rappresenta la classe "Persona" con attributi come "nome" e "cognome" e una classe figlia "Studente" con attributi specifici come "matricola" e "corso di studi". Nel main, crea un'istanza di Studente e stampa il suo nome completo.
+
+
+Crea un programma che rappresenta la classe "Impiegato" con attributi come "nome" e "stipendio" e una classe figlia "Manager" con attributi specifici come "bonus". Nel main, crea un'istanza di Manager e stampa il suo stipendio totale (considerando anche il bonus).
+
+Crea una classe "Cane" con metodi per abbaiare e mangiare e una classe figlia "CaneGuida" con metodi specifici come "vaiA" . Nel main, crea diverse istanze di Cane e CaneGuida e per ognuna fai abbaiare il cane e se l'istanza è di tipo CaneGuida dagli l'ordine "vaiA".
+
+
+Crea una classe "Frutta" con attributi come "nome" e "prezzo al chilo" e una classe figlia "Mela" con attributi specifici come "varietà" e "peso". Nel main, crea un'istanza di Mela e calcola il suo prezzo totale.
+
+Crea una classe "Veicolo" con metodi per accelerare e frenare e una classe figlia "Bicicletta" con attributi specifici come "numero di marce" e "tipo di telaio". Nel main, crea diverse istanze in un'array e poi fai accellerare i diversi veicoli.
+
+Completo!

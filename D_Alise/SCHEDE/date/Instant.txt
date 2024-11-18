@@ -1,0 +1,38 @@
+Name: Instant
+Package: java.time
+
+Descrizione:Un punto istantaneo sulla linea del tempo.
+
+Questa classe modella un singolo punto istantaneo sulla linea del tempo. Questo potrebbe essere utilizzato per registrare i timestamp degli eventi nell'applicazione.
+
+La portata di un istante richiede la memorizzazione di un numero maggiore di un long. Per ottenere ciò, la classe memorizza un long che rappresenta epoch-seconds e un int che rappresenta nanosecond-of-second, che sarà sempre compreso tra 0 e 999.999.999. I secondi di epoca sono misurati dall'epoca Java standard di 1970-01-01T00:00:00Z dove gli istanti dopo l'epoca hanno valori positivi e gli istanti precedenti hanno valori negativi. Per entrambe le parti dell'epoca-secondo e del nanosecondo, un valore più grande è sempre più avanti sulla linea del tempo rispetto a un va:lore più piccolo.
+
+Fields:
+EPOCH:
+Costante per l'istante dell'epoca 1970-01-01T00:00:00Z.
+
+MAX:
+Il valore istantaneo massimo supportato, "1000000000-12-31T23:59:59.999999999Z".
+
+MIN:
+L'Instant minimo supportato, '-1000000000-01-01T00:00Z'.
+
+Metodi:
+adjustInto(Temporal temporal):
+Regola l'oggetto temporale specificato in modo che abbia questo istante.
+
+compareTo(Instant otherInstant):
+Confronta questo istante con l'istante specificato.
+
+equals(Object otherInstant):
+Controlla se questo istante è uguale all'istante specificato.
+
+now():
+Ricava l'istante corrente dall'orologio di sistema.
+
+plusMillis(long millisToAdd):
+Restituisce una copia di questo istante con la durata specificata in millisecondi aggiunta
+
+
+
+

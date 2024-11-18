@@ -1,0 +1,14 @@
+- Scrivi una classe che rappresenta un'auto, con variabili di istanza come marca, modello, anno di produzione e chilometraggio. Implementa un metodo per incrementare il chilometraggio e un metodo per stampare le informazioni dell'auto.
+
+
+- Scrivi una classe che rappresenta un conto corrente bancario, con una variabile di classe che tiene traccia del tasso di interesse applicato ai conti correnti. Implementa un metodo per calcolare l'interesse maturato su un conto corrente dato.
+
+- Scrivi una classe che rappresenta un cerchio, con variabili di istanza come il raggio e la coordinata del centro. Implementa un metodo per calcolare l'area del cerchio.
+
+fino qua
+
+- Scrivi una classe che rappresenta una playlist di canzoni, con variabili di istanza come il titolo della playlist e un array di canzoni. Implementa un metodo per aggiungere una canzone alla playlist e un metodo per stampare la lista delle canzoni.
+
+- Scrivi una classe che rappresenta un negozio online, con variabili di istanza come il nome del negozio e l'elenco dei prodotti disponibili. Implementa un metodo per aggiungere un prodotto alla lista e un metodo per cercare un prodotto nella lista.
+
+- Scrivi una classe che rappresenta un libro, con variabili di istanza come il titolo, l'autore e il prezzo. Implementa un metodo per calcolare il prezzo scontato del libro, dato uno sconto percentuale.

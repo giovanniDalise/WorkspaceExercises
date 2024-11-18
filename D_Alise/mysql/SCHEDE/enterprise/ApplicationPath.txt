@@ -1,0 +1,15 @@
+package: javax.ws.rs.
+
+Nome: Annotation Type ApplicationPath
+
+Descrizione: Identifica il percorso dell'applicazione che funge da URI di base per tutti gli URI di risorsa forniti da Path. Può essere applicato solo a una sottoclasse di Application.
+Quando viene pubblicato in un contenitore Servlet, il valore del percorso dell'applicazione può essere sovrascritto utilizzando un elemento di mappatura servlet in web.xml.
+
+Required Element Summary
+
+Modificatore o tipo:String     
+Required element :value
+Descrizione:Definisce l'URI di base per tutti gli URI di risorsa
+
+Definisce l'URI di base per tutti gli URI di risorsa. Un carattere '/' finale verrà aggiunto automaticamente se non è presente.
+Il valore fornito viene automaticamente codificato in percentuale per conformarsi alla produzione del percorso di {@link RFC 3986 sezione 3.3}. Si noti che i valori codificati in percentuale sono consentiti nel valore, un'implementazione riconoscerà tali valori e non codificherà due volte il carattere '%'.

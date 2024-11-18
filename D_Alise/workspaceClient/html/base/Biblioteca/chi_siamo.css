@@ -1,0 +1,84 @@
+body {
+    font-family: math;
+}
+header{
+    background-color: rgba(158, 167, 45, 0.973);
+    position: relative;
+    /*relative: Quando si applica position: relative a un elemento,
+     il suo posizionamento viene calcolato rispetto alla sua posizione originale nel flusso del documento. 
+     L'elemento conserva lo spazio che occuperebbe nel flusso normale della pagina, anche se è spostato utilizzando le proprietà top, bottom, 
+     left o right.*/
+}
+header h2{
+    margin-left: 570px;
+    position: absolute;
+    top: 2px;
+    font-size:35px;
+    font-weight:500; /* Font più sottile */
+    color: rgba(60, 77, 54, 0.959);
+    /*absolute: Quando si applica position: absolute a un elemento, il suo posizionamento viene calcolato rispetto al primo elemento genitore posizionato o all'elemento radice (<html>). 
+    L'elemento viene quindi rimosso dal flusso normale della pagina e sovrapposto agli altri elementi. 
+    Puoi utilizzare le proprietà top, bottom, left e right per specificare la posizione esatta dell'elemento rispetto al suo genitore posizionato.*/
+}
+header img{
+    width: 200px; /* Imposta la larghezza desiderata dell'immagine */
+    height: auto; 
+}
+header form{
+    position: absolute;
+    top: 120px;
+    margin-left: 590px;
+}
+body h1{
+    margin-left: 50px;
+    margin-top: 30px;
+}
+body section1 h1{
+    margin-left: 570px;
+    color: rgba(26, 26, 37, 0.815);
+    font-size:30px;
+
+}
+body section1 p1{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    height: 10vh; /* Imposta l'altezza del contenitore a tutta l'altezza della finestra del browser */
+    margin: 0 20%;
+    font-size:20px;
+}
+body section2 h1{
+    margin-top: 140px;
+    margin-bottom: 30px;
+    margin-left: 580px;
+    color: rgba(26, 26, 37, 0.815);
+    font-size:30px;
+
+}
+body section2 p1{
+    margin-top: 120px;
+    margin-bottom: 10px;
+    margin-left: 480px;
+    height: 10vh; /* Imposta l'altezza del contenitore a tutta l'altezza della finestra del browser */
+    font-size:20px;
+}
+body section3 h1{
+    margin-top: 60px;
+    margin-bottom: 40px;
+    margin-left: 580px;
+    color: rgba(26, 26, 37, 0.815);
+    font-size:30px;
+
+}
+body section3 ul{
+    margin-top: 40px;
+    margin-left: 500px;
+    height: 10vh; /* Imposta l'altezza del contenitore a tutta l'altezza della finestra del browser */
+    font-size:20px;
+}
+
+footer {
+    margin-left: 450px;
+    margin-top: 100px;
+}

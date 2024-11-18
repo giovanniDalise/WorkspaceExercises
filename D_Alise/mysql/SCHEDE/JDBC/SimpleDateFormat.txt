@@ -1,0 +1,42 @@
+CLASS:SimpleDateFormat
+package:java.text
+
+Descrizione:SimpleDateFormat is a concrete class for formatting and parsing dates in a locale-sensitive manner. It allows for formatting (date → text), parsing (text → date), and normalization.
+SimpleDateFormat allows you to start by choosing any user-defined patterns for date-time formatting. However, you are encouraged to create a date-time formatter with either getTimeInstance, getDateInstance, or getDateTimeInstance in DateFormat. Each of these class methods can return a date/time formatter initialized with a default format pattern. You may modify the format pattern using the applyPattern methods as desired. For more information on using these methods, see DateFormat.
+
+Date and Time Patterns
+Date and time formats are specified by date and time pattern strings. Within date and time pattern strings, unquoted letters from 'A' to 'Z' and from 'a' to 'z' are interpreted as pattern letters representing the components of a date or time string. Text can be quoted using single quotes (') to avoid interpretation. "''" represents a single quote. All other characters are not interpreted; they're simply copied into the output string during formatting or matched against the input string during parsing.
+
+The following pattern letters are defined (all other characters from 'A' to 'Z' and from 'a' to 'z' are reserved):
+
+COSTUTTORI:
+SimpleDateFormat()
+Constructs a SimpleDateFormat using the default pattern and date format symbols for the default FORMAT locale.
+
+SimpleDateFormat(String pattern)
+Constructs a SimpleDateFormat using the given pattern and the default date format symbols for the default FORMAT locale.
+
+SimpleDateFormat(String pattern, DateFormatSymbols formatSymbols)
+Constructs a SimpleDateFormat using the given pattern and date format symbols.
+
+SimpleDateFormat(String pattern, Locale locale)
+Constructs a SimpleDateFormat using the given pattern and the default date format symbols for the given locale.
+
+METODI:
+applyLocalizedPattern(String pattern)
+Applies the given localized pattern string to this date format.
+
+applyPattern(String pattern)
+Applies the given pattern string to this date format.
+
+clone()
+Creates a copy of this SimpleDateFormat.
+
+equals(Object obj)
+Compares the given object with this SimpleDateFormat for equality.
+
+hashCode()
+Returns the hash code value for this SimpleDateFormat object.
+
+parse(String text, ParsePosition pos)
+Parses text from a string to produce a Date.

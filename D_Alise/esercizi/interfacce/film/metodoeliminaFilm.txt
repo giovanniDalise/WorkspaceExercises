@@ -1,0 +1,12 @@
+Spiegazione metodo eliminaFilm: algoritmo "Shift Delete"
+- si inserisce il file da eliminare nella variabile temp di tipo Film
+- si crea un array nuovo di nome f con la lunghezza meno 1 rispetta all'array originale di film
+- si inizializza una variabile boolean di nome trovato su false
+- si cicla per la lunghezza dell'array originale
+- se temp sarà uguale ad un indice dell'array originale allora imposteremo la nostra variabile trovato su true.
+Questo passaggio è importante perchè cambierà il metodo di assegnazione dal vecchio array film al nuovo f
+- se invece il file non è uguale all'indice dell'array film se avevamo già trovato in precedenza la corrispondeza tra temp e indice dell'array allora l'assegnazione degli indici dal vecchio array film a quello nuovo f sarebbe stata f[i-1]=film[1] se invece ancora non era stato trovato f[i]= film[i]
+L'espressione if (trovato) è un abbreviazione e come se fosse if(trovato = true) o if(trovato=false) a seconda dell'ultimo valore assunto.
+In questo caso ci dice che se non è stato trovato ancora il file da cancellare che ovviamente non vogliamo ricopiare nel nuovo array allora dovremo semplicemente riportare gli indici del vecchio array su quello nuovo dato che hanno la stessa corrispondenza; invece non appena avremo trovato il file da eliminare succederà che i vecchi indici saranno assegnati ad un indice precedente rispetto al numero di indici dell'array nuovo dato che in questo nuovo array avremo saltato un elemento (quello da eliminare) e la corrispondenza da 1=1 diventerà 1 =-1.(ricordati inoltre che il nuovo array ha una lunghezza minore di 1 rispetto all'originale).
+-In ultimo assegnamo alla variabile di classe film (ossia l'array originale) il nuovo array.
+

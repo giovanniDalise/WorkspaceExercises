@@ -1,0 +1,14 @@
+- Scrivi una classe che rappresenta un prodotto in un negozio online. L'oggetto prodotto ha un nome, un prezzo e una quantità disponibile. Implementa l'interfaccia Comparable in modo che i prodotti siano ordinati in base al prezzo.
+
+
+
+- Scrivi una classe che rappresenta un'automobile. L'oggetto automobile ha una marca, un modello e un anno di produzione. Implementa l'interfaccia Comparator in modo che le automobili siano ordinate prima per marca, poi per modello e infine per anno di produzione.
+
+
+
+- Scrivi una classe che rappresenta un conto corrente bancario. L'oggetto conto corrente ha un saldo e un numero di conto. Implementa l'interfaccia Cloneable in modo che gli utenti possano clonare il proprio conto corrente.
+
+fino qua da finire
+
+- Scrivi una classe che rappresenta un elenco di prodotti in un negozio online. L'elenco di prodotti deve essere salvato su disco in modo che possa essere ripristinato in caso di arresto del programma. Implementa l'interfaccia Serializable per supportare il salvataggio su disco.
+

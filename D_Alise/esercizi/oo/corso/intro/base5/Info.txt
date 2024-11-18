@@ -1,0 +1,47 @@
+Ok in pratica noi con l'override di equals ridefiniamo il metodo in questo modo:
+
+if (this == obj) return true; 
+se l'istanza di Rettangolo(this) a cui stiamo associando il metodo equals e lo stesso oggetto di obj ossia sono lo stesso oggetto(ossia obj==obj oppure this==this) e hanno lo stesso riferimento in memoria allora l'euqals ci darà true. é un controllo necassario per l'exception ma non necessario per attivare il casting dell'oggetto che vedremo dopo
+Nel nostro caso non sono lo stesso oggetto e quindi mi darà false.
+
+mentre con:
+if (!(obj instanceof Rettangolo)) return false;
+Rettangolo rettangolo3 = (Rettangolo) obj;
+
+stiamo dicendo che se l'oggetto obj non è un istanza del rettangolo allora ci dovrà restituire false.
+Qesta condizione è necessaria per il casting della riga di sotto ossia ci sta dicendo che se non avviene tale condizione allora il casting di obj in Rettangolo non potrà avvenire.
+
+Nel mio caso mi restituisce un true dato che il mio obj non è un istanza di Rettangolo e quindi il casting non potrà avvenire
+Dopo aver ridefinito il funzionamento dell'equals(operazione necessaria anche perchè se no ci avrebbe dato un ClassCastException) possiamo proseguire a fare il casting:
+
+Rettangolo rettangolo3 = (Rettangolo) obj;
+
+In altre parole, la riga di codice sta dicendo al compilatore di considerare l'oggetto obj come se fosse un oggetto di tipo Rettangolo, in modo da poter accedere alle proprietà e ai metodi specifici della classe Rettangolo e da trasmettergli il metodo equals.
+
+return this.altezza== rettangolo3.altezza && this.lunghezza == rettangolo3.lunghezza;  
+
+ Infine, il metodo restituisce true se i parametri delle due istanze sono uguali(istanza corrente this con istanza 3), altrimenti restituisce false.
+
+Il metodo equals viene utilizzato per confrontare l'oggetto corrente con un altro oggetto passato come parametro. Nella classe BootStrap si confronta l'oggetto rettangolo1 con l'oggetto rettangolo2 e poi si confronta rettangolo1 con rettangolo3. Quindi quando il metodo equals viene chiamato su rettangolo1 o rettangolo2, l'oggetto passato come parametro sarà l'altro rettangolo (ovvero rettangolo2 o rettangolo1 rispettivamente) e non rettangolo3.
+
+Quindi il funzionamento di equals dipende dalle prime due condizioni e dal confronto finale tra i parametri dell'istanza corrente e passata.
+
+Fino a qua tutto bene ma se non riesco a soddisfare entrambe le prime condizioni soprattutto la seconda come è possibile che io riesca a fare il casting mi dovrebbe essere vietato?
+In pratica quando utilizzo Object obj è perchè sto generalizzando questo comportamento con 
+la classe Object ma in realtà nelle parentesi io al posto di obj utilizzerò l'istanza che chiamerà il metodo equals ogni volta quindi al posto di obj avremo rettangolo o rettangolo 2 o 3 e questi sono istanze della stessa classe quindi renderanno la seconda condizione false (ricardoil NOT!) esaudendo tale condizione sarà possibile fare il casting e quindi il confronto tra oggetti trasmettendo il metodo di obj equals all'istanza di Rettangolo scelta.
+é la stessa cosa che fai quando chiami un metodo lo chiami con un nome di una variabile tra parantesi ma lo dichiari nel metodo sempre tra parentesi con un altro nome quindi persona3 puo diventare obj e penso che per il discorso del tipo Object invece sia che il tipo non fa differenza forse perchè tutte le classi derivano da Object.
+
+ok ma è possibile avere un caso in cui la prima condizione sia false e la seconda sia true?
+
+Sì, potrebbe accadere se l'oggetto obj passato come parametro non è lo stesso oggetto su cui si sta chiamando il metodo (quindi la prima condizione sarebbe falsa), ma allo stesso tempo è un'istanza di Rettangolo (quindi la seconda condizione sarebbe vera). Ecco un esempio:
+
+java
+
+Rettangolo r1 = new Rettangolo(3, 4);
+Rettangolo r2 = new Rettangolo(3, 4);
+Object obj = r2;
+
+boolean isEqual = r1.equals(obj);
+
+In questo esempio, r1 e r2 sono due oggetti distinti di tipo Rettangolo. La variabile obj viene inizializzata con l'oggetto r2. Quando viene chiamato il metodo equals sull'oggetto r1 passando come parametro obj, la prima condizione if (this == obj) sarà falsa perché r1 e obj non sono lo stesso oggetto. Tuttavia, la seconda condizione if (!(obj instanceof Rettangolo)) sarà vera perché obj è un'istanza di Rettangolo. In questo caso, il metodo equals restituirebbe false.
+

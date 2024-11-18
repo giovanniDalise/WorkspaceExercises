@@ -1,0 +1,60 @@
+<mxfile host="app.diagrams.net" modified="2023-04-12T12:47:28.789Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/111.0" etag="wURXf5RQacTl3u8rJNWh" version="21.1.7" type="google">
+  <diagram name="Pagina-1" id="iKMumlaKeeyvDRU3WvHi">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="NwPTvp0NNvxGXrm3oOGS-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="NwPTvp0NNvxGXrm3oOGS-1" target="NwPTvp0NNvxGXrm3oOGS-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NwPTvp0NNvxGXrm3oOGS-1" value="Start" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="20" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="NwPTvp0NNvxGXrm3oOGS-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="NwPTvp0NNvxGXrm3oOGS-3" target="NwPTvp0NNvxGXrm3oOGS-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NwPTvp0NNvxGXrm3oOGS-3" value="int somma = 0" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="130" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NwPTvp0NNvxGXrm3oOGS-15" value="V" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="NwPTvp0NNvxGXrm3oOGS-11" target="NwPTvp0NNvxGXrm3oOGS-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NwPTvp0NNvxGXrm3oOGS-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.025;entryY=0.65;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="NwPTvp0NNvxGXrm3oOGS-11" target="NwPTvp0NNvxGXrm3oOGS-12">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="270" y="270" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="280" y="260" />
+              <mxPoint x="280" y="389" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NwPTvp0NNvxGXrm3oOGS-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="NwPTvp0NNvxGXrm3oOGS-11" target="NwPTvp0NNvxGXrm3oOGS-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OyFHtgfFopl4EcHMIGCg-1" value="F" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="NwPTvp0NNvxGXrm3oOGS-21">
+          <mxGeometry x="-0.4741" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NwPTvp0NNvxGXrm3oOGS-11" value="&lt;div&gt;int i = 1; i&amp;lt;=100;&lt;/div&gt;&lt;div&gt;i++&lt;br&gt;&lt;/div&gt;" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="230" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="NwPTvp0NNvxGXrm3oOGS-12" value="somma+=i" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="350" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NwPTvp0NNvxGXrm3oOGS-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="NwPTvp0NNvxGXrm3oOGS-19" target="NwPTvp0NNvxGXrm3oOGS-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NwPTvp0NNvxGXrm3oOGS-19" value="somma" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="440" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NwPTvp0NNvxGXrm3oOGS-20" value="o" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="595" y="400" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NwPTvp0NNvxGXrm3oOGS-22" value="Start" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="530" width="120" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

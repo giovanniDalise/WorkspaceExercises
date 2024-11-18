@@ -1,0 +1,68 @@
+GIT:
+GIT é un versionale per facilitare il lavoro in un team di sviluppo tramite una condivisione del lavoro in parallelo, controllata nel senso di tracciabile per le modifiche specifiche e da chi sono state effetuate e reversibile per backup di versioni del proggetto.
+
+- Posizionamoci in una cartella con il prompt dei comandi, io in questo caso avevo creato la directori git_workspace sul desktop quindi faccio: cd Deskto\git_workspace
+
+- Creare file nuovo dal terminale con mac "touch" mentre con windows "copy con" e poi il nome del file ad esempio copy con index.html e mi trovero nella cartella git_workspace il mio nuovo file index.html
+
+- Successivamente digiteremo git init per creare una repository locale all'iterno della directory dove siamo nel terminale (non vedremo questa repository inizializzata, ossia un file .git, perchè è un file nascosto)
+
+-I comandi che seguono servono per specificare i dati utente:
+-git config --local user.name "Giovanni DAlise"
+
+-git config --local user.mail "giovannidalise@gmail.com"
+
+config --global configura default per tutti i repository config --local configurazione per il
+repository corrente
+
+Solo che a me non ha funzionato il local quindi ho scritto solo git config user e git config email etc... e li ha funzionato
+
+- Poi potremo digitare il comando git status che ci da il punto della situazione sui nostri file interessati della directory corrente, per esempio in questo caso non avendo fatto nessuna operazione ancora sul nostro index.html (che vedremo come rosso) ci consiglierà di eseguire il comando git add per poter fare il commit del file.sono detti anche come untraccked file ossia non tracciati da git, non li rileva ancora. (in visual studio avremo l'icona U di fianco al file unregistered)
+
+- Facendo quindi git add index.html e dopo scrivendo git status e vedremo che index.html (diventato verde e come new file)sarà stato aggiunto nella nostra stage area ossia dove si potrà fare il comitted sul file (in visual studio icona A a fianco al file Added ossia aggiunto)
+
+- con git rm --cached index.html vedremo che (facendo un git status) avremo fatto l'unsatge del file e quindi sarà di nuovo alla situazione di partenza (di nuovo rosso).
+
+- con il comando git add. se avremo per esempio più file nella nostra directory li aggiungerà tutti direttamente.
+
+- riportato il nostro index.html nello stage possiamo eseguire il nostro git commit per aggiungere il file alla nostra repository, una volta fatto ci troveremo in una nuova schermata di vim editor dove ci chiederà di aggiungere un commento per descriverè il cambiamento apportato al file in questione in modo che ci lo scaricherà saprà il perchè della modifica, con la i entreremo in modalità insert per srivere il commento per uscire poi da questa modalità dovremo digitare esc e poi :wq per tornare alla schermata precedente.
+Un altro modo per fare il commit e magari anche meno macchinoso del vim editor e quello di scrivere git commit -m "e qui aggiungeremo il nostro commento". Posso fare anche un altra -m "commento" cosi da avere un titolo ed un testo del commento e avere una maggiore descrizione della versione committata.
+
+E avremo questo il risultato:
+[master (root-commit) a8b8b60] Sto facendo una prova
+ 1 file changed, 5 insertions(+)
+ create mode 100644 index.html
+
+- Vedremo il commento che avevo inserito ossia Sto facendo una prova poi vedremo che abbiamo cambiato un file ossia i nostro index.html con 5 inserzioni.
+
+- Se modifichiamo il nostro html e torniamo sullo nostro prompt vedremo che rifacendo git status il nostro index.html sarà stato di nuovo unstage ossia rosso ma come stato sarà modified(in visual studio ogni volta che lo modificheremo avrà la lettera M modified) e non più new file e oltre al solito consiglio di eseguire git add ci dirà che potremo anche eseguire git checkout --index html che ci rimuoverà tutti i cambiamenti che avevammo apportato, insomma riporterà il file al momento del nostr commit
+
+- con i brench ossia i rami non possiamo conservare una copia del nostro codice non ancora merged,quindi apriremo nuovi brench per diciamo testare ancora il nostro programma ad avere varie versioni di questo fino a fare il merge definito. Il brench master si desume sia il brenc definitivo che manderemo in produzione.
+
+-repository locale è quella creata sul desktop quella remota è quella presente su github 
+
+- git clone per importare una repository remota già esistente vai su git hub vai su un progetto qualsiasi clicca su code cui potremo fare il clone l'open con github desktop e il download zip di tutto il progetto. Facendo il clone ossia copieremo il progetto da importare e dal terminale andremo sul desktop e scriveremo git clone e poi faremo control + v ossia incolleremo il progetto clonato dalla repository remota su git hub e e mi importerà la cartella sullo desktop e con il cd e il nome della cartella del progetto, ossia l'ultimo nome del file.git che abbiamo incollato nel terminale, potremo entrare dentro al progetto importato.
+
+- con get log visualizzo tutti commit eseguiti dove vedremo l'hash ossia un codice identificativo del commit l'autore del commit e la data e orario di quando è stato effetuato e su quale brench ad esempio il Master e la scritta Head "testa" ossia l'ultimo commit, quello più recente eseguito.
+
+- con git chekout -b dev io in questo caso con -b sto dicendo di spostarmi(in realtà creare) in un altro brench e in questo caso specifico sul brench dev quindi starei passando dal mio brench master al brench dev per eseguire i vari commit di prova di sviluppo.
+
+-Una volta passato sul nuovo brench potrò rifare le nuove modifiche ma stavolta sono sul brench dev.
+
+- quando avrò finito e vorro ritornare sul brench master non scriverò -b(perchè il brench master già esiste se mi fossi spostato in altro brench nuovo allora avrei dovuto scrivere -b) ma semplicemente git checkout master
+
+- In questo caso però succederà che non vedrò più le mie modifiche appena effettuate (per esempio se sono su visual studio) questo perchè sto visualizzando un altro brench(master) al tempo del suo ultimo commit dove le modifiche non sono mai avvenute (le ho fatte sul brench dev).
+
+- ora se io voglio riportare le modifiche di dev su master, dovro fondere i due brench ossia fare il merge, dovrò andare sul brench master (git checkout master) e git merge dev e ci ritroveremo su master con le modifiche di dev trsferitesi.  Git merge oltre alla funzione di unire i cambiamenti tra due branch svolge l'operazione di fondere il repository remoto con quello locale.
+
+- Con git reset si eliminano tutto quanto era stato messo nello stage, ma i file rimangono. (un po come il git checkout --nomefile che abbiamo visto sopra. Ci sono delle differenze in realtà da vedere.
+
+- Con git push iniviamo i dati al repository remoto.
+NOTA: la prima volta che eseguiamo il comando con un nuovo repository usare l'opzione --
+set-upstream per impostare dove su quale repositori inviare.
+
+- Attraverso il comando git pull, verrà effettuato un git fetch + un git merge, che ci permette di
+integrare direttamente le modifiche nel nostro repository locale.
+
+- git fetch scarica i cambiamenti che ci sono stati nel repository da
+remoto la differenza con il git pull è che quest'ultimo effettua il fetch + il merge delle modifiche remote nel repository locale

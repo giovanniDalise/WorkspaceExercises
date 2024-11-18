@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gioco dell'Impiccato</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="hangman-container">
+        <h1>Gioco dell'Impiccato</h1>
+        <div id="word-display"></div>
+        <div id="guesses-left"></div>
+        <div id="letters">
+            <button class="letter-button" onclick="letterClick('a')">A</button>
+            <button class="letter-button" onclick="letterClick('b')">B</button>
+            <button class="letter-button" onclick="letterClick('c')">C</button>
+            <!-- Aggiungi il resto dei pulsanti delle lettere -->
+        </div>
+        <div id="result"></div>
+        <button id="reset-button">Ricomincia</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

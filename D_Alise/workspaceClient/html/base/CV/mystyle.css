@@ -1,0 +1,123 @@
+body {
+    font-family: Calibri;
+}
+.left-section {
+width: 19%;
+float: left;
+background-color: rgba(155, 183, 201, 0.438);
+padding: 30px; /* Aggiunge uno spazio interno di 20px, per non stare sui margini */
+border-radius: 10px; /* bordi curvi alla sezione */
+}
+.left-section h3 {
+color: rgba(63, 77, 199, 0.801);
+}
+            
+.circular-image {
+width: 200px;
+height: 200px;
+border-radius: 50%;
+display: flex;/*display definisce il tipo di visualizzazione di un elemento. Nell'esempio specifico, stiamo utilizzando display: flex;. Questo imposta l'elemento padre (nel nostro caso la classe "circular-image") come un contenitore flessibile, che permette di gestire facilmente l'allineamento degli elementi al suo interno.*/
+justify-content: center;/*justify-content: center; che centra gli elementi lungo l'asse orizzontale del contenitore. */
+align-items: center;/*align-items: center; che centra gli elementi lungo l'asse verticale del contenitore. */
+overflow: hidden;  /*il contenuto della foto che supera i bordi viene nascosto */
+border: 6px solid rgba(124, 128, 146, 0.363);
+margin-left: 15px;/*sposto 'immagine a destra*/
+}
+.circular-image img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}    
+@media (max-width: 900px) {
+    .circular-image {
+        width: 150px;
+        height: 150px;
+    }    
+}
+@media (max-width: 600px) { /* sovrascrive lo stile della classe.circular-image una volta che saremo ad una larghezza schermo uguale o inferiore di 600 px */
+    .circular-image {   /* in questo modo si crea un design responsivo dell'immagine*/
+    width: 100px;
+    height: 100px;
+    }
+}
+.right-section {
+width: 50%;
+float: left;
+}
+.right-section header h2 {
+margin-left: 140px;/*sposto a destra*/
+margin-top: 130px;
+margin-bottom: 3px;
+font-family: "Century Gothic", sans-serif;
+font-size:50px;
+font-weight:500; /* Font più sottile */
+
+}
+.right-section header h3 {
+margin-left: 140px;
+margin-top: 3px;
+margin-bottom: 3px;
+font-size:40px;
+font-weight:300; /* Font più sottile */
+}
+.right-section header h4 {
+margin-left: 140px;
+margin-top: 3px;
+margin-bottom: 3px;
+font-size:26px;
+font-weight:500; /* Font più sottile */
+}
+.istruzione-section h1{
+    margin-left: 140px;
+    margin-bottom: 3px;
+}
+.istruzione-section h2{
+    margin-left: 140px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    font-size:21px;
+}
+.istruzione-section p{
+    margin-left: 140px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    font-size:16px;
+}
+.right-section hr {
+    margin-left: 140px;
+    border: none; /* Rimuovi il bordo predefinito */
+    border-top: 1px solid;/* Aggiungi una linea superiore */
+    width:100%; /* lunghezza */
+    border-width: 2px; /* larghezza */
+    border-color: rgb(173, 173, 185);
+    margin-top: 1px;
+}
+.job-section h1{
+    margin-left: 140px;
+    margin-bottom: 3px;
+}
+.job-section h2{
+    margin-left: 140px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    font-size:21px;
+}
+.job-section p{
+    margin-left: 140px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    font-size:16px;
+}
+.job-section hr {
+    margin-left: 140px;
+    border: none; /* Rimuovi il bordo predefinito */
+    border-top: 1px solid;/* Aggiungi una linea superiore */
+    width:100%; /* lunghezza */
+    border-width: 2px; /* larghezza */
+    border-color: rgb(173, 173, 185);
+    margin-top: 1px;
+}
+.job-section ul {
+    margin-left: 140px;
+
+}

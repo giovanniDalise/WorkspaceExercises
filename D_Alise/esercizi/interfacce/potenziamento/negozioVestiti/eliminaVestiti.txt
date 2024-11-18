@@ -1,0 +1,10 @@
+Elimina vestiti:
+diverso dallo shift delete che creava prima un array nuovo dove ricopiava tutti i valori degli indici dell'array originale tranne per il valore da eliminare. 
+In questo algoritmo noi invece notiamo che non viene creato subito un array nuovo ma si lavora su quello originale.
+- si inizializza il vestito da cercare
+- si inizializza il boolean trovato a falso
+si cicla per l'array originale di vestiti e se il vestito viene trovato tra gli indici semplicemente la boolean diventa true
+- poi annidata abbiamo una condizione che se il vestito è stato trovato e se l'indice che prendiamo in considerazione dell'array e più piccolo dell'ultimo (ossia fino al penultimo compreso) allora il valore dell'indice che stiamo considerando diventerà il suo successivo:this.vestiti[i] = this.vestiti[i + 1]. In questo modo shifteremo il successivo con il valore attuale.
+-Se invece non è stato ancora trovato il valore da trovare(non è scritta questa condizione  else ma è implicita all'if annidato) allora non succederò nulla e si prenderà in considerazione il prossimo indice dell'array.
+In questo modo a parte per il valore o vestito in questo caso da eliminare avremo shiftato indietro tutti i valori del nostro array fino al penultimo(nel quale ci sarà l'ultimo valore dell'array orginale).
+- infine avremo un ultimo if che con Arrays.copyOf copierà il nostro array vecchio in uno nuovo con una lunghezza uguale al precedente meno uno in modo da troncare l'ultimo elemento dell'array originale che non ci servirà più dato che abbiamo traslato tutti i valori di 1 indietro.

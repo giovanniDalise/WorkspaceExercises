@@ -1,0 +1,50 @@
+Name:Calendar
+Package:java.util
+
+Descrizione:
+La classe Calendar è una classe astratta che fornisce metodi per la conversione tra uno specifico istante nel tempo e un insieme di campi del calendario come YEAR, MONTH, DAY_OF_MONTH, HOUR e così via, e per manipolare i campi del calendario, come ottenere la data della prossima settimana. Un istante nel tempo può essere rappresentato da un valore in millisecondi che è un offset dall'epoca, 1 gennaio 1970 00:00:00.000 GMT (gregoriano).
+VEDI RESTO DESCRIZIONE DEI FIELD SU DOCUMENTAZIONE API
+
+Fields:
+vedi documentazione
+
+Costruttori:
+Calendar():
+Costruisce un calendario con il fuso orario predefinito e le impostazioni locali FORMAT predefinite.
+
+Calendar(TimeZone zone, Locale aLocale):
+Costruisce un calendario con il fuso orario e le impostazioni locali specificati.
+
+Metodi:
+add(int field, int amount):
+Aggiunge o sottrae la quantità di tempo specificata al campo del calendario specificato, in base alle regole del calendario.
+
+after(Object when):
+Restituisce se questo Calendar rappresenta un'ora successiva all'ora rappresentata dall'oggetto specificato
+
+before(Object when):
+Restituisce se questo Calendar rappresenta un'ora precedente all'ora rappresentata dall'oggetto specificato
+
+clear():
+Imposta tutti i valori del campo del calendario e il valore dell'ora (offset in millisecondi dall'epoca) di questo calendario non definito.
+
+clone():
+Crea e restituisce una copia di questo oggetto.
+
+complete():
+Compila tutti i campi non impostati nei campi del calendario.
+
+equals(Object obj):
+Confronta questo calendario con l'oggetto specificato.
+
+get(int field):
+Restituisce il valore del campo del calendario specificato.
+
+isLenient():
+Indica se l'interpretazione di data/ora deve essere indulgente.
+
+isSet(int field):
+Determina se il campo del calendario specificato ha un valore impostato, inclusi i casi in cui il valore è stato impostato dai calcoli dei campi interni attivati ​​da una chiamata al metodo get.
+
+toString():
+Restituisce una rappresentazione in forma di stringa di questo calendario.

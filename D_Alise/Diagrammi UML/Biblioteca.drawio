@@ -1,0 +1,34 @@
+<mxfile host="app.diagrams.net" modified="2023-04-28T13:13:24.289Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/112.0" etag="i9lN2iIB9q0IBpCf4ZHG" version="21.2.3" type="google">
+  <diagram name="Pagina-1" id="xi6DCA7nQuGbKydnW-zz">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="EhR4UH_OuhrcJM4nj_Nr-1" value="Libro" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="280" height="278" as="geometry" />
+        </mxCell>
+        <mxCell id="EhR4UH_OuhrcJM4nj_Nr-2" value="&lt;div&gt;- titolo: String&lt;/div&gt;&lt;div&gt;- autore:String&lt;/div&gt;&lt;div&gt;- editore:String&lt;/div&gt;&lt;div&gt;- prezzo:float&lt;/div&gt;&lt;div&gt;- numeroPagine:int&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="EhR4UH_OuhrcJM4nj_Nr-1">
+          <mxGeometry y="26" width="280" height="94" as="geometry" />
+        </mxCell>
+        <mxCell id="EhR4UH_OuhrcJM4nj_Nr-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="EhR4UH_OuhrcJM4nj_Nr-1">
+          <mxGeometry y="120" width="280" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="EhR4UH_OuhrcJM4nj_Nr-4" value="&lt;div&gt;+ Libro(titolo:String,autore:String,editore:String,&lt;/div&gt;&lt;div&gt;float:prezzo,int:numeroPagine)&lt;/div&gt;&lt;div&gt;+ getTitolo()String&lt;/div&gt;&lt;div&gt;+getAutore()String&lt;/div&gt;&lt;div&gt;+getEditore()String&lt;/div&gt;&lt;div&gt;+getPrezzo()float&lt;/div&gt;&lt;div&gt;+getnumeroPagine()int&lt;/div&gt;&lt;div&gt;+sfoglia(Libro)String&lt;/div&gt;&lt;div&gt;+appunta(Libro)String&lt;br&gt; &lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="EhR4UH_OuhrcJM4nj_Nr-1">
+          <mxGeometry y="128" width="280" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="EhR4UH_OuhrcJM4nj_Nr-16" value="Biblioteca" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="40" width="280" height="278" as="geometry" />
+        </mxCell>
+        <mxCell id="EhR4UH_OuhrcJM4nj_Nr-17" value="&lt;div&gt;- libri:[]Libro&lt;/div&gt;&lt;div&gt;+ nomeBiblioteca:String&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="EhR4UH_OuhrcJM4nj_Nr-16">
+          <mxGeometry y="26" width="280" height="94" as="geometry" />
+        </mxCell>
+        <mxCell id="EhR4UH_OuhrcJM4nj_Nr-18" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="EhR4UH_OuhrcJM4nj_Nr-16">
+          <mxGeometry y="120" width="280" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="EhR4UH_OuhrcJM4nj_Nr-19" value="&lt;div&gt;+main(String[])&lt;br&gt;&lt;/div&gt;&lt;div&gt;+Biblioteca()&lt;/div&gt;&lt;div&gt;+inserisciLibro():Libro&lt;br&gt;&lt;/div&gt;&lt;div&gt;+aggiungiLibro(Libro)&lt;/div&gt;&lt;div&gt;+cercaLibro Libro (String)&lt;/div&gt;&lt;div&gt;+affittaLibro ()Boolean&lt;/div&gt;&lt;div&gt;+restituisciLibro(Libro)Libro[]&lt;/div&gt;&lt;div&gt;+eliminazioneLibro(Libro)Libro[]&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="EhR4UH_OuhrcJM4nj_Nr-16">
+          <mxGeometry y="128" width="280" height="150" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

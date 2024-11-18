@@ -1,0 +1,39 @@
+ESEMPIO DI IMPOSTAZIONE STATIC e NON:
+In negozio dischi ho evitato l'attributo static(ovviamente tranne nel main dove è necessario) ti copio la differenza del codice che puoi confrontare con quello della classe NegozioDischi nel caso avessi utilizzato invece l'attributo static nei metodi:
+
+public class NegozioDischi{
+    private static Disco[] dischi = new Disco[3];
+    
+    public static void main (String []args){
+        dischi[0]= new Disco ("Field of Reeds","These New Puritans",16.22,10);
+        dischi[1]= new Disco ("Roman Candle","Elliott Smith",26.24,5);
+        dischi[2]= new Disco ("Spirit of Eden","Talk Talk",25.90,15);       
+        visualizzaDischi();        
+        ordinaDischi(dischi);
+        System.out.println("Dischi in ordine di prezzo:");
+        visualizzaDischi();
+    }
+    
+    public static void ordinaDischi(Disco[] dischi){
+        Arrays.sort(dischi);
+    }
+    
+    public static void visualizzaDischi(){
+        for(int i=0;i<dischi.length;i++){
+            System.out.println(dischi[i].toString());
+        }
+    }
+}
+
+ho deciso in entrambi i casi di dichiarare l'array di dischi fuori dal main per renderlo variabile di istanza visibile a tutti i metodi ma in questo caso per far si che comunichi con gli altri metodi avrei dovuto metterlo come static.
+Nel'originale invece l'unico modo che ho avuto per far comunicare l'interno del main static con gli altri metodi che non erano static era quello di creare un istanza di NegozioDischi(controlla sul codice originale).
+
+La scelta tra mantenere la keyword static o creare un'istanza della classe NegozioDischi dipende dal contesto in cui si sta scrivendo il codice.
+
+Se il metodo ordinaDischi e visualizzaDischi sono dipendenti da uno stato della classe NegozioDischi, allora può essere necessario creare un'istanza della classe e chiamare i metodi su di essa. Ad esempio, se ci sono più negozi di dischi, allora si vorrà creare un'istanza della classe NegozioDischi per ogni negozio, e ogni negozio avrà i propri dischi. In tal caso, non è possibile utilizzare la keyword static per riferirsi ai dischi del negozio, in quanto il campo sarebbe condiviso da tutti i negozi.
+
+D'altra parte, se il metodo ordinaDischi e visualizzaDischi non sono dipendenti da uno stato della classe NegozioDischi, ma solo da una serie di dischi, allora potrebbe essere preferibile mantenere i metodi static. In questo modo, è possibile chiamare i metodi direttamente sulla classe NegozioDischi, senza la necessità di creare un'istanza della classe.
+
+In generale, è una buona pratica cercare di evitare l'utilizzo di metodi statici in quanto possono causare problemi di manutenzione del codice e di testabilità. Tuttavia, ci sono situazioni in cui l'utilizzo di metodi statici è giustificato, come nel caso in cui il metodo non dipende dallo stato di un oggetto.
+
+In ogni caso, è importante valutare il contesto specifico e scegliere l'approccio più appropriato per il caso specifico.

@@ -1,0 +1,16 @@
+- Scrivi un classe che prevede due variabili di istanza generiche di tipo T e permette attraverso il metodo inverti di scambiarle. 
+Implementare il metodo toString per stampare l'oggetto prima e dopo lo scambio.
+
+- Scrivere una classe con un metodo generico printArray che accetta un array di tipo generico T[] e stampa tutti gli elementi al suo interno sfruttando il metodo toString. 
+Creare successivamente un programma che richiama il metodo printArray passandogli array di tipo diverso. 
+
+fino e qua
+
+- Scrivere l'interfaccia OperationEsecutor con il metodo "eseguiOperation" che riceve come parametro un array di tipo generico e restituisce in output un void. Creare le seguenti implementazioni
+dell'interfaccia:
+    - Classe InvertiArray con il metodo esegui che prende in input un'array di tipo T e inverte gli elementi
+    - Classe ShiftArlray con il metodo esegui che prende in input un'array di tipo T ed effettua lo shift di un elemento in avanti.
+Creare la classe TestOperations con il metodo main che a fronte di un'array di tipo OperationEsecutor, per ogni elemento richiama il metodo eseguiOperation e poi stampa l'array.
+
+- Scrivi la classe con un metodo generico max che accetta due parametri di tipo generico T (extends Comparable<T>) e restituisce il valore massimo tra i due. 
+Creare un programma che richiama il metodo max.

@@ -1,0 +1,42 @@
+PROPERTIES
+La classe Properties in Java è utilizzata per gestire le proprietà di un'applicazione.
+Una proprietà è una coppia chiave-valore, dove sia la chiave che il valore sono stringhe.
+Le Properties offrono un modo per memorizzare configurazioni, impostazioni o altre informazioni di un'applicazione in modo persistente. 
+Queste proprietà possono essere salvate su disco o caricate da file di configurazione, e possono essere facilmente modificate.
+
+Nel codice fornito, le Properties vengono utilizzate per caricare le informazioni di configurazione da un file denominato "config.properties".
+ Questo file di configurazione contiene le informazioni necessarie per stabilire una connessione al database.
+Le Properties sono utilizzate per memorizzare coppie chiave-valore. In questo caso, il file di configurazione contiene le seguenti chiavi: "URL", "USERNAME" e "PASSWORD", che coPROPERTIES
+La classe Properties in Java è utilizzata per gestire le proprietà di un'applicazione.
+Una proprietà è una coppia chiave-valore, dove sia la chiave che il valore sono stringhe.
+Le Properties offrono un modo per memorizzare configurazioni, impostazioni o altre informazioni di un'applicazione in modo persistente. 
+Queste proprietà possono essere salvate su disco o caricate da file di configurazione, e possono essere facilmente modificate.
+Nel codice fornito, le Properties vengono utilizzate per caricare le informazioni di configurazione da un file denominato "config.properties".
+ Questo file di configurazione contiene le informazioni necessarie per stabilire una connessione al database.
+Le Properties sono utilizzate per memorizzare coppie chiave-valore. In questo caso, il file di configurazione contiene le seguenti chiavi: "URL", "USERNAME" e "PASSWORD", che corrispondono all'URL del database, all'username e alla password per l'accesso al database.
+Il codice legge il file di configurazione utilizzando la classe FileInputStream e carica le informazioni di configurazione nelle Properties tramite il metodo load(). Successivamente, le informazioni di configurazione vengono recuperate utilizzando il metodo getProperty() passando come argomento le chiavi corrispondenti.
+Infine, viene stabilita una connessione al database utilizzando le informazioni di configurazione lette dal file di configurazione. Viene eseguita una query per selezionare il campo "titolo" dalla tabella "libri" e il risultato viene stampato sulla console.
+In sintesi, l'utilizzo delle Properties in questo codice consente di caricare le informazioni di configurazione da un file esterno e utilizzarle per stabilire una connessione al database.
+
+
+CONNECTION E STATEMENT
+Nel codice fornito, la classe Connection viene utilizzata per stabilire una connessione al database utilizzando le informazioni di configurazione fornite nel file "config.properties".
+La connessione al database viene creata utilizzando il metodo DriverManager.getConnection(), al quale vengono passati tre parametri: l'URL del database, l'username e la password. Questi valori vengono estratti dalle Properties caricate dal file di configurazione.
+Dopo aver stabilito la connessione, è possibile creare un oggetto Statement utilizzando il metodo createStatement() della connessione. L'oggetto Statement viene utilizzato per eseguire le query e gli aggiornamenti nel database.
+
+
+
+RESULTSET
+Nel contesto della programmazione con database, l'interfaccia ResultSet rappresenta un insieme di risultati ottenuti da un'operazione di query eseguita su un database. Fornisce metodi per accedere e manipolare i dati all'interno del risultato.
+Quando si esegue una query utilizzando un oggetto Statement, il metodo executeQuery() restituisce un oggetto ResultSet che rappresenta i risultati della query. L'oggetto ResultSet contiene una tabella virtuale che rappresenta il set di risultati restituiti dal database.
+In questo specifico caso, viene utilizzato l'oggetto ResultSet per ottenere i risultati di una query che seleziona il titolo dei libri dalla tabella "libri" nel database.
+La riga di codice ResultSet rs = stmt.executeQuery("select titolo from corso.libri"); esegue la query specificata, che seleziona il titolo dei libri dalla tabella "libri" nel database. Il risultato della query viene assegnato all'oggetto ResultSet denominato rs.
+Successivamente, viene utilizzato un ciclo while(rs.next()) per iterare attraverso i record nel ResultSet. Il metodo next() sposta il cursore del ResultSet al prossimo record disponibile. All'interno del ciclo, viene utilizzato il metodo getString(1) per ottenere il valore della colonna 1 (nel nostro caso, la colonna "titolo") del record corrente come una stringa.
+La riga System.out.println(rs.getString(1)); stampa il valore del titolo del libro corrente sulla console.
+In sintesi, il codice esegue una query per selezionare i titoli dei libri dalla tabella nel database e li stampa sulla console utilizzando un oggetto ResultSet.rrispondono all'URL del database, all'username e alla password per l'accesso al database.
+
+Il codice legge il file di configurazione utilizzando la classe FileInputStream e carica le informazioni di configurazione nelle Properties tramite il metodo load(). Successivamente, le informazioni di configurazione vengono recuperate utilizzando il metodo getProperty() passando come argomento le chiavi corrispondenti.
+
+Infine, viene stabilita una connessione al database utilizzando le informazioni di configurazione lette dal file di configurazione. Viene eseguita una query per selezionare il campo "titolo" dalla tabella "libri" e il risultato viene stampato sulla console.
+
+In sintesi, l'utilizzo delle Properties in questo codice consente di caricare le informazioni di configurazione da un file esterno e utilizzarle per stabilire una connessione al database.

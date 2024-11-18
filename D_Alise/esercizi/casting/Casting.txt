@@ -1,0 +1,20 @@
+- Scrivi un programma Java che converte un intero in un numero in virgola mobile e viceversa.
+- Scrivi un programma Java che converte un valore booleano in un intero.
+- Scrivi un programma Java che converte un carattere in un intero e viceversa.
+- Scrivi un programma Java che converte un intero in una stringa.
+- Scrivi un programma Java che converte una stringa in un intero.
+- Scrivi un programma Java che converte un numero in virgola mobile in una stringa.
+- Scrivi un programma Java che converte una stringa in un numero in virgola mobile.
+- Scrivi un programma Java che converte un carattere in una stringa.
+- Scrivi un programma Java che converte una stringa in un carattere.
+- Scrivi un programma Java che converte un intero in un byte e viceversa.
+- Scrivi un programma Java che converte un intero in un short e viceversa.
+- Scrivi un programma Java che converte un intero in un long e viceversa.
+- Scrivi un programma Java che converte un numero in virgola mobile in un float e viceversa.
+- Scrivi un programma Java che converte un numero in virgola mobile in un double e viceversa.
+- Scrivi un programma Java che converte un byte in un carattere e viceversa.
+- Scrivi un programma Java che converte un byte in un intero e viceversa.
+- Scrivi un programma Java che converte un short in un intero e viceversa.
+- Scrivi un programma Java che converte un long in un intero e viceversa.
+- Scrivi un programma Java che converte un float in un intero e viceversa.
+- Scrivi un programma Java che converte un double in un intero e viceversa.
